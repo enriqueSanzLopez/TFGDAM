@@ -5,6 +5,7 @@ from .models import User
 from .models import Permission
 from .models import Enumerate
 from .models import Value
+from .models import Connection
 
 # Register your models here.
 @admin.register(CustomStyle)
@@ -48,3 +49,11 @@ class ValueAdmin(admin.ModelAdmin):
     list_display=('placeholder', 'enumerate', 'value', 'order', 'created_at', 'updated_at')
     list_editable=('placeholder', 'enumerate', 'value', 'order')
     ordering=('enumerate', 'order')
+
+@admin.register(Connection)
+class ConnectionAdmin(admin.ModelAdmin):
+    search_fields=('db_type', 'host', 'created_at', 'updated_at')
+    list_filter = ('user')
+    list_display=('db_type', 'host', 'port', 'name', 'user', 'created_at', 'updated_at')
+    list_editable=('db_type', 'host', 'port', 'name', 'user')
+    ordering=('user', 'db_type', 'host')

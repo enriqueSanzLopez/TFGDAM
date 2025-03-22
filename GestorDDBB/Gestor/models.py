@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.hashers import make_password
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 #Modelo para estilos personalizados en la aplicacion
@@ -57,3 +58,14 @@ class Value(models.Model):
     enumerate=models.ForeignKey(Enumerate, on_delete=models.CASCADE, related_name='values')
     created_at=models.DateTimeField(null=False, blank=False, auto_now_add=True)
     updated_at=models.DateTimeField(null=False, blank=False, auto_now=True)
+
+#Modelo de conexiones para usuario
+class Connection(models.Model):
+    db_type = models.CharField(max_length=20, null=False, blank=False)
+    host=models.TextField(null=False, blank=False, unique=True)
+    port = models.IntegerField(null=False, blank=False, validators=[MinValueValidator(0), MaxValueValidator(65535)])
+    name=models.TextField(null=False, blank=False, unique=True)
+    user=models.ForeignKey(User, on_delete=models.CASCADE, related_name='connections')
+    created_at=models.DateTimeField(null=False, blank=False, auto_now_add=True)
+    updated_at=models.DateTimeField(null=False, blank=False, auto_now=True)
+
