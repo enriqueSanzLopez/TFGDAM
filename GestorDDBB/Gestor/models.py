@@ -16,7 +16,7 @@ class CustomStyle(models.Model):
 
 #Modelo para indicar grupo
 class Group(models.Model):
-    desc_group=models.TextField(null=False, blank=False)
+    desc_group=models.TextField(null=False, blank=False, unique=True)
     permissions=models.ManyToManyField('Permission', related_name='groups')
     created_at=models.DateTimeField(null=False, blank=False, auto_now_add=True)
     updated_at=models.DateTimeField(null=False, blank=False, auto_now=True)
