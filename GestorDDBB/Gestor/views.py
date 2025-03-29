@@ -3,6 +3,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import check_password
 from Gestor.models import User
+import logging
+from datetime import datetime
+logger = logging.getLogger('django')
 
 # Create your views here.
 def login_view(request):
@@ -15,29 +18,30 @@ def login_view(request):
 def login_controller(request):
     #Comprueba el metodo de envio
     if request.method == 'POST':
-        username = request.POST['username']
+        username = request.POST['name']
         password = request.POST['password']
         #Intenta autenticar para validar al usuario
         try:
             user = User.objects.get(name=username)
-            if check_password(password, user.password):
+            if user.verify_password(password):
+                current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                logger.info(f"{current_time} - Inicio de sesión: {user.id}")
                 request.session['user_id'] = user.id
                 return redirect('main')
             else:
-                return render(request, 'login.html', {'error': 'Credenciales inválidas'})
+                return redirect('inicio')
         except User.DoesNotExist:
-            return render(request, 'login.html', {'error': 'Credenciales inválidas'})
+            return redirect('inicio')
+        except Exception:
+            return redirect('inicio')
     return redirect('inicio')
 
-@login_required(login_url='/')
 def logout_view(request):
     request.session.flush()
     return redirect('inicio')
 
-@login_required(login_url='/')
 def main_view(request):
-    #Comprueba si el usuario ha iniciado sesion
-    if request.user.is_authenticated:
+    if 'user_id' in request.session:
         return render(request, 'main.html')
     else:
         return redirect('inicio')

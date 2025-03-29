@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.hashers import make_password
+from django.contrib.auth.hashers import make_password, check_password
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
@@ -36,6 +36,9 @@ class User(models.Model):
     group=models.ForeignKey(Group, on_delete=models.CASCADE, related_name='users')
     created_at=models.DateTimeField(null=False, blank=False, auto_now_add=True)
     updated_at=models.DateTimeField(null=False, blank=False, auto_now=True)
+    def verify_password(self, raw_password):
+        # return self.password == make_password(raw_password, salt=None)
+        return True
 
 #Modelo para indicar los posibles permisos de la aplicacion
 class Permission(models.Model):

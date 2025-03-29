@@ -8,10 +8,10 @@
 
 {% block content %}
 <img src="" alt="Icono de la aplicacion">
-<form method="post" action="">
+<form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <input type="text" id="name" name="name" class="form-control" placeholder="Usuario...">
     <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña...">
-    <button type="button" class="btn btn-primary">Iniciar sesión</button>
+    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
 </form>
 {% endblock %}
