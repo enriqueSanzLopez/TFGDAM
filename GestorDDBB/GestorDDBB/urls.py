@@ -20,6 +20,8 @@ from Gestor import views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', views.login_view, name='login'),
+    path('', views.login_view, name='inicio'),
+    path('login/', views.login_controller, name='login'),
+    path('logout/', views.logout_view, name='logout'),
     path('main/', views.main_view, name='main'),
 ]
