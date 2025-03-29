@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block importaciones %}
+<link rel="stylesheet" href="{% static 'css/user/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method="post" action="">
+    {% csrf_token %}
+    <input type="text" id="name" name="name" class="form-control" placeholder="Usuario...">
+    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña...">
+    <button type="button" class="btn btn-primary">Iniciar sesión</button>
+</form>
+{% endblock %}
