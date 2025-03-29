@@ -1,16 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GestorDDBB</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="{% static 'bootstrap.bundle.min.js' %}" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="{% static 'bootstrap.bundle.min.js' %}"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="{% static 'fontawesome/css/fontawesome.css' %}" rel="stylesheet" />
+    <link href="{% static 'fontawesome/css/brands.css' %}" rel="stylesheet" />
+    <link href="{% static 'fontawesome/css/solid.css' %}" rel="stylesheet" />
     {% block importaciones %}
     {% endblock %}
 </head>
+
 <body>
     <header>
         {% include 'partials/header.html' %}
@@ -21,4 +29,5 @@
         {% endblock %}
     </main>
 </body>
+
 </html>

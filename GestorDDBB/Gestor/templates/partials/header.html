@@ -1,1 +1,9 @@
-<nav></nav>
+<nav>
+    <img src="" alt="Icono de la aplicacion">
+    <ul>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'main' %}">Inicio <i class="fa-solid fa-house"></i></a></li>
+        <li><a href="">Cerrar sesión <i class="fa-solid fa-right-from-bracket"></i></a></li>
+        {% endif %}
+    </ul>
+</nav>
