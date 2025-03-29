@@ -13,6 +13,7 @@ class CustomStyle(models.Model):
     email = models.EmailField(null=True, blank=True)
     telephone=models.TextField(null=True, blank=True)
     other_code=models.TextField(null=True, blank=True)
+    imagen=models.ImageField(null=True, blank=True)
 
 #Modelo para indicar grupo
 class Group(models.Model):
