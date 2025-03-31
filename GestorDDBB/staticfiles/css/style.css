@@ -14,3 +14,7 @@ body>*{
 main{
     flex-grow: 2;
 }
+
+header>nav{
+    width: 100%;
+}

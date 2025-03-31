@@ -391,3 +391,29 @@ Not Found: /favicon.ico
 "GET /static/css/user/login.css HTTP/1.1" 304 0
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
 "GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET / HTTP/1.1" 200 1848
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/user/login.css HTTP/1.1" 304 0
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+2025-03-31 22:02:51 - Inicio de sesión: 6
+"POST /login/ HTTP/1.1" 302 0
+"GET /main/ HTTP/1.1" 200 1432
+"GET /static/css/main.css HTTP/1.1" 200 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /main/favicon.ico
+"GET /main/favicon.ico HTTP/1.1" 404 2725
+"GET /main/ HTTP/1.1" 200 1578
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /main/ HTTP/1.1" 200 1578
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /main/ HTTP/1.1" 200 1562
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /main/ HTTP/1.1" 200 1598
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
