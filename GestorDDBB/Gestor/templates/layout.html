@@ -15,11 +15,12 @@
     <link href="{% static 'fontawesome/css/fontawesome.css' %}" rel="stylesheet" />
     <link href="{% static 'fontawesome/css/brands.css' %}" rel="stylesheet" />
     <link href="{% static 'fontawesome/css/solid.css' %}" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     {% block importaciones %}
     {% endblock %}
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-space-between align-items-center">
     <header>
         {% include 'partials/header.html' %}
     </header>

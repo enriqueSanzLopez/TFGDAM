@@ -4,14 +4,15 @@
 
 {% block importaciones %}
 <link rel="stylesheet" href="{% static 'css/user/login.css' %}">
+ <!-- <link rel="stylesheet" href="/static/css/user/login.css"> -->
 {% endblock %}
 
 {% block content %}
 <img src="" alt="Icono de la aplicacion">
-<form method="post" action="{% url 'login' %}">
+<form method="post" action="{% url 'login' %}" class="d-flex flex-column justify-content-space-between align-items-end">
     {% csrf_token %}
     <input type="text" id="name" name="name" class="form-control" placeholder="Usuario...">
     <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña...">
-    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+    <button type="submit" class="btn btn-primary btn-lg">Iniciar sesión</button>
 </form>
 {% endblock %}

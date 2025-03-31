@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+}
+
+body>*{
+    width: 100%;
+}
+
+main{
+    flex-grow: 2;
+}

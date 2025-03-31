@@ -6,6 +6,8 @@ Lista de comandos:
 Ejecutar la aplicación para pruebas:
     python manage.py runserver
 
+La ruta será: http://localhost:8000/
+
 Generar migraciones para los modelos:
     python manage.py makemigrations
 
