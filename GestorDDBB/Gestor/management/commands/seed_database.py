@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from Gestor.factories import GroupFactory, UserFactory
+from Gestor.factories import GroupFactory, UserFactory, PermissionFactory
 from django.contrib.auth.hashers import make_password
 
 class Command(BaseCommand):
@@ -9,6 +9,30 @@ class Command(BaseCommand):
         # Crear grupo "administradores"
         administradores_group = GroupFactory(desc_group="administradores")
         self.stdout.write(f"Grupo creado: {administradores_group.desc_group}")
+
+        lectura_permission = PermissionFactory(
+            name="Lectura",
+            value="lectura",
+            order=1
+        )
+        administradores_group.permissions.add(lectura_permission)
+        self.stdout.write(f"Permiso creado: {lectura_permission.name}, Asociado a Grupo: {administradores_group.desc_group}")
+
+        personalizacion_permission = PermissionFactory(
+            name="Personalizacion",
+            value="personalizacion",
+            order=2
+        )
+        administradores_group.permissions.add(personalizacion_permission)
+        self.stdout.write(f"Permiso creado: {personalizacion_permission.name}, Asociado a Grupo: {administradores_group.desc_group}")
+
+        usuarios_permission = PermissionFactory(
+            name="Usuarios",
+            value="usuarios",
+            order=2
+        )
+        administradores_group.permissions.add(usuarios_permission)
+        self.stdout.write(f"Permiso creado: {usuarios_permission.name}, Asociado a Grupo: {administradores_group.desc_group}")
 
         # Crear usuario "admin"
         administrador_user = UserFactory(

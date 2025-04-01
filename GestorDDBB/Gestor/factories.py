@@ -1,5 +1,5 @@
 import factory
-from Gestor.models import Group, User
+from Gestor.models import Group, User, Permission
 from django.contrib.auth.hashers import make_password
 
 class GroupFactory(factory.django.DjangoModelFactory):
@@ -16,6 +16,11 @@ class UserFactory(factory.django.DjangoModelFactory):
     password = factory.LazyAttribute(lambda obj: make_password('default_password'))
     real_name = factory.Faker('name')
     group = factory.SubFactory(GroupFactory)
+
+class PermissionFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model=Permission
+    name=factory.Faker('user_name')
 
 # administradores_group = GroupFactory(desc_group="administradores")
 # administrador_user=UserFactory(name='admin', email='admin@admin.com', password=make_password('1234'), real_name='Administrador', group=administradores_group)

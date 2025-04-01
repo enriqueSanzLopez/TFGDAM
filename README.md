@@ -17,3 +17,5 @@ Generar tablas de la base de datos:
 Insertar registros iniciales en la aplicación:
     python manage.py seed_database
 
+Registrar cambios en archivos estáticos:
+    python manage.py collectstatic

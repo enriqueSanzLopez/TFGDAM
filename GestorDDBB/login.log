@@ -507,3 +507,5 @@ Not Found: /favicon.ico
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
 "GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
