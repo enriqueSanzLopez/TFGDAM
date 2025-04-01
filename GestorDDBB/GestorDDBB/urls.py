@@ -24,4 +24,8 @@ urlpatterns = [
     path('login/', views.login_controller, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('main/', views.main_view, name='main'),
+    path('users/', views.users_view, name='users'),
+    path('users/create/', views.users_create_view, name='users/create'),
+    path('users/edit/', views.users_edit_view, name='users/edit'),
+    path('group/', views.group_view, name='group'),
 ]

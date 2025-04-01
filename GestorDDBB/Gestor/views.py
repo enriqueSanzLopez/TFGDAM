@@ -61,3 +61,59 @@ def main_view(request):
         return render(request, 'main.html', {'permissions': permissions})
     else:
         return redirect('inicio')
+
+def users_view(request):
+    if 'user_id' in request.session:
+        permissions = get_permissions_from_user(request.session)
+        acceso=False
+        for permiso in permissions:
+            if permiso.value=='usuarios':
+                acceso=True
+                break
+        if acceso!=True:
+            return redirect('inicio')
+        return render(request, 'users/index.html', {'permissions': permissions})
+    else:
+        return redirect('inicio')
+    
+def users_create_view(request):
+    if 'user_id' in request.session:
+        permissions = get_permissions_from_user(request.session)
+        acceso=False
+        for permiso in permissions:
+            if permiso.value=='usuarios':
+                acceso=True
+                break
+        if acceso!=True:
+            return redirect('inicio')
+        return render(request, 'users/create.html', {'permissions': permissions})
+    else:
+        return redirect('inicio')
+    
+def users_edit_view(request):
+    if 'user_id' in request.session:
+        permissions = get_permissions_from_user(request.session)
+        acceso=False
+        for permiso in permissions:
+            if permiso.value=='usuarios':
+                acceso=True
+                break
+        if acceso!=True:
+            return redirect('inicio')
+        return render(request, 'users/edit.html', {'permissions': permissions})
+    else:
+        return redirect('inicio')
+
+def group_view(request):
+    if 'user_id' in request.session:
+        permissions = get_permissions_from_user(request.session)
+        acceso=False
+        for permiso in permissions:
+            if permiso.value=='usuarios':
+                acceso=True
+                break
+        if acceso!=True:
+            return redirect('inicio')
+        return render(request, 'users/group.html', {'permissions': permissions})
+    else:
+        return redirect('inicio')

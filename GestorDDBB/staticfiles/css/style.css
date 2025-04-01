@@ -17,4 +17,21 @@ main{
 
 header>nav{
     width: 100%;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+header>nav>ul{
+    margin-bottom: .25em;
+    margin-top: .25em;
+}
+
+header>nav>ul>li{
+    list-style-type: none;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+header>nav>ul>li>a{
+    text-decoration: none;
 }
