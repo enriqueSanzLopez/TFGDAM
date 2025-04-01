@@ -21,7 +21,7 @@ class Command(BaseCommand):
         personalizacion_permission = PermissionFactory(
             name="Personalizacion",
             value="personalizacion",
-            order=2
+            order=3
         )
         administradores_group.permissions.add(personalizacion_permission)
         self.stdout.write(f"Permiso creado: {personalizacion_permission.name}, Asociado a Grupo: {administradores_group.desc_group}")

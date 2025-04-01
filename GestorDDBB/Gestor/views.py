@@ -2,12 +2,27 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import check_password
-from Gestor.models import User
+from Gestor.models import User, Group, Permission
 import logging
 from datetime import datetime
+from django.shortcuts import get_object_or_404
+
 logger = logging.getLogger('django')
 
 # Create your views here.
+
+def get_permissions_from_user(session):
+    if 'user_id' in session:
+        # Obtener el usuario
+        user = User.objects.filter(id=session['user_id']).first()
+        if user:
+            # Obtener el grupo
+            group = Group.objects.filter(id=user.group_id).first()
+            if group:
+                # Obtener los permisos asociados al grupo
+                return group.permissions.all()
+    return None
+
 def login_view(request):
     #Comprueba si el usuario ha iniciado sesion
     if request.user.is_authenticated:
@@ -42,6 +57,7 @@ def logout_view(request):
 
 def main_view(request):
     if 'user_id' in request.session:
-        return render(request, 'main.html')
+        permissions = get_permissions_from_user(request.session)
+        return render(request, 'main.html', {'permissions': permissions})
     else:
         return redirect('inicio')
