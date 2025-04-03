@@ -28,4 +28,5 @@ urlpatterns = [
     path('users/create/', views.users_create_view, name='users/create'),
     path('users/edit/', views.users_edit_view, name='users/edit'),
     path('group/', views.group_view, name='group'),
+    path('customize/', views.customize_view, name='customize'),
 ]

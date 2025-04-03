@@ -117,3 +117,17 @@ def group_view(request):
         return render(request, 'users/group.html', {'permissions': permissions})
     else:
         return redirect('inicio')
+    
+def customize_view(request):
+    if 'user_id' in request.session:
+        permissions = get_permissions_from_user(request.session)
+        acceso=False
+        for permiso in permissions:
+            if permiso.value=='personalizacion':
+                acceso=True
+                break
+        if acceso!=True:
+            return redirect('inicio')
+        return render(request, 'customize.html', {'permissions': permissions})
+    else:
+        return redirect('inicio')

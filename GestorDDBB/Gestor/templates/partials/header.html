@@ -9,7 +9,7 @@
                         {% if permission.value|default_if_none:'' == 'usuarios' %}
                             <li><a href="{% url 'users' %}"><i class="fa-solid fa-users"></i> Usuarios</a></li>
                         {% elif permission.value|default_if_none:'' == 'personalizacion' %}
-                            <li><a href=""><i class="fa-solid fa-palette"></i> Personalización</a></li>
+                            <li><a href="{% url 'customize' %}"><i class="fa-solid fa-palette"></i> Personalización</a></li>
                         {% endif %}
                     {% endfor %}
             {% else %}
