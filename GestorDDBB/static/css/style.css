@@ -30,6 +30,7 @@ header>nav>ul>li{
     list-style-type: none;
     padding-left: .5em;
     padding-right: .5em;
+    margin-left: 2em;
 }
 
 header>nav>ul>li>a{

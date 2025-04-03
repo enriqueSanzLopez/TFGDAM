@@ -1,0 +1,19 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main>form{
+    width: 90%;
+    background: #b8b8b8;
+    padding: .5em;
+    border-radius: 4px;
+}
+
+main>form>input,
+main>form>button,
+main>form>textarea{
+    margin-top: .5em;
+}
