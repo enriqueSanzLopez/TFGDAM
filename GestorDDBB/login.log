@@ -1024,3 +1024,36 @@ Not Found: /customize/favicon.ico
 "GET /customize/favicon.ico HTTP/1.1" 404 3587
 C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 3075
+"GET /static/css/style.css HTTP/1.1" 200 453
+"GET /static/css/customize.css HTTP/1.1" 200 0
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3157
+"GET /static/css/style.css HTTP/1.1" 200 453
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 0
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3252
+"GET /static/css/style.css HTTP/1.1" 200 453
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/customize.css HTTP/1.1" 200 0
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
