@@ -7,5 +7,17 @@
 {% endblock %}
 
 {% block content %}
-<h1>Personalizacion en contrucción...</h1>
+<form method="post" action="" class="d-flex flex-column justify-content-between align-items-end">
+    {% csrf_token %}
+    <input type="text" id="company-name" name="company-name" class="form-control" placeholder="Compañía...">
+    <input type="file" name="imagen" class="form-control" placeholder="Imagen..." id="imagen">
+    <input type="email" id="email" name="email" class="form-control" placeholder="Email...">
+    <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Teléfono...">
+    <input type="text" id="text-color" name="text-color" class="form-control" placeholder="Color de texto...">
+    <input type="number" id="text-size" name="text-size" class="form-control" placeholder="Tamaño de texto...">
+    <input type="text" id="primary-color" name="primary-color" class="form-control" placeholder="Color de primario...">
+    <input type="text" id="secondary-color" name="secondary-color" class="form-control" placeholder="Color de secundario...">
+    <textarea name="other-code" id="other-code" class="form-control"></textarea>
+    <button type="submit" class="btn btn-primary btn-lg">Iniciar sesión</button>
+</form>
 {% endblock %}

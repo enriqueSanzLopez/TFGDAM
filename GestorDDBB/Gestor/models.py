@@ -14,7 +14,6 @@ class CustomStyle(models.Model):
     telephone=models.TextField(null=True, blank=True)
     other_code=models.TextField(null=True, blank=True)
     imagen=models.TextField(null=True, blank=True)
-    title=models.CharField(max_length=50, null=True, blank=True)
 
 #Modelo para indicar grupo
 class Group(models.Model):
