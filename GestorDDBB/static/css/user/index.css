@@ -1,0 +1,14 @@
+main>.acciones{
+    margin-top: 3em;
+    margin-right: .25em;
+}
+
+main tbody{
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+.table-responsive-lg{
+    overflow-x: scroll;
+    max-width: 100%;
+}

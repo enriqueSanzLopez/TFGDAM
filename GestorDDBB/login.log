@@ -1807,3 +1807,117 @@ Codifica la imagen: /9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhMREhITFhMVExMYFhYW
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
 C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 2034
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/css/user/index.css HTTP/1.1" 200 0
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+"GET /users/ HTTP/1.1" 200 2293
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/css/user/index.css HTTP/1.1" 200 0
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+"GET /users/ HTTP/1.1" 200 2293
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/user/index.css HTTP/1.1" 200 54
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+"GET /users/ HTTP/1.1" 200 2307
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/index.css HTTP/1.1" 200 54
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+"GET /users/ HTTP/1.1" 200 2341
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/user/index.css HTTP/1.1" 200 54
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+"GET /users/ HTTP/1.1" 200 2444
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 54
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+"GET /users/ HTTP/1.1" 200 2507
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/index.css HTTP/1.1" 200 54
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+"GET /users/ HTTP/1.1" 200 2516
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/user/index.css HTTP/1.1" 200 40
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+"GET /users/ HTTP/1.1" 200 2516
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/index.css HTTP/1.1" 200 66
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3756
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader

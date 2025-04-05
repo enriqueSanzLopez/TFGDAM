@@ -7,5 +7,33 @@
 {% endblock %}
 
 {% block content %}
-<h1>Índice de usuarios en contrucción...</h1>
+<div class="d-flex flex-row justify-content-end align-items-center acciones">
+    <a href="" class="btn btn-primary"><i class="fa-solid fa-user"></i> Crear usuario</a>
+</div>
+<div class="table-responsive-lg">
+    <table class="table table-striped">
+        <thead>
+            <th scope="col">Nick</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Grupo</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </thead>
+        <tbody id="usuarios">
+            {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.real_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{user.group.desc_group}}</td>
+                <td><a href="" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}

@@ -74,7 +74,8 @@ def users_view(request):
                 break
         if acceso!=True:
             return redirect('inicio')
-        return render(request, 'users/index.html', {'permissions': permissions})
+        users = User.objects.all()
+        return render(request, 'users/index.html', {'permissions': permissions, 'users': users})
     else:
         return redirect('inicio')
     
