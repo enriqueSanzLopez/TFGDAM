@@ -1057,3 +1057,753 @@ Not Found: /customize/favicon.ico
 "GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
 Not Found: /customize/favicon.ico
 "GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3252
+"GET /static/css/style.css HTTP/1.1" 200 453
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/customize.css HTTP/1.1" 200 283
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3252
+"GET /static/css/style.css HTTP/1.1" 200 453
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/customize.css HTTP/1.1" 200 304
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3284
+"GET /static/css/style.css HTTP/1.1" 200 453
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 304
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3287
+"GET /static/css/style.css HTTP/1.1" 200 453
+"GET /static/css/customize.css HTTP/1.1" 200 304
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3287
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 304
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 1990
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 304 0
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 304 0
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 304 0
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 304 0
+"GET /static/css/user/login.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3557
+2025-04-05 16:07:43 - Inicio de sesión: 6
+"POST /login/ HTTP/1.1" 302 0
+"GET /main/ HTTP/1.1" 200 2017
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+Not Found: /main/favicon.ico
+"GET /main/favicon.ico HTTP/1.1" 404 3572
+"GET /customize/ HTTP/1.1" 200 3290
+"GET /static/css/customize.css HTTP/1.1" 304 0
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3290
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/css/customize.css HTTP/1.1" 200 304
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3400
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/customize.css HTTP/1.1" 200 304
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /customize/ HTTP/1.1" 200 3400
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/customize.css HTTP/1.1" 200 343
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3337
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 343
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3337
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/customize.css HTTP/1.1" 200 359
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3412
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 359
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3433
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 359
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3430
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/customize.css HTTP/1.1" 200 359
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3449
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 359
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3691
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/css/customize.css HTTP/1.1" 200 359
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3748
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/customize.css HTTP/1.1" 200 359
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3925
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/customize.css HTTP/1.1" 200 359
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3925
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/customize.css HTTP/1.1" 200 412
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 3925
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/customize.css HTTP/1.1" 200 412
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+Internal Server Error: /customize/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 132, in customize_view
+    return render(request, 'customize.html', {'permissions': permissions, 'custom': custom})
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 706, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' if custom else ''' from 'custom.company_name if custom else '''
+"GET /customize/ HTTP/1.1" 500 183708
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3557
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 3925
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/customize.css HTTP/1.1" 200 412
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3951
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/css/customize.css HTTP/1.1" 200 412
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3951
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3960
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 3960
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4043
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+"GET /customize/ HTTP/1.1" 200 4043
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3587
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4062
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4062
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4094
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4094
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4123
+"GET /customize/ HTTP/1.1" 200 4123
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+"GET /customize/ HTTP/1.1" 200 4123
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+"GET /customize/ HTTP/1.1" 200 4123
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+"GET /customize/ HTTP/1.1" 200 4123
+"GET /main/ HTTP/1.1" 200 2017
+Not Found: /main/favicon.ico
+"GET /main/favicon.ico HTTP/1.1" 404 3753
+"GET /customize/ HTTP/1.1" 200 4123
+"GET /customize/ HTTP/1.1" 200 4098
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /customize/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 140, in customize_view
+    'main_color': custom.primary_color if custom and custom.primary_color else '#000000',
+                                                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CustomStyle' object has no attribute 'primary_color'
+"GET /customize/ HTTP/1.1" 500 69283
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3738
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4094
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4095
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4095
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4095
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+2025-04-05 18:50:11 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4095
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4095
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+2025-04-05 18:53:55 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4095
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+2025-04-05 19:02:48 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+2025-04-05 19:03:48 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+2025-04-05 19:04:16 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+2025-04-05 19:05:10 - Inicia proceso Personalizacion: 6
+2025-04-05 19:05:11 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /customize/favicon.ico
+"GET /customize/favicon.ico HTTP/1.1" 404 3768
+2025-04-05 19:06:03 - Inicia proceso Personalizacion: 6
+Error al procesar la imagen: cannot access local variable 'e' where it is not associated with a value
+2025-04-05 19:06:03 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+2025-04-05 19:06:32 - Inicia proceso Personalizacion: 6
+Encuentra la imagen
+2025-04-05 19:06:32 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+2025-04-05 19:07:20 - Inicia proceso Personalizacion: 6
+Encuentra la imagen
+Codifica la imagen: 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
+2025-04-05 19:07:20 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+2025-04-05 19:08:37 - Inicia proceso Personalizacion: 6
+Encuentra la imagen
+Codifica la imagen: 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
+2025-04-05 19:08:37 - Personalización: 6
+"POST /customize-save/ HTTP/1.1" 302 0
+"GET /customize/ HTTP/1.1" 200 4125
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader

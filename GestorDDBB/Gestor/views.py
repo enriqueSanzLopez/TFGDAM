@@ -2,10 +2,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import check_password
-from Gestor.models import User, Group, Permission
+from Gestor.models import User, Group, Permission, CustomStyle
 import logging
 from datetime import datetime
 from django.shortcuts import get_object_or_404
+import base64
+from django.core.files.uploadedfile import InMemoryUploadedFile
 
 logger = logging.getLogger('django')
 
@@ -128,6 +130,76 @@ def customize_view(request):
                 break
         if acceso!=True:
             return redirect('inicio')
-        return render(request, 'customize.html', {'permissions': permissions})
+        custom = CustomStyle.objects.first()
+        return render(request, 'customize.html', {'permissions': permissions, 'custom': {
+                'company_name': custom.company_name if custom and custom.company_name else '',
+                'email': custom.email if custom and custom.email else '',
+                'telephone': custom.telephone if custom and custom.telephone else '',
+                'text_size': custom.text_size if custom and custom.text_size else '',
+                'text_color': custom.text_color if custom and custom.text_color else '#000000',
+                'main_color': custom.main_color if custom and custom.main_color else '#000000',
+                'secondary_color': custom.secondary_color if custom and custom.secondary_color else '#000000',
+                'other_code': custom.other_code if custom and custom.other_code else '',
+            },})
+    else:
+        return redirect('inicio')
+    
+def customize_process(request):
+    if request.method == 'POST':
+        try:
+            if 'user_id' in request.session:
+                permissions = get_permissions_from_user(request.session)
+                acceso = False
+                for permiso in permissions:
+                    if permiso.value == 'personalizacion':
+                        acceso = True
+                        break
+                if acceso != True:
+                    return redirect('inicio')
+                
+                custom = CustomStyle.objects.first()
+                imagen_file = request.FILES.get('imagen')
+                imagen_base64 = None
+                # Procesamiento del archivo de imagen en base64
+                if imagen_file:
+                    try:
+                        imagen_base64 = base64.b64encode(imagen_file.read()).decode('utf-8')
+                    except Exception as e:
+                        logger.error(f"Error al procesar la imagen: {str(e)}")
+                        imagen_base64 = ""
+                if custom is None:
+                    # No existe el registro, se crea uno nuevo
+                    custom = CustomStyle(
+                        main_color=request.POST.get('main_color'),
+                        secondary_color=request.POST.get('secondary_color'),
+                        text_color=request.POST.get('text_color'),
+                        text_size=request.POST.get('text_size'),
+                        company_name=request.POST.get('company_name'),
+                        email=request.POST.get('email'),
+                        telephone=request.POST.get('telephone'),
+                        other_code=request.POST.get('other_code'),
+                        imagen=imagen_base64
+                    )
+                    custom.save()
+                else:
+                    # Existe el registro, luego se actualiza
+                    if imagen_base64!="":
+                        custom.imagen = imagen_base64
+                    custom.main_color = request.POST.get('main_color')
+                    custom.secondary_color = request.POST.get('secondary_color')
+                    custom.text_color = request.POST.get('text_color')
+                    custom.text_size = request.POST.get('text_size')
+                    custom.company_name = request.POST.get('company_name')
+                    custom.email = request.POST.get('email')
+                    custom.telephone = request.POST.get('telephone')
+                    custom.other_code = request.POST.get('other_code')
+                    custom.save()
+                
+                current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                logger.info(f"{current_time} - Personalización: {request.session['user_id']}")
+                return redirect('customize')
+        except Exception as e:
+            logger.error(f"Error en customize_process: {str(e)}")
+            return redirect('customize')
     else:
         return redirect('inicio')

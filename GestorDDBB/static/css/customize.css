@@ -14,6 +14,19 @@ main>form{
 
 main>form>input,
 main>form>button,
-main>form>textarea{
+main>form>textarea,
+main>form>div{
     margin-top: .5em;
+}
+
+main>form>div{
+    width: 100%;
+}
+
+input[type="color"]{
+    margin-right: .25em;
+}
+
+h1{
+    width: 100%;
 }

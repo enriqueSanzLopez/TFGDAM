@@ -29,4 +29,5 @@ urlpatterns = [
     path('users/edit/', views.users_edit_view, name='users/edit'),
     path('group/', views.group_view, name='group'),
     path('customize/', views.customize_view, name='customize'),
+    path('customize-save/', views.customize_process, name='customize-save'),
 ]

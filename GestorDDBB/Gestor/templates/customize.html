@@ -7,17 +7,27 @@
 {% endblock %}
 
 {% block content %}
-<form method="post" action="" class="d-flex flex-column justify-content-between align-items-end">
+<form method="post" action="{% url 'customize-save' %}" enctype="multipart/form-data" class="d-flex flex-column justify-content-between align-items-end">
     {% csrf_token %}
-    <input type="text" id="company-name" name="company-name" class="form-control" placeholder="Compañía...">
+    <h1>Personalizar</h1>
+    <input type="text" id="company_name" name="company_name" class="form-control" placeholder="Compañía..." value="{{ custom.company_name }}">
     <input type="file" name="imagen" class="form-control" placeholder="Imagen..." id="imagen">
-    <input type="email" id="email" name="email" class="form-control" placeholder="Email...">
-    <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Teléfono...">
-    <input type="text" id="text-color" name="text-color" class="form-control" placeholder="Color de texto...">
-    <input type="number" id="text-size" name="text-size" class="form-control" placeholder="Tamaño de texto...">
-    <input type="text" id="primary-color" name="primary-color" class="form-control" placeholder="Color de primario...">
-    <input type="text" id="secondary-color" name="secondary-color" class="form-control" placeholder="Color de secundario...">
-    <textarea name="other-code" id="other-code" class="form-control" placeholder="Código adicional..."></textarea>
-    <button type="submit" class="btn btn-primary btn-lg">Iniciar sesión</button>
+    <input type="email" id="email" name="email" class="form-control" placeholder="Email..." value="{{ custom.email }}">
+    <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Teléfono..." value="{{ custom.telephone }}">
+    <input type="number" id="text_size" name="text_size" class="form-control" placeholder="Tamaño de texto..." value="{{ custom.text_size }}" min="0">
+    <div class="d-flex flex-wrap flex-row justify-content-between align-items-center">
+        <label for="text_color" class="form-label d-flex flex-row justify-content-between align-items-center">
+            <input type="color" id="text_color" name="text_color" class="form-control form-control-color"
+                placeholder="Color de texto..." value="{{ custom.text_color }}"> Color de
+            texto</label>
+        <label for="main_color" class="form-label d-flex flex-row justify-content-between align-items-center">
+            <input type="color" id="main_color" name="main_color" class="form-control form-control-color" placeholder="Color de primario..." value="{{ custom.main_color }}"> Color
+            primario</label>
+        <label for="secondary_color" class="form-label d-flex flex-row justify-content-between align-items-center">
+            <input type="color" id="secondary_color" name="secondary_color" class="form-control form-control-color" placeholder="Color de secundario..." value="{{ custom.secondary_color }}"> Color
+            secundario</label>
+    </div>
+    <textarea name="other_code" id="other_code" class="form-control" placeholder="Código CSS adicional...">{{ custom.other_code }}</textarea>
+    <button type="submit" class="btn btn-primary btn-lg">Guardar cambios</button>
 </form>
 {% endblock %}
