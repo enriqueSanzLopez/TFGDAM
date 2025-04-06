@@ -75,7 +75,8 @@ def users_view(request):
         if acceso!=True:
             return redirect('inicio')
         users = User.objects.all()
-        return render(request, 'users/index.html', {'permissions': permissions, 'users': users})
+        groups = Group.objects.all()
+        return render(request, 'users/index.html', {'permissions': permissions, 'users': users, 'groups': groups})
     else:
         return redirect('inicio')
     

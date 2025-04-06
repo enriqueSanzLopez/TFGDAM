@@ -2380,3 +2380,9 @@ Not Found: /users/favicon.ico
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
 Not Found: /users/favicon.ico
 "GET /users/favicon.ico HTTP/1.1" 404 3756
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
