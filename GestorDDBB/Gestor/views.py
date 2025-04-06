@@ -205,3 +205,84 @@ def customize_process(request):
             return redirect('customize')
     else:
         return redirect('inicio')
+
+def create_user(request):
+    if request.method == 'POST':
+        try:
+            if 'user_id' in request.session:
+                permissions = get_permissions_from_user(request.session)
+                acceso = False
+                for permiso in permissions:
+                    if permiso.value == 'personalizacion':
+                        acceso = True
+                        break
+                if acceso != True:
+                    return redirect('inicio')
+                if request.POST.get('id')=='new':
+                    #Se tiene que crear al usuario
+                    user=User(
+                        name=request.POST.get('name'),
+                        email=request.POST.get('email'),
+                        real_name=request.POST.get('real_name'),
+                        password=request.POST.get('password'),
+                        group=Group.objects.get(id=request.POST.get('group'))
+                    )
+                    user.save()
+                else:
+                    #Se tiene que actualizar al usuario
+                    user=User.objects.get(id=request.POST.get('id'))
+                    user.name=request.POST.get('name')
+                    user.email=request.POST.get('email')
+                    user.real_name=request.POST.get('real_name')
+                    user.group=Group.objects.get(id=request.POST.get('group'))
+                    user.save()
+            return redirect('users')
+        except Exception as e:
+            logger.error(f"Error en create_user: {str(e)}")
+            return redirect('users')
+    else:
+        return redirect('users')
+
+def change_password(request):
+    if request.method == 'POST':
+        try:
+            if 'user_id' in request.session:
+                permissions = get_permissions_from_user(request.session)
+                acceso = False
+                for permiso in permissions:
+                    if permiso.value == 'personalizacion':
+                        acceso = True
+                        break
+                if acceso != True:
+                    return redirect('inicio')
+                #Se tiene que actualizar al usuario
+                user=User.objects.get(id=request.POST.get('cambio_id'))
+                user.password=request.POST.get('cambio_password')
+                user.save()
+            return redirect('users')
+        except Exception as e:
+            logger.error(f"Error en change_password: {str(e)}")
+            return redirect('users')
+    else:
+        return redirect('users')
+
+def delete_user(request):
+    if request.method == 'POST':
+        try:
+            if 'user_id' in request.session:
+                permissions = get_permissions_from_user(request.session)
+                acceso = False
+                for permiso in permissions:
+                    if permiso.value == 'personalizacion':
+                        acceso = True
+                        break
+                if acceso != True:
+                    return redirect('inicio')
+                user=User.objects.get(id=request.POST.get('borrar_id'))
+                user.delete()
+            return redirect('users')
+        except Exception as e:
+            logger.error(f"Error en delete_user: {str(e)}")
+            return redirect('users')
+    else:
+        return redirect('users')

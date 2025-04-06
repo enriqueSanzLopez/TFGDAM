@@ -19,7 +19,7 @@
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="create-user-form" role="tabpanel"
                         aria-labelledby="create-user-form-tab">
-                        <form action="" method="POST"
+                        <form action="{% url 'users-edit' %}" method="POST"
                             class="d-flex flex-column justify-content-between align-items-end">
                             {% csrf_token %}
                             <input type="hidden" name="id" id="id" value="new">
@@ -27,12 +27,17 @@
                             <input type="text" id="real_name" name="real_name" class="form-control"
                                 placeholder="Nombre real...">
                             <input type="email" id="email" name="email" class="form-control" placeholder="Email...">
+                            <select class="form-select form-select-lg" name="group" id="group" placeholder="Grupo">
+                                {% for group in groups %}
+                                <option value="{{ group.id }}">{{ group.desc_group }}</option>
+                                {% endfor %}
+                            </select>
                             <input type="password" id="password" name="password" class="form-control"
                                 placeholder="Contraseña...">
                             <input type="password" id="repeat_password" name="repeat_password" class="form-control"
                                 placeholder="Repite la contraseña...">
                             <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Guardar Cambios</button>
+                                <button type="submit" class="btn btn-primary btn-lg" id="save-changes" disabled>Guardar Cambios</button>
                                 <button type="button" class="btn btn-secondary btn-lg"
                                     data-bs-dismiss="modal">Cancelar</button>
                             </div>
@@ -40,7 +45,7 @@
                     </div>
                     <div class="tab-pane fade" id="change-password" role="tabpanel"
                         aria-labelledby="change-password-tab">
-                        <form action="" method="POST"
+                        <form action="{% url 'users-password' %}" method="POST"
                             class="d-flex flex-column justify-content-between align-items-end">
                             {% csrf_token %}
                             <input type="hidden" name="cambio_id" id="cambio_id" value="new">
@@ -49,7 +54,7 @@
                             <input type="password" id="cambio_repeat_password" name="cambio_repeat_password"
                                 class="form-control" placeholder="Repite la contraseña...">
                             <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Cambiar contraseña</button>
+                                <button type="submit" class="btn btn-primary btn-lg" disabled id="change-password-button">Cambiar contraseña</button>
                                 <button type="button" class="btn btn-secondary btn-lg"
                                     data-bs-dismiss="modal">Cancelar</button>
                             </div>

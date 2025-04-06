@@ -2470,3 +2470,421 @@ Not Found: /users/favicon.ico
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
 Not Found: /users/favicon.ico
 "GET /users/favicon.ico HTTP/1.1" 404 3756
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 9832
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/scripts/users/index.js HTTP/1.1" 200 2197
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3406
+"GET /users/ HTTP/1.1" 200 9848
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 2197
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3406
+"GET /users/ HTTP/1.1" 200 9848
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 2251
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3406
+"GET /users/ HTTP/1.1" 200 9848
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 2197
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3406
+"GET /users/ HTTP/1.1" 200 9848
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/scripts/users/index.js HTTP/1.1" 200 2305
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3406
+"GET /users/ HTTP/1.1" 200 9834
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/scripts/users/index.js HTTP/1.1" 200 2305
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3406
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 9898
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3579
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 9910
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3579
+Error en create_user: Cannot assign "'6'": "User.group" must be a "Group" instance.
+"POST /users-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 9910
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /users-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/scripts/users/index.js HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Error en create_user: 'QuerySet' object has no attribute 'user'
+"POST /users-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Error en create_user: 'QuerySet' object has no attribute 'user'
+"POST /users-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3579
+Error en create_user: 'QuerySet' object has no attribute 'user'
+"POST /users-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3579
+Error en create_user: 'User' object has no attribute 'user'
+"POST /users-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3579
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3579
+"POST /users-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11042
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3937
+Error en create_user: User matching query does not exist.
+"POST /users-password/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Error en create_user: User matching query does not exist.
+"POST /users-delete/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3937
+Error en change_password: User matching query does not exist.
+"POST /users-password/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/scripts/users/index.js HTTP/1.1" 200 3957
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3937
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4063
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3937
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4063
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3937
+Error en change_password: User matching query does not exist.
+"POST /users-password/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/scripts/users/index.js HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4063
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3937
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4063
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3937
+ID en change_password: None
+Error en change_password: User matching query does not exist.
+"POST /users-password/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/css/style.css HTTP/1.1" 200 476
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4063
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 353
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /users/favicon.ico
+"GET /users/favicon.ico HTTP/1.1" 404 3937
+Error en change_password: null value in column "password" of relation "Gestor_user" violates not-null constraint
+DETAIL:  Failing row contains (7, prueba3, Prueba2, prueba@prueba.com, null, 2025-04-06 18:27:36.123441+00, 2025-04-06 19:00:25.349942+00, 6).
+
+"POST /users-password/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/scripts/users/index.js HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /users-password/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 11072
+"GET /static/scripts/users/index.js HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
