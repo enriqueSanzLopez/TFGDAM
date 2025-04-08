@@ -7,40 +7,68 @@
 {% endblock %}
 
 {% block content %}
-<div class="d-flex flex-row justify-content-end align-items-center acciones">
-    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#user-modal"
-        id="create-user"><i class="fa-solid fa-user"></i> Crear usuario</button>
-</div>
-<div class="table-responsive-lg">
-    <table class="table table-striped">
-        <thead>
-            <th scope="col">Usuario</th>
-            <th scope="col">Nombre real</th>
-            <th scope="col">Email</th>
-            <th scope="col">Grupo</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-        </thead>
-        <tbody id="usuarios">
-            {% for user in users %}
-            <tr>
-                <td>{{ user.name }}<input type="hidden" name="user-name-{{ user.id }}" id="user-name-{{ user.id }}"
-                        value="{{ user.name }}"></td>
-                <td>{{ user.real_name }}<input type="hidden" name="user-real_name-{{ user.id }}"
-                        id="user-real_name-{{ user.id }}" value="{{ user.real_name }}"></td>
-                <td>{{ user.email }}<input type="hidden" name="user-email-{{ user.id }}" id="user-email-{{ user.id }}"
-                        value="{{ user.email }}"></td>
-                <td>{{user.group.desc_group}}<input type="hidden" name="user-desc_group-{{ user.id }}"
-                        id="user-desc_group-{{ user.id }}" value="{{ user.group.id }}"></td>
-                <td><button type="button" class="btn btn-primary btn-lg editar" data-bs-toggle="modal"
-                        data-bs-target="#user-modal" id="editar-{{ user.id }}"><i class="fa fa-pencil"></i></button><input type="hidden"
-                        name="user-id-{{ user.id }}" id="user-id-{{ user.id }}" value="{{ user.id }}"></td>
-                <td><button type="button" class="btn btn-danger btn-lg borrar" data-bs-toggle="modal"
-                        data-bs-target="#delete-user" id="borrar-{{ user.id }}"><i class="fa-solid fa-trash"></i></button></td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="users-tab" data-bs-toggle="tab" data-bs-target="#users"
+                        type="button" role="tab" aria-controls="users" aria-selected="true">Usuarios</button>
+                <button class="nav-link" id="groups-tab" data-bs-toggle="tab" data-bs-target="#groups" type="button"
+                        role="tab" aria-controls="groups" aria-selected="false">Grupos</button>
+                <button class="nav-link" id="permissions-tab" data-bs-toggle="tab" data-bs-target="#permissions"
+                        type="button" role="tab" aria-controls="permissions" aria-selected="false">Permisos</button>
+        </div>
+</nav>
+<div class="tab-content" id="nav-tabMainContent">
+        <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+                <div class="d-flex flex-row justify-content-end align-items-center acciones">
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#user-modal" id="create-user"><i class="fa-solid fa-user"></i> Crear
+                                usuario</button>
+                </div>
+                <div class="table-responsive-lg">
+                        <table class="table table-striped">
+                                <thead>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Nombre real</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Grupo</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                </thead>
+                                <tbody id="usuarios">
+                                        {% for user in users %}
+                                        <tr>
+                                                <td>{{ user.name }}<input type="hidden" name="user-name-{{ user.id }}"
+                                                                id="user-name-{{ user.id }}" value="{{ user.name }}">
+                                                </td>
+                                                <td>{{ user.real_name }}<input type="hidden"
+                                                                name="user-real_name-{{ user.id }}"
+                                                                id="user-real_name-{{ user.id }}"
+                                                                value="{{ user.real_name }}"></td>
+                                                <td>{{ user.email }}<input type="hidden" name="user-email-{{ user.id }}"
+                                                                id="user-email-{{ user.id }}" value="{{ user.email }}">
+                                                </td>
+                                                <td>{{user.group.desc_group}}<input type="hidden"
+                                                                name="user-desc_group-{{ user.id }}"
+                                                                id="user-desc_group-{{ user.id }}"
+                                                                value="{{ user.group.id }}"></td>
+                                                <td><button type="button" class="btn btn-primary btn-lg editar"
+                                                                data-bs-toggle="modal" data-bs-target="#user-modal"
+                                                                id="editar-{{ user.id }}"><i
+                                                                        class="fa fa-pencil"></i></button><input
+                                                                type="hidden" name="user-id-{{ user.id }}"
+                                                                id="user-id-{{ user.id }}" value="{{ user.id }}"></td>
+                                                <td><button type="button" class="btn btn-danger btn-lg borrar"
+                                                                data-bs-toggle="modal" data-bs-target="#delete-user"
+                                                                id="borrar-{{ user.id }}"><i
+                                                                        class="fa-solid fa-trash"></i></button></td>
+                                        </tr>
+                                        {% endfor %}
+                                </tbody>
+                        </table>
+                </div>
+        </div>
+        <div class="tab-pane fade" id="groups" role="tabpanel" aria-labelledby="groups-tab"></div>
+        <div class="tab-pane fade" id="permissions" role="tabpanel" aria-labelledby="permissions-tab"></div>
 </div>
 {% include 'partials/modals/user-modal.html' %}
 {% include 'partials/modals/delete-user-modal.html' %}
