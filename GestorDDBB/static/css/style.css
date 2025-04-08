@@ -36,3 +36,8 @@ header>nav>ul>li{
 header>nav>ul>li>a{
     text-decoration: none;
 }
+
+nav img{
+    width: 10%;
+    height: auto;
+}
