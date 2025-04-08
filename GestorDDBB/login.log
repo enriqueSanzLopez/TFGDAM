@@ -2907,3 +2907,9 @@ Not Found: /users/favicon.ico
 "GET /static/scripts/users/index.js HTTP/1.1" 304 0
 "GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 1990
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3919
