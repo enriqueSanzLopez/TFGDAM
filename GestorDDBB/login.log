@@ -4131,3 +4131,5 @@ Not Found: /favicon.ico
 "GET /static/css/user/login.css HTTP/1.1" 304 0
 "GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
