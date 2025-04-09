@@ -98,18 +98,18 @@
                                                                 name="permission-order-{{ permission.id }}"
                                                                 id="permission-order-{{ permission.id }}"
                                                                 value="{{ permission.order }}"></td>
-                                                <td><button type="button" class="btn btn-primary btn-lg editar"
+                                                <td><button type="button" class="btn btn-primary btn-lg editar-permission"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#permission-modal"
-                                                                id="editar-{{ permission.id }}"><i
+                                                                id="editar-permission-{{ permission.id }}"><i
                                                                         class="fa fa-pencil"></i></button><input
                                                                 type="hidden" name="permission-id-{{ permission.id }}"
                                                                 id="permission-id-{{ permission.id }}"
                                                                 value="{{ permission.id }}"></td>
-                                                <td><button type="button" class="btn btn-danger btn-lg borrar"
+                                                <td><button type="button" class="btn btn-danger btn-lg borrar-permission"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#delete-permission"
-                                                                id="borrar-{{ permission.id }}"><i
+                                                                id="borrar-permission-{{ permission.id }}"><i
                                                                         class="fa-solid fa-trash"></i></button></td>
                                         </tr>
                                         {% endfor %}

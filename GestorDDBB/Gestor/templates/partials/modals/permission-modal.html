@@ -6,7 +6,8 @@
             </div>
             <div class="modal-body">
                 <h3 id="create-permission-modal-title">Crear permiso</h3>
-                <form action="{% url 'permissions-edit' %}" method="POST" class="d-flex flex-column justify-content-between align-items-end">
+                <form action="{% url 'permissions-edit' %}" method="POST"
+                    class="d-flex flex-column justify-content-between align-items-end">
                     {% csrf_token %}
                     <input type="hidden" name="permission_id" id="permission_id" value="new">
                     <input type="text" id="permission_name" name="permission_name" class="form-control"
@@ -16,8 +17,8 @@
                     <input type="number" name="permission_order" class="form-control" id="permission_order"
                         placeholder="Orden..." min="0">
                     <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                        <button type="submit" class="btn btn-primary btn-lg" id="permission-save-changes"
-                            disabled>Guardar Cambios</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="permission-save-changes">Guardar
+                            Cambios</button>
                         <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Cancelar</button>
                     </div>
                 </form>
