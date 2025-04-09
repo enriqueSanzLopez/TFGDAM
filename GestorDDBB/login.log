@@ -4555,3 +4555,565 @@ C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py chang
 Watching for file changes with StatReloader
 C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\urls.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2744
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2782
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2782
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2811
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2811
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2811
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 3055
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2980
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2980
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24407
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 3019
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24440
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 3030
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24440
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 3030
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24440
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 3150
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24440
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 3150
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24440
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 3298
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2318
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2207
+"GET /static/css/user/login.css HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+PASO 1 - Llega a la ruta y al metodo
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2207
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2207
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+PASO 1.7 - Lee los permisos
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2207
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+Error en create_permission: can only concatenate str (not "bool") to str
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+PASO 1.7 - Lee los permisos, resultado: False
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2207
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+Permiso: Lectura
+PASO 1.7 - Lee los permisos, resultado: False
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2207
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+Permiso: lectura
+PASO 1.7 - Lee los permisos, resultado: False
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2207
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+Error en create_permission: name 'session' is not defined
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/scripts/users/permissions.js HTTP/1.1" 304 0
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+Error en create_permission: 'Group' object has no attribute 'name'
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 24484
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+Grupo: administradores
+Permiso: lectura
+PASO 1.7 - Lee los permisos, resultado: False
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2207
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+PASO 1.5 - Encuentra los permisos
+Grupo: administradores
+Grupo: administradores
+Permiso: lectura
+Permiso: personalizacion
+Permiso: usuarios
+PASO 1.7 - Lee los permisos, resultado: False
+Permiso: lectura
+Permiso: personalizacion
+Permiso: usuarios
+PASO 1.7 - Lee los permisos, resultado: False
+"POST /permissions-edit/ HTTP/1.1" 302 0
+- Broken pipe from ('127.0.0.1', 55118)
+"GET / HTTP/1.1" 200 2207
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+PASO 1.7 - Lee los permisos, resultado: False
+PASO 1.7 - Lee los permisos, resultado: False
+PASO 2 - Tiene permisos
+PASO 3 - Crea permiso
+Error en create_permission: duplicate key value violates unique constraint "Gestor_permission_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/scripts/users/permissions.js HTTP/1.1" 304 0
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+PASO 1.7 - Lee los permisos, resultado: False
+PASO 1.7 - Lee los permisos, resultado: False
+PASO 2 - Tiene permisos
+PASO 3 - Crea permiso
+Datos: Prueba; test; 4
+Error en create_permission: duplicate key value violates unique constraint "Gestor_permission_pkey"
+DETAIL:  Key (id)=(2) already exists.
+
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/scripts/users/permissions.js HTTP/1.1" 304 0
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+PASO 1.7 - Lee los permisos, resultado: False
+PASO 1.7 - Lee los permisos, resultado: False
+PASO 2 - Tiene permisos
+PASO 3 - Crea permiso
+Datos: Prueba; test; 4
+Error en create_permission: duplicate key value violates unique constraint "Gestor_permission_pkey"
+DETAIL:  Key (id)=(3) already exists.
+
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/user/index.css HTTP/1.1" 304 0
+"GET /static/scripts/users/permissions.js HTTP/1.1" 304 0
+"GET /users/ HTTP/1.1" 200 24484
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/css/user/index.css HTTP/1.1" 200 484
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+PASO 1 - Llega a la ruta y al metodo
+PASO 1.5 - Encuentra los permisos
+PASO 1.7 - Lee los permisos, resultado: False
+PASO 1.7 - Lee los permisos, resultado: False
+PASO 2 - Tiene permisos
+PASO 3 - Crea permiso
+Datos: Prueba; test; 4
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 26970
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader

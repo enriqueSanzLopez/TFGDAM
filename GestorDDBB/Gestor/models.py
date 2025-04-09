@@ -41,7 +41,7 @@ class User(models.Model):
 
 #Modelo para indicar los posibles permisos de la aplicacion
 class Permission(models.Model):
-    name=models.CharField(max_length=50, null=False, blank=False)
+    name=models.CharField(max_length=50, null=False, blank=False, unique=True)
     value=models.TextField(null=True, blank=True)
     order=models.IntegerField(null=True, blank=True)
     # groups=models.ManyToManyField('Group', related_name='permissions')
