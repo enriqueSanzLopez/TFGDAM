@@ -214,7 +214,7 @@ def create_user(request):
                 permissions = get_permissions_from_user(request.session)
                 acceso = False
                 for permiso in permissions:
-                    if permiso.value == 'personalizacion':
+                    if permiso.value == 'usuarios':
                         acceso = True
                         break
                 if acceso != True:
@@ -251,7 +251,7 @@ def change_password(request):
                 permissions = get_permissions_from_user(request.session)
                 acceso = False
                 for permiso in permissions:
-                    if permiso.value == 'personalizacion':
+                    if permiso.value == 'usuarios':
                         acceso = True
                         break
                 if acceso != True:
@@ -274,7 +274,7 @@ def delete_user(request):
                 permissions = get_permissions_from_user(request.session)
                 acceso = False
                 for permiso in permissions:
-                    if permiso.value == 'personalizacion':
+                    if permiso.value == 'usuarios':
                         acceso = True
                         break
                 if acceso != True:
@@ -284,6 +284,39 @@ def delete_user(request):
             return redirect('users')
         except Exception as e:
             logger.error(f"Error en delete_user: {str(e)}")
+            return redirect('users')
+    else:
+        return redirect('users')
+
+def create_permission(request):
+    if request.method == 'POST':
+        try:
+            permissions = get_permissions_from_user(request.session)
+            acceso = False
+            for permiso in permissions:
+                if permiso.value == 'usuarios':
+                    acceso = True
+                    break
+                if acceso != True:
+                    return redirect('inicio')
+                if request.POST.get('permission_id')=='new':
+                    #Se tiene que crear
+                    permission=Permission(
+                        name=request.POST.get('permission_name'),
+                        value=request.POST.get('permission_value'),
+                        order=request.POST.get('permission_order')
+                        )
+                    permission.save()
+                else:
+                    #Se tiene que actualizar
+                    permission=Permission.objects.get(id=request.POST.get('permission_id'))
+                    permission.name=request.POST.get('permission_name')
+                    permission.value=request.POST.get('permission_value')
+                    permission.order=request.POST.get('permission_order')
+                    permission.save()
+                return redirect('users')
+        except Exception as e:
+            logger.error(f"Error en create_permission: {str(e)}")
             return redirect('users')
     else:
         return redirect('users')
