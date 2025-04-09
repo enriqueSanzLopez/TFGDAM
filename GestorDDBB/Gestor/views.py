@@ -320,3 +320,23 @@ def create_permission(request):
             return redirect('users')
     else:
         return redirect('users')
+
+def delete_permission(request):
+    if request.method == 'POST':
+        try:
+            permissions = get_permissions_from_user(request.session)
+            acceso = False
+            for permiso in permissions:
+                if permiso.value == 'usuarios':
+                    acceso = True
+                    break
+                if acceso != True:
+                    return redirect('inicio')
+                permission=Permission.objects.get(id=request.POST.get('permission_borrar_id'))
+                permission.delete()
+                return redirect('users')
+        except Exception as e:
+            logger.error(f"Error en create_permission: {str(e)}")
+            return redirect('users')
+    else:
+        return redirect('users')

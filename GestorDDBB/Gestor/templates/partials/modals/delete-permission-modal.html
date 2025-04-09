@@ -1,0 +1,20 @@
+<div class="modal fade" id="delete-permission" tabindex="-1" aria-labelledby="delete-permissionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3 id="permission-borrar-title">¿Seguro que quieres eliminar el permiso?</h3>
+                <form action="" method="POST" class="d-flex flex-column justify-content-between align-items-end">
+                    {% csrf_token %}
+                    <input type="hidden" name="permission_borrar_id" id="permission_borrar_id" value="new">
+                    <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
+                        <button type="submit" class="btn btn-danger btn-lg">Borrar</button>
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

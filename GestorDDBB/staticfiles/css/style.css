@@ -17,7 +17,7 @@ main{
 
 header>nav{
     width: 100%;
-    padding-left: .5em;
+    padding-left: 0;
     padding-right: .5em;
 }
 
@@ -35,4 +35,9 @@ header>nav>ul>li{
 
 header>nav>ul>li>a{
     text-decoration: none;
+}
+
+nav img{
+    width: 5%;
+    height: auto;
 }
