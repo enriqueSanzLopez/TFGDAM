@@ -5117,3 +5117,7 @@ Datos: Prueba; test; 4
 "GET /users/ HTTP/1.1" 200 26970
 C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
 Watching for file changes with StatReloader
+"POST /permissions-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 26966
+"POST /permissions-delete/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 24484
