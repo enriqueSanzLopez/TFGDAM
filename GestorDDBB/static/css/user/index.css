@@ -24,3 +24,12 @@ main tbody {
 .modal form>div>button{
     margin-left: .25em;
 }
+
+#nav-tabMainContent .tab-pane{
+    padding-left: .25em;
+    padding-right: .25em;
+}
+
+.acciones{
+    margin-top: .25em;
+}

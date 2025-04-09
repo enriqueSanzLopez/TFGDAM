@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block importaciones %}
-<link rel="stylesheet" href="{% static 'css/user/index.css' %}">
+<link rel="stylesheet" href="/static/css/user/index.css">
 {% endblock %}
 
 {% block content %}
@@ -67,8 +67,56 @@
                         </table>
                 </div>
         </div>
-        <div class="tab-pane fade" id="groups" role="tabpanel" aria-labelledby="groups-tab"></div>
-        <div class="tab-pane fade" id="permissions" role="tabpanel" aria-labelledby="permissions-tab"></div>
+        <div class="tab-pane fade" id="groups" role="tabpanel" aria-labelledby="groups-tab">
+                <h1>Grupos</h1>
+        </div>
+        <div class="tab-pane fade" id="permissions" role="tabpanel" aria-labelledby="permissions-tab">
+                <div class="d-flex flex-row justify-content-end align-items-center acciones"><button
+                                class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#permission-modal"
+                                id="create-permission" type="button">Crear permiso</button></div>
+                <div class="table-responsive-lg">
+                        <table class="table table-striped">
+                                <thead>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Valor</th>
+                                        <th scope="col">Orden</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                </thead>
+                                <tbody>
+                                        {% for permission in permissions %}
+                                        <tr>
+                                                <td>{{ permission.name }}<input type="hidden"
+                                                                name="permission-name-{{ permission.id }}"
+                                                                id="permission-name-{{ permission.id }}"
+                                                                value="{{ permission.name }}"></td>
+                                                <td>{{ permission.value }}<input type="hidden"
+                                                                name="permission-value-{{ permission.id }}"
+                                                                id="permission-value-{{ permission.id }}"
+                                                                value="{{ permission.value }}"></td>
+                                                <td>{{ permission.order }}<input type="hidden"
+                                                                name="permission-order-{{ permission.id }}"
+                                                                id="permission-order-{{ permission.id }}"
+                                                                value="{{ permission.order }}"></td>
+                                                <td><button type="button" class="btn btn-primary btn-lg editar"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#permission-modal"
+                                                                id="editar-{{ permission.id }}"><i
+                                                                        class="fa fa-pencil"></i></button><input
+                                                                type="hidden" name="permission-id-{{ permission.id }}"
+                                                                id="permission-id-{{ permission.id }}"
+                                                                value="{{ permission.id }}"></td>
+                                                <td><button type="button" class="btn btn-danger btn-lg borrar"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#delete-permission"
+                                                                id="borrar-{{ permission.id }}"><i
+                                                                        class="fa-solid fa-trash"></i></button></td>
+                                        </tr>
+                                        {% endfor %}
+                                </tbody>
+                        </table>
+                </div>
+        </div>
 </div>
 {% include 'partials/modals/user-modal.html' %}
 {% include 'partials/modals/delete-user-modal.html' %}
