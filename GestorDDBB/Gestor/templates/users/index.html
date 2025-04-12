@@ -68,7 +68,40 @@
                 </div>
         </div>
         <div class="tab-pane fade" id="groups" role="tabpanel" aria-labelledby="groups-tab">
-                <h1>Grupos</h1>
+                <div class="d-flex flex-row justify-content-end align-items-center acciones"><button
+                        class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#group-modal"
+                        id="create-group" type="button">Crear grupo</button></div>
+                <div class="table-responsive-lg">
+                        <table class="table table-striped">
+                                <thead>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                </thead>
+                                <tbody>
+                                        {% for group in groups %}
+                                        <tr>
+                                                <td>{{ group.desc_group }} <input type="hidden" name="group-name-{{ group.id }}"
+                                                        id="group-name-{{ group.id }}"
+                                                        value="{{ group.desc_group }}"></td>
+                                                <td><button type="button" class="btn btn-primary btn-lg editar-group"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#group-modal"
+                                                                id="editar-group-{{ group.id }}"><i
+                                                                        class="fa fa-pencil"></i></button><input
+                                                                type="hidden" name="group-id-{{ group.id }}"
+                                                                id="group-id-{{ group.id }}"
+                                                                value="{{ group.id }}"></td>
+                                                <td><button type="button" class="btn btn-danger btn-lg borrar-group"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#delete-group"
+                                                                id="borrar-group-{{ group.id }}"><i
+                                                                        class="fa-solid fa-trash"></i></button></td>
+                                        </tr>
+                                        {% endfor %}
+                                </tbody>
+                        </table>
+                </div>
         </div>
         <div class="tab-pane fade" id="permissions" role="tabpanel" aria-labelledby="permissions-tab">
                 <div class="d-flex flex-row justify-content-end align-items-center acciones"><button
