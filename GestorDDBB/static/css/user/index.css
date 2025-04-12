@@ -33,3 +33,11 @@ main tbody {
 .acciones{
     margin-top: .25em;
 }
+
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .25em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
