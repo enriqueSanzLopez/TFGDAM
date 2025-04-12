@@ -34,4 +34,5 @@ urlpatterns = [
     path('permissions-edit/', views.create_permission, name='permissions-edit'),
     path('permissions-delete/', views.delete_permission, name='permissions-delete'),
     path('groups-delete/', views.delete_group, name='groups-delete'),
+    path('groups-edit/', views.create_group, name='groups-edit'),
 ]

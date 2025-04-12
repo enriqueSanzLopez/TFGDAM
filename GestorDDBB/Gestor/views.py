@@ -361,3 +361,38 @@ def delete_group(request):
             return redirect('users')
     else:
         return redirect('users')
+
+def create_group(request):
+    if request.method == 'POST':
+        try:
+            permissions = get_permissions_from_user(request.session)
+            acceso = False
+            for permiso in permissions:
+                if permiso.value == 'usuarios':
+                    acceso = True
+                    break
+            if acceso != True:
+                return redirect('inicio')
+            if request.POST.get('group_id')=='new':
+                group=Group(
+                    desc_group=request.POST.get('group_name')
+                )
+                group.save()
+            else:
+                group=Group.objects.get(id=request.POST.get('group_id'))
+                group.desc_group=request.POST.get('group_name')
+                group.save()
+            permission_ids = request.POST.getlist('permissions')
+            group.permissions.clear()
+            for perm_id in permission_ids:
+                try:
+                    permission = Permission.objects.get(id=perm_id)
+                    group.permissions.add(permission)  # Asignar permisos
+                except Permission.DoesNotExist:
+                    continue
+            return redirect('users')
+        except Exception as e:
+            logger.error(f"Error en create_group: {str(e)}")
+            return redirect('users')
+    else:
+        return redirect('users')
