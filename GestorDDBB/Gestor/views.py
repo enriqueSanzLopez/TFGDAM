@@ -337,7 +337,27 @@ def delete_permission(request):
             permission.delete()
             return redirect('users')
         except Exception as e:
-            logger.error(f"Error en create_permission: {str(e)}")
+            logger.error(f"Error en delete_permission: {str(e)}")
+            return redirect('users')
+    else:
+        return redirect('users')
+
+def delete_group(request):
+    if request.method == 'POST':
+        try:
+            permissions = get_permissions_from_user(request.session)
+            acceso = False
+            for permiso in permissions:
+                if permiso.value == 'usuarios':
+                    acceso = True
+                    break
+            if acceso != True:
+                return redirect('inicio')
+            group=Group.objects.get(id=request.POST.get('group_borrar_id'))
+            group.delete()
+            return redirect('users')
+        except Exception as e:
+            logger.error(f"Error en delete_group: {str(e)}")
             return redirect('users')
     else:
         return redirect('users')
