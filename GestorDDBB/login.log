@@ -5371,3 +5371,84 @@ C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\urls.py ch
 Watching for file changes with StatReloader
 C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\urls.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 31282
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 626
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+- Broken pipe from ('127.0.0.1', 55667)
+Error en create_group: duplicate key value violates unique constraint "Gestor_group_desc_group_04d400d4_uniq"
+DETAIL:  Key (desc_group)=(Pruebas) already exists.
+
+"POST /groups-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 33025
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /users/ HTTP/1.1" 200 33025
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 626
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 33025
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/user/index.css HTTP/1.1" 200 626
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+Error en create_group: "<Group: Group object (None)>" needs to have a value for field "id" before this many-to-many relationship can be used.
+"POST /groups-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 33025
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 33025
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/index.css HTTP/1.1" 200 626
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"POST /groups-edit/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 34771
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877

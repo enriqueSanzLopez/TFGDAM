@@ -377,11 +377,10 @@ def create_group(request):
                 group=Group(
                     desc_group=request.POST.get('group_name')
                 )
-                group.save()
             else:
                 group=Group.objects.get(id=request.POST.get('group_id'))
                 group.desc_group=request.POST.get('group_name')
-                group.save()
+            group.save()
             permission_ids = request.POST.getlist('permissions')
             group.permissions.clear()
             for perm_id in permission_ids:
