@@ -69,8 +69,8 @@
         </div>
         <div class="tab-pane fade" id="groups" role="tabpanel" aria-labelledby="groups-tab">
                 <div class="d-flex flex-row justify-content-end align-items-center acciones"><button
-                        class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#group-modal"
-                        id="create-group" type="button">Crear grupo</button></div>
+                                class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#group-modal"
+                                id="create-group" type="button">Crear grupo</button></div>
                 <div class="table-responsive-lg">
                         <table class="table table-striped">
                                 <thead>
@@ -81,22 +81,23 @@
                                 <tbody>
                                         {% for group in groups %}
                                         <tr>
-                                                <td>{{ group.desc_group }} <input type="hidden" name="group-name-{{ group.id }}"
-                                                        id="group-name-{{ group.id }}"
-                                                        value="{{ group.desc_group }}">
-                                                        <input type="hidden" name="permissions-{{ group.id }}" id="permissions-{{ group.id }}" value="{% for perm in group.permissions.all %}{% if not forloop.first %},{% endif %}{{ perm.id }}{% endfor %}">
+                                                <td>{{ group.desc_group }} <input type="hidden"
+                                                                name="group-name-{{ group.id }}"
+                                                                id="group-name-{{ group.id }}"
+                                                                value="{{ group.desc_group }}">
+                                                        <input type="hidden" name="permissions-{{ group.id }}"
+                                                                id="permissions-{{ group.id }}"
+                                                                value="{% for perm in group.permissions.all %}{% if not forloop.first %},{% endif %}{{ perm.id }}{% endfor %}">
                                                 </td>
                                                 <td><button type="button" class="btn btn-primary btn-lg editar-group"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#group-modal"
+                                                                data-bs-toggle="modal" data-bs-target="#group-modal"
                                                                 id="editar-group-{{ group.id }}"><i
                                                                         class="fa fa-pencil"></i></button><input
                                                                 type="hidden" name="group-id-{{ group.id }}"
-                                                                id="group-id-{{ group.id }}"
-                                                                value="{{ group.id }}"></td>
+                                                                id="group-id-{{ group.id }}" value="{{ group.id }}">
+                                                </td>
                                                 <td><button type="button" class="btn btn-danger btn-lg borrar-group"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#delete-group"
+                                                                data-bs-toggle="modal" data-bs-target="#delete-group"
                                                                 id="borrar-group-{{ group.id }}"><i
                                                                         class="fa-solid fa-trash"></i></button></td>
                                         </tr>
@@ -133,7 +134,8 @@
                                                                 name="permission-order-{{ permission.id }}"
                                                                 id="permission-order-{{ permission.id }}"
                                                                 value="{{ permission.order }}"></td>
-                                                <td><button type="button" class="btn btn-primary btn-lg editar-permission"
+                                                <td><button type="button"
+                                                                class="btn btn-primary btn-lg editar-permission"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#permission-modal"
                                                                 id="editar-permission-{{ permission.id }}"><i
@@ -141,7 +143,8 @@
                                                                 type="hidden" name="permission-id-{{ permission.id }}"
                                                                 id="permission-id-{{ permission.id }}"
                                                                 value="{{ permission.id }}"></td>
-                                                <td><button type="button" class="btn btn-danger btn-lg borrar-permission"
+                                                <td><button type="button"
+                                                                class="btn btn-danger btn-lg borrar-permission"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#delete-permission"
                                                                 id="borrar-permission-{{ permission.id }}"><i
