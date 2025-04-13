@@ -83,7 +83,9 @@
                                         <tr>
                                                 <td>{{ group.desc_group }} <input type="hidden" name="group-name-{{ group.id }}"
                                                         id="group-name-{{ group.id }}"
-                                                        value="{{ group.desc_group }}"></td>
+                                                        value="{{ group.desc_group }}">
+                                                        <input type="hidden" name="permissions-{{ group.id }}" id="permissions-{{ group.id }}" value="{% for perm in group.permissions.all %}{% if not forloop.first %},{% endif %}{{ perm.id }}{% endfor %}">
+                                                </td>
                                                 <td><button type="button" class="btn btn-primary btn-lg editar-group"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#group-modal"
