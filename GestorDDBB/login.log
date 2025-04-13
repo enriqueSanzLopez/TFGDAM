@@ -5505,3 +5505,18 @@ Watching for file changes with StatReloader
 "GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
 Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2042
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/user/login.css HTTP/1.1" 304 0
+"GET /static/img/Icono.jpg HTTP/1.1" 304 0
+2025-04-13 19:20:12 - Inicio de sesión: 6
+"POST /login/ HTTP/1.1" 302 0
+"GET /main/ HTTP/1.1" 200 2048
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /users/ HTTP/1.1" 200 39228
+"GET /static/css/user/index.css HTTP/1.1" 304 0
+"GET /static/scripts/users/index.js HTTP/1.1" 304 0
+"GET /static/scripts/users/permissions.js HTTP/1.1" 304 0
+"GET /static/scripts/users/groups.js HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
