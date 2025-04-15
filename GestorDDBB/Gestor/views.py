@@ -9,6 +9,15 @@ from django.shortcuts import get_object_or_404
 import base64
 from django.core.files.uploadedfile import InMemoryUploadedFile
 
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_protect
+from django.middleware.csrf import get_token
+from django.utils.decorators import method_decorator
+from django.db import connections, OperationalError
+from django.db import models
+import json
+from django.views import View
+
 logger = logging.getLogger('django')
 
 # Create your views here.
@@ -395,3 +404,32 @@ def create_group(request):
             return redirect('users')
     else:
         return redirect('users')
+    
+#Metodos de API
+
+@method_decorator(csrf_protect, name='dispatch')
+class TestConnectionView(View):
+    def post(self, request):
+        try:
+            #Conseguir los datos enviados por POST
+            body = json.loads(request.body.decode('utf-8'))
+            #Configurar la conexion
+            db_config = {
+                'ENGINE': body.get('db_engine'),
+                'NAME': body.get('db_name'),
+                'USER': body.get('user'),
+                'PASSWORD': body.get('password'),
+                'HOST': body.get('host'),
+                'PORT': body.get('port'),
+            }
+            connections.databases['temp_db'] = db_config
+            temp_connection = connections['temp_db']
+            #Intentar conectar
+            temp_connection.cursor()
+            return JsonResponse({'status': 'success', 'message': 'Conexión exitosa'})
+        except OperationalError as e:
+            return JsonResponse({'status': 'error', 'message': str(e)})
+        finally:
+            if 'temp_db' in connections.databases:
+                connections['temp_db'].close()
+                del connections.databases['temp_db']
