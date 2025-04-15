@@ -11,12 +11,8 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_protect
-from django.middleware.csrf import get_token
-from django.utils.decorators import method_decorator
 from django.db import connections, OperationalError
-from django.db import models
 import json
-from django.views import View
 
 logger = logging.getLogger('django')
 
@@ -41,6 +37,7 @@ def login_view(request):
     else:
         return render(request, 'login.html')
 
+@csrf_protect
 def login_controller(request):
     #Comprueba el metodo de envio
     if request.method == 'POST':
@@ -155,7 +152,8 @@ def customize_view(request):
             },})
     else:
         return redirect('inicio')
-    
+
+@csrf_protect    
 def customize_process(request):
     if request.method == 'POST':
         try:
@@ -216,6 +214,7 @@ def customize_process(request):
     else:
         return redirect('inicio')
 
+@csrf_protect
 def create_user(request):
     if request.method == 'POST':
         try:
@@ -253,6 +252,7 @@ def create_user(request):
     else:
         return redirect('users')
 
+@csrf_protect
 def change_password(request):
     if request.method == 'POST':
         try:
@@ -276,6 +276,7 @@ def change_password(request):
     else:
         return redirect('users')
 
+@csrf_protect
 def delete_user(request):
     if request.method == 'POST':
         try:
@@ -297,6 +298,7 @@ def delete_user(request):
     else:
         return redirect('users')
 
+@csrf_protect
 def create_permission(request):
     if request.method == 'POST':
         try:
@@ -331,6 +333,7 @@ def create_permission(request):
     else:
         return redirect('users')
 
+@csrf_protect
 def delete_permission(request):
     if request.method == 'POST':
         try:
@@ -351,6 +354,7 @@ def delete_permission(request):
     else:
         return redirect('users')
 
+@csrf_protect
 def delete_group(request):
     if request.method == 'POST':
         try:
@@ -371,6 +375,7 @@ def delete_group(request):
     else:
         return redirect('users')
 
+@csrf_protect
 def create_group(request):
     if request.method == 'POST':
         try:
@@ -407,13 +412,11 @@ def create_group(request):
     
 #Metodos de API
 
-@method_decorator(csrf_protect, name='dispatch')
-class TestConnectionView(View):
-    def post(self, request):
+@csrf_protect
+def test_connection(request):
+    if request.method == 'POST':
         try:
-            #Conseguir los datos enviados por POST
             body = json.loads(request.body.decode('utf-8'))
-            #Configurar la conexion
             db_config = {
                 'ENGINE': body.get('db_engine'),
                 'NAME': body.get('db_name'),
@@ -424,7 +427,6 @@ class TestConnectionView(View):
             }
             connections.databases['temp_db'] = db_config
             temp_connection = connections['temp_db']
-            #Intentar conectar
             temp_connection.cursor()
             return JsonResponse({'status': 'success', 'message': 'Conexión exitosa'})
         except OperationalError as e:
@@ -433,3 +435,5 @@ class TestConnectionView(View):
             if 'temp_db' in connections.databases:
                 connections['temp_db'].close()
                 del connections.databases['temp_db']
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
