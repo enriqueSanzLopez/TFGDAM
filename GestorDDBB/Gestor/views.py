@@ -67,7 +67,7 @@ def logout_view(request):
 def main_view(request):
     if 'user_id' in request.session:
         permissions = get_permissions_from_user(request.session)
-        return render(request, 'main.html', {'permissions': permissions})
+        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id')})
     else:
         return redirect('inicio')
 
@@ -430,7 +430,7 @@ def test_connection(request):
             temp_connection = connections['temp_db']
             temp_connection.cursor()
             connection_instance = Connection(
-                user=request.user,
+                user=request.get('apid'),
                 db_type=body.get('db_engine'),
                 host=body.get('host'),
                 db_name=body.get('db_name'),

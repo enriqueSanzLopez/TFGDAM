@@ -3,6 +3,7 @@ from django.contrib.auth.hashers import make_password, check_password
 from django.core.validators import MinValueValidator, MaxValueValidator
 import uuid
 from cryptography.fernet import Fernet
+from datetime import datetime
 
 # Create your models here.
 #Modelo para estilos personalizados en la aplicacion
@@ -82,7 +83,7 @@ class Connection(models.Model):
     def save(self, *args, **kwargs):
         # Generar un token único si no existe
         if not self.token:
-            self.token = str(self.user.id)+str(uuid.uuid4())
+            self.token = str(self.user.id)+str(uuid.uuid4())+str(datetime.now())
         # Encriptar los datos sensibles antes de guardarlos
         self.host = cipher.encrypt(self.host.encode()).decode()
         self.db_name = cipher.encrypt(self.db_name.encode()).decode()
