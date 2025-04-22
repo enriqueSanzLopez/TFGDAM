@@ -4,8 +4,11 @@
 
 {% block importaciones %}
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
+<script src="/static/jquery.min.js"></script>
+<script src="/static/vue.global.js"></script>
 {% endblock %}
 
 {% block content %}
-<h1>Pantalla en contrucción...</h1>
+<div id="app"></div>
+<script src="/static/scripts/main/main.js" type="module"></script>
 {% endblock %}
