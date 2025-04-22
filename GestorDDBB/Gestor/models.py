@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.hashers import make_password, check_password
 from django.core.validators import MinValueValidator, MaxValueValidator
+import uuid
+from cryptography.fernet import Fernet
 
 # Create your models here.
 #Modelo para estilos personalizados en la aplicacion
@@ -64,12 +66,37 @@ class Value(models.Model):
     updated_at=models.DateTimeField(null=False, blank=False, auto_now=True)
 
 #Modelo de conexiones para usuario
+ENCRYPTION_KEY = Fernet.generate_key()
+cipher = Fernet(ENCRYPTION_KEY)
 class Connection(models.Model):
+    token=models.CharField(max_length=50, null=False, blank=False, unique=True)
     db_type = models.CharField(max_length=20, null=False, blank=False)
-    host=models.TextField(null=False, blank=False, unique=True)
+    host=models.TextField(null=False, blank=False)
+    table=models.TextField(null=False, blank=False, default="abcd")
     port = models.IntegerField(null=False, blank=False, validators=[MinValueValidator(0), MaxValueValidator(65535)])
-    name=models.TextField(null=False, blank=False, unique=True)
     user=models.ForeignKey(User, on_delete=models.CASCADE, related_name='connections')
+    name=models.TextField(null=False, blank=False)
+    password=models.TextField(null=False, blank=False, default="1234")
     created_at=models.DateTimeField(null=False, blank=False, auto_now_add=True)
     updated_at=models.DateTimeField(null=False, blank=False, auto_now=True)
+    def save(self, *args, **kwargs):
+        # Generar un token único si no existe
+        if not self.token:
+            self.token = str(uuid.uuid4())
+        # Encriptar los datos sensibles antes de guardarlos
+        self.host = cipher.encrypt(self.host.encode()).decode()
+        self.table = cipher.encrypt(self.table.encode()).decode()
+        self.db_type = cipher.encrypt(self.db_type.encode()).decode()
+        self.name = cipher.encrypt(self.name.encode()).decode()
+        self.password = cipher.encrypt(self.password.encode()).decode()
+        super().save(*args, **kwargs)
+    def decrypt_data(self):
+        # Desencriptar los datos sensibles
+        return {
+            "host": cipher.decrypt(self.host.encode()).decode(),
+            "table": cipher.decrypt(self.table.encode()).decode(),
+            "db_type": cipher.decrypt(self.db_type.encode()).decode(),
+            "name": cipher.decrypt(self.name.encode()).decode(),
+            "password": cipher.decrypt(self.password.encode()).decode(),
+        }
 

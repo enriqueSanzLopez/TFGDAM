@@ -5974,3 +5974,68 @@ Not Found: /favicon.ico
 "GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
 "GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
 "GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /main/ HTTP/1.1" 200 2191
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/main.css HTTP/1.1" 200 413
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/vue.global.js HTTP/1.1" 200 562700
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 1314
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /main/ HTTP/1.1" 200 2191
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/main.css HTTP/1.1" 200 413
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/vue.global.js HTTP/1.1" 200 562700
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 2182
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /main/ HTTP/1.1" 200 2191
+"GET /static/css/style.css HTTP/1.1" 200 523
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/css/main.css HTTP/1.1" 200 556
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/vue.global.js HTTP/1.1" 200 562700
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 2658
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader

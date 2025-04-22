@@ -28,3 +28,15 @@ main,
 .main-conexiones button{
     margin-left: .25em;
 }
+
+.modal form>* {
+    margin-top: .25em;
+}
+
+.modal form>div {
+    width: 100%;
+}
+
+.modal form>div>button{
+    margin-left: .25em;
+}
