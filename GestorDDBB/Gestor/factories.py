@@ -1,5 +1,5 @@
 import factory
-from Gestor.models import Group, User, Permission
+from Gestor.models import Group, User, Permission, Value, Enumerate
 from django.contrib.auth.hashers import make_password
 
 class GroupFactory(factory.django.DjangoModelFactory):
@@ -22,5 +22,14 @@ class PermissionFactory(factory.django.DjangoModelFactory):
         model=Permission
     name=factory.Faker('user_name')
 
-# administradores_group = GroupFactory(desc_group="administradores")
-# administrador_user=UserFactory(name='admin', email='admin@admin.com', password=make_password('1234'), real_name='Administrador', group=administradores_group)
+class EnumerateFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model=Enumerate
+    name=factory.Faker('word')
+
+class ValueFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model=Value
+    placeholder=factory.Faker('word')
+    value=factory.Faker('word')
+    order = factory.Faker('random_int', min=1, max=1000)

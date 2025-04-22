@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from Gestor.factories import GroupFactory, UserFactory, PermissionFactory
+from Gestor.factories import GroupFactory, UserFactory, PermissionFactory, EnumerateFactory, ValueFactory
 from django.contrib.auth.hashers import make_password
 
 class Command(BaseCommand):
@@ -43,3 +43,44 @@ class Command(BaseCommand):
             group=administradores_group
         )
         self.stdout.write(f"Usuario creado: {administrador_user.name}, Grupo: {administrador_user.group.desc_group}")
+
+        #Crear enumerado de tipos de conexion
+        connection_enumerate=EnumerateFactory(
+            name='Tipos de Conexión'
+        )
+
+        postgre_enumerate_value=ValueFactory(
+            placeholder='PostgreSQL',
+            value='django.db.backends.postgresql',
+            order=1,
+            enumerate=connection_enumerate
+        )
+
+        mysql_enumerate_value=ValueFactory(
+            placeholder='MySQL',
+            value='django.db.backends.mysql',
+            order=2,
+            enumerate=connection_enumerate
+        )
+
+        sqlite3_enumerate_value=ValueFactory(
+            placeholder='SQLite',
+            value='django.db.backends.sqlite3',
+            order=3,
+            enumerate=connection_enumerate
+        )
+
+        sql_enumerate_value=ValueFactory(
+            placeholder='SQL',
+            value='mssql',
+            order=4,
+            enumerate=connection_enumerate
+        )
+
+        django_enumerate_value=ValueFactory(
+            placeholder='Django',
+            value='djongo',
+            order=5,
+            enumerate=connection_enumerate
+        )
+        self.stdout.write(f"Enumerado de conexiones creado creado: {connection_enumerate.name}")
