@@ -17,36 +17,6 @@ export const Conexiones = {
     <ul>
         <li v-for="conexion in conexiones" :key="conexion.id">{{conexion.host}} - {{conexion.db_name}}</li>
     </ul>
-    <div class="modal fade" id="conexion-modal" tabindex="-1" aria-labelledby="conexion-modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h3 id="create-conexion-modal-title">Conectar</h3>
-                    <form>
-                        <input type="hidden" name="conexion-id" id="conexion-id" value="new">
-                        <input type="text" id="conexion-host" name="conexion-host" class="form-control"
-                            placeholder="Host...">
-                        <select id="conexion-tipo" name="conexion-tipo" class="form-select form-select-lg"></select>
-                        <input type="text" id="conexion-database" name="conexion-database" class="form-control"
-                            placeholder="Base de datos...">
-                        <input type="number" id="conexion-port" name="conexion-port" class="form-control"
-                            placeholder="Puerto...">
-                        <input type="text" id="conexion-name" name="conexion-name" class="form-control"
-                            placeholder="Usuario...">
-                        <input type="password" id="conexion-password" name="conexion-passsword" class="form-control"
-                            placeholder="Contraseña...">
-                        <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                            <button type="button" class="btn btn-primary btn-lg" @click="addConnection()">Guardar conexión</button>
-                            <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Cancelar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     `,
     data() {
         return {

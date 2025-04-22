@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import check_password
-from Gestor.models import User, Group, Permission, CustomStyle, Connection
+from Gestor.models import User, Group, Permission, CustomStyle, Connection, Enumerate, Value
 import logging
 from datetime import datetime
 from django.shortcuts import get_object_or_404
@@ -67,7 +67,9 @@ def logout_view(request):
 def main_view(request):
     if 'user_id' in request.session:
         permissions = get_permissions_from_user(request.session)
-        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id')})
+        connectionsName=Enumerate.objects.get(name="Tipos de Conexión")
+        connections=Value.objects.filter(enumerate=connectionsName).order_by('order')
+        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id'), 'connections': connections})
     else:
         return redirect('inicio')
 
