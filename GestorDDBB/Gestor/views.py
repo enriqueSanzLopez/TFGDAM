@@ -12,6 +12,7 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_protect
 from django.db import connections, OperationalError
+from django.middleware.csrf import get_token
 import json
 
 logger = logging.getLogger('django')
@@ -444,10 +445,26 @@ def test_connection(request):
                 'token': connection_instance.token
             })
         except OperationalError as e:
-            return JsonResponse({'status': 'error', 'message': str(e)})
+            return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+                })
         finally:
             if 'temp_db' in connections.databases:
                 connections['temp_db'].close()
                 del connections.databases['temp_db']
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+
+def get_csrf(request):
+    try:
+        return JsonResponse({
+                'status': 'success',
+                'message': 'Token recuperado',
+                'token': get_token(request)
+            })
+    except Exception as e:
+        return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+                })
