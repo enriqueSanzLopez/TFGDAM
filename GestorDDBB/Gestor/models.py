@@ -69,7 +69,7 @@ class Value(models.Model):
 ENCRYPTION_KEY = Fernet.generate_key()
 cipher = Fernet(ENCRYPTION_KEY)
 class Connection(models.Model):
-    token=models.CharField(max_length=50, null=False, blank=False, unique=True)
+    token=models.CharField(max_length=50, null=False, blank=False, unique=True, default=str(uuid.uuid4()))
     db_type = models.CharField(max_length=20, null=False, blank=False)
     host=models.TextField(null=False, blank=False)
     table=models.TextField(null=False, blank=False, default="abcd")
@@ -82,7 +82,7 @@ class Connection(models.Model):
     def save(self, *args, **kwargs):
         # Generar un token único si no existe
         if not self.token:
-            self.token = str(uuid.uuid4())
+            self.token = str(self.user.id)+str(uuid.uuid4())
         # Encriptar los datos sensibles antes de guardarlos
         self.host = cipher.encrypt(self.host.encode()).decode()
         self.table = cipher.encrypt(self.table.encode()).decode()
