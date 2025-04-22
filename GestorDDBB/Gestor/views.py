@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import check_password
-from Gestor.models import User, Group, Permission, CustomStyle
+from Gestor.models import User, Group, Permission, CustomStyle, Connection
 import logging
 from datetime import datetime
 from django.shortcuts import get_object_or_404
@@ -428,7 +428,21 @@ def test_connection(request):
             connections.databases['temp_db'] = db_config
             temp_connection = connections['temp_db']
             temp_connection.cursor()
-            return JsonResponse({'status': 'success', 'message': 'Conexión exitosa'})
+            connection_instance = Connection(
+                user=request.user,
+                db_type=body.get('db_engine'),
+                host=body.get('host'),
+                db_name=body.get('db_name'),
+                port=body.get('port'),
+                name=body.get('user'),
+                password=body.get('password')
+            )
+            connection_instance.save()
+            return JsonResponse({
+                'status': 'success',
+                'message': 'Conexión exitosa',
+                'token': connection_instance.token
+            })
         except OperationalError as e:
             return JsonResponse({'status': 'error', 'message': str(e)})
         finally:

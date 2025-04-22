@@ -94,7 +94,7 @@ class Connection(models.Model):
         # Desencriptar los datos sensibles
         return {
             "host": cipher.decrypt(self.host.encode()).decode(),
-            "table": cipher.decrypt(self.table.encode()).decode(),
+            "db_name": cipher.decrypt(self.db_name.encode()).decode(),
             "db_type": cipher.decrypt(self.db_type.encode()).decode(),
             "name": cipher.decrypt(self.name.encode()).decode(),
             "password": cipher.decrypt(self.password.encode()).decode(),
