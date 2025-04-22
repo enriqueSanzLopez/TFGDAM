@@ -72,6 +72,7 @@ class Connection(models.Model):
     token=models.CharField(max_length=50, null=False, blank=False, unique=True, default=str(uuid.uuid4()))
     db_type = models.CharField(max_length=20, null=False, blank=False)
     host=models.TextField(null=False, blank=False)
+    db_name=models.TextField(null=False, blank=False, default="abcd")
     port = models.IntegerField(null=False, blank=False, validators=[MinValueValidator(0), MaxValueValidator(65535)])
     user=models.ForeignKey(User, on_delete=models.CASCADE, related_name='connections')
     name=models.TextField(null=False, blank=False)
@@ -84,6 +85,7 @@ class Connection(models.Model):
             self.token = str(self.user.id)+str(uuid.uuid4())
         # Encriptar los datos sensibles antes de guardarlos
         self.host = cipher.encrypt(self.host.encode()).decode()
+        self.db_name = cipher.encrypt(self.db_name.encode()).decode()
         self.db_type = cipher.encrypt(self.db_type.encode()).decode()
         self.name = cipher.encrypt(self.name.encode()).decode()
         self.password = cipher.encrypt(self.password.encode()).decode()
