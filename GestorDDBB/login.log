@@ -6355,3 +6355,4 @@ Watching for file changes with StatReloader
 "GET /static/scripts/main/conexiones.js HTTP/1.1" 200 3798
 "GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
 "GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+Watching for file changes with StatReloader
