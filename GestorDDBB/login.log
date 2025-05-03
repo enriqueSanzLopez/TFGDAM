@@ -6441,3 +6441,891 @@ Watching for file changes with StatReloader
 "GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
 "GET /static/scripts/main/conexiones.js HTTP/1.1" 200 3798
 "GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /customize/ HTTP/1.1" 200 4156
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/customize.css HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /customize/ HTTP/1.1" 200 4156
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/css/customize.css HTTP/1.1" 200 440
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2042
+"GET /static/css/user/login.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2042
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/img/Icono.jpg HTTP/1.1" 304 0
+"GET /static/css/user/login.css HTTP/1.1" 304 0
+2025-05-03 18:45:08 - Inicio de sesión: 6
+"POST /login/ HTTP/1.1" 302 0
+"GET /main/ HTTP/1.1" 200 4745
+"GET /static/css/main.css HTTP/1.1" 304 0
+"GET /static/jquery.min.js HTTP/1.1" 304 0
+"GET /static/vue.global.prod.js HTTP/1.1" 304 0
+"GET /static/scripts/main/main.js HTTP/1.1" 304 0
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 304 0
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /main/ HTTP/1.1" 200 4740
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/main.css HTTP/1.1" 200 571
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/vue.global.prod.js HTTP/1.1" 200 114577
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 4019
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /api/csrf HTTP/1.1" 301 0
+"GET /api/csrf/ HTTP/1.1" 200 129
+Internal Server Error: /api/test-connection
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/test-connection/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /api/test-connection HTTP/1.1" 500 72756
+"GET /main/ HTTP/1.1" 200 4740
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/css/main.css HTTP/1.1" 200 571
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/vue.global.prod.js HTTP/1.1" 200 114577
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 4021
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /api/csrf/ HTTP/1.1" 200 129
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 433, in test_connection
+    temp_connection.cursor()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 295, in _cursor
+    self.close_if_health_check_failed()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\postgresql\base.py", line 498, in close_if_health_check_failed
+    if self.pool:
+       ^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\postgresql\base.py", line 186, in pool
+    pool_options = self.settings_dict["OPTIONS"].get("pool")
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'OPTIONS'
+"POST /api/test-connection/ HTTP/1.1" 500 99317
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /main/ HTTP/1.1" 200 4740
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/css/main.css HTTP/1.1" 200 571
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/vue.global.prod.js HTTP/1.1" 200 114577
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 4021
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /api/csrf/ HTTP/1.1" 200 129
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 432, in test_connection
+    with connections.databases.setdefault('temp_db', db_config):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'dict' object does not support the context manager protocol
+"POST /api/test-connection/ HTTP/1.1" 500 79781
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 435, in test_connection
+    with temp_connection.cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 295, in _cursor
+    self.close_if_health_check_failed()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\postgresql\base.py", line 498, in close_if_health_check_failed
+    if self.pool:
+       ^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\postgresql\base.py", line 186, in pool
+    pool_options = self.settings_dict["OPTIONS"].get("pool")
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'OPTIONS'
+"POST /api/test-connection/ HTTP/1.1" 500 99283
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 435, in test_connection
+    with temp_connection.cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 295, in _cursor
+    self.close_if_health_check_failed()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\postgresql\base.py", line 498, in close_if_health_check_failed
+    if self.pool:
+       ^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\postgresql\base.py", line 186, in pool
+    pool_options = self.settings_dict["OPTIONS"].get("pool")
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'OPTIONS'
+"POST /api/test-connection/ HTTP/1.1" 500 99283
+"GET /main/ HTTP/1.1" 200 4740
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/css/main.css HTTP/1.1" 200 571
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/vue.global.prod.js HTTP/1.1" 200 114577
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 4021
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /api/csrf/ HTTP/1.1" 200 129
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 435, in test_connection
+    with temp_connection.cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 295, in _cursor
+    self.close_if_health_check_failed()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\postgresql\base.py", line 498, in close_if_health_check_failed
+    if self.pool:
+       ^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\postgresql\base.py", line 186, in pool
+    pool_options = self.settings_dict["OPTIONS"].get("pool")
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'OPTIONS'
+"POST /api/test-connection/ HTTP/1.1" 500 99283
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /main/ HTTP/1.1" 200 4740
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/vue.global.prod.js HTTP/1.1" 200 114577
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/main.css HTTP/1.1" 200 571
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 4021
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /api/csrf/ HTTP/1.1" 200 129
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 435, in test_connection
+    db_wrapper = BaseDatabaseWrapper(db_config, DEFAULT_DB_ALIAS)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 114, in __init__
+    self.client = self.client_class(self)
+                  ~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: 'NoneType' object is not callable
+"POST /api/test-connection/ HTTP/1.1" 500 84158
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 434, in test_connection
+    db_wrapper = BaseDatabaseWrapper(db_config, DEFAULT_DB_ALIAS)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 114, in __init__
+    self.client = self.client_class(self)
+                  ~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: 'NoneType' object is not callable
+"POST /api/test-connection/ HTTP/1.1" 500 84158
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:19:45 - Motor: django.db.backends.postgresql
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 436, in test_connection
+    db_wrapper = BaseDatabaseWrapper(db_config, DEFAULT_DB_ALIAS)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 114, in __init__
+    self.client = self.client_class(self)
+                  ~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: 'NoneType' object is not callable
+"POST /api/test-connection/ HTTP/1.1" 500 84349
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:23:56 - Motor: django.db.backends.postgresql
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 436, in test_connection
+    db_wrapper = BaseDatabaseWrapper(db_config, DEFAULT_DB_ALIAS)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 114, in __init__
+    self.client = self.client_class(self)
+                  ~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: 'NoneType' object is not callable
+"POST /api/test-connection/ HTTP/1.1" 500 84349
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:25:00 - Motor: django.db.backends.postgresql
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 438, in test_connection
+    db_wrapper = BaseDatabaseWrapper(db_config, DEFAULT_DB_ALIAS)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 114, in __init__
+    self.client = self.client_class(self)
+                  ~~~~~~~~~~~~~~~~~^^^^^^
+TypeError: 'NoneType' object is not callable
+"POST /api/test-connection/ HTTP/1.1" 500 84349
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:28:09 - Motor: django.db.backends.postgresql
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 440, in test_connection
+    with temp_connection.cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 240, in connect
+    self.check_settings()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 264, in check_settings
+    if self.settings_dict["TIME_ZONE"] is not None and not settings.USE_TZ:
+       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'TIME_ZONE'
+"POST /api/test-connection/ HTTP/1.1" 500 112029
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:33:34 - Motor: django.db.backends.postgresql
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 443, in test_connection
+    with temp_connection.cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 247, in connect
+    self.health_check_enabled = self.settings_dict["CONN_HEALTH_CHECKS"]
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'CONN_HEALTH_CHECKS'
+"POST /api/test-connection/ HTTP/1.1" 500 108512
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:35:08 - Motor: django.db.backends.postgresql
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 444, in test_connection
+    with temp_connection.cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 248, in connect
+    max_age = self.settings_dict["CONN_MAX_AGE"]
+              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'CONN_MAX_AGE'
+"POST /api/test-connection/ HTTP/1.1" 500 108452
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:36:04 - Motor: django.db.backends.postgresql
+"POST /api/test-connection/ HTTP/1.1" 200 152
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:39:27 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:39:27 - DB_NAME: test
+2025-05-03 19:39:27 - USER: 6
+2025-05-03 19:39:27 - PASSWORD: 1234
+2025-05-03 19:39:27 - HOST: localhost
+2025-05-03 19:39:27 - PORT: None
+"POST /api/test-connection/ HTTP/1.1" 200 152
+"GET /main/ HTTP/1.1" 200 4740
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/vue.global.prod.js HTTP/1.1" 200 114577
+"GET /static/jquery.min.js HTTP/1.1" 200 87533
+"GET /static/scripts/main/main.js HTTP/1.1" 200 662
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/main.css HTTP/1.1" 200 571
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/scripts/main/conexiones.js HTTP/1.1" 200 4021
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:40:23 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:40:23 - DB_NAME: test
+2025-05-03 19:40:23 - USER: 6
+2025-05-03 19:40:23 - PASSWORD: 1234
+2025-05-03 19:40:23 - HOST: localhost
+2025-05-03 19:40:23 - PORT: None
+"POST /api/test-connection/ HTTP/1.1" 200 152
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:40:49 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:40:49 - DB_NAME: test
+2025-05-03 19:40:49 - USER: 6
+2025-05-03 19:40:49 - PASSWORD: 1234
+2025-05-03 19:40:49 - HOST: localhost
+2025-05-03 19:40:49 - PORT: 5432
+"POST /api/test-connection/ HTTP/1.1" 200 152
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:45:04 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:45:04 - DB_NAME: test
+2025-05-03 19:45:04 - USER: admin
+2025-05-03 19:45:04 - PASSWORD: 1234
+2025-05-03 19:45:04 - HOST: localhost
+2025-05-03 19:45:04 - PORT: 5432
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 450, in test_connection
+    with temp_connection.cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\base\base.py", line 257, in connect
+    self.set_autocommit(self.settings_dict["AUTOCOMMIT"])
+                        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'AUTOCOMMIT'
+"POST /api/test-connection/ HTTP/1.1" 500 108988
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:49:15 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:49:15 - DB_NAME: test
+2025-05-03 19:49:15 - USER: admin
+2025-05-03 19:49:15 - PASSWORD: 1234
+2025-05-03 19:49:15 - HOST: localhost
+2025-05-03 19:49:15 - PORT: 5432
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 455, in test_connection
+    user=request.get('user'),
+         ^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+"POST /api/test-connection/ HTTP/1.1" 500 80449
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:50:17 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:50:17 - DB_NAME: test
+2025-05-03 19:50:17 - USER: admin
+2025-05-03 19:50:17 - PASSWORD: 1234
+2025-05-03 19:50:17 - HOST: localhost
+2025-05-03 19:50:17 - PORT: 5432
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 454, in test_connection
+    connection_instance = Connection(
+        user=body.get('user'),
+    ...<5 lines>...
+        password=body.get('password')
+    )
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 545, in __init__
+    _setattr(self, field.name, rel_obj)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 288, in __set__
+    raise ValueError(
+    ...<7 lines>...
+    )
+ValueError: Cannot assign "'6'": "Connection.user" must be a "User" instance.
+"POST /api/test-connection/ HTTP/1.1" 500 91033
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:52:50 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:52:50 - DB_NAME: test
+2025-05-03 19:52:50 - USER: admin
+2025-05-03 19:52:50 - PASSWORD: 1234
+2025-05-03 19:52:50 - HOST: localhost
+2025-05-03 19:52:50 - PORT: 5432
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 454, in test_connection
+    user=User.objects.first(body.get('user'))
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: QuerySet.first() takes 1 positional argument but 2 were given
+"POST /api/test-connection/ HTTP/1.1" 500 84731
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:54:22 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:54:22 - DB_NAME: test
+2025-05-03 19:54:22 - USER: admin
+2025-05-03 19:54:22 - PASSWORD: 1234
+2025-05-03 19:54:22 - HOST: localhost
+2025-05-03 19:54:22 - PORT: 5432
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(20)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 464, in test_connection
+    connection_instance.save()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py", line 93, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.DataError: value too long for type character varying(20)
+
+"POST /api/test-connection/ HTTP/1.1" 500 165496
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 19:59:18 - ENGINE: django.db.backends.postgresql
+2025-05-03 19:59:18 - DB_NAME: test
+2025-05-03 19:59:18 - USER: admin
+2025-05-03 19:59:18 - PASSWORD: 1234
+2025-05-03 19:59:18 - HOST: localhost
+2025-05-03 19:59:18 - PORT: 5432
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(50)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 464, in test_connection
+    connection_instance.save()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py", line 93, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.DataError: value too long for type character varying(50)
+
+"POST /api/test-connection/ HTTP/1.1" 500 165496
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/csrf/ HTTP/1.1" 200 129
+2025-05-03 20:00:29 - ENGINE: django.db.backends.postgresql
+2025-05-03 20:00:29 - DB_NAME: test
+2025-05-03 20:00:29 - USER: admin
+2025-05-03 20:00:29 - PASSWORD: 1234
+2025-05-03 20:00:29 - HOST: localhost
+2025-05-03 20:00:29 - PORT: 5432
+"POST /api/test-connection/ HTTP/1.1" 200 106

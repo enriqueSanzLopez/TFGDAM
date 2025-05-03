@@ -27,10 +27,11 @@ export const Conexiones = {
     },
     methods: {
         async addConnection() {
+            console.log('Intenta incluir la conexion');
             this.conexionLoading = true;
             this.conexionError = false;
             $.ajax({
-                url: '/api/csrf',
+                url: '/api/csrf/',
                 type: 'GET',
                 success: function (response) {
                     if (response.status === 'success') {
@@ -46,23 +47,23 @@ export const Conexiones = {
                             port: document.getElementById('conexion-port').value
                         };
                         $.ajax({
-                            url: '/api/test-connection',
+                            url: '/api/test-connection/',
                             type: 'POST',
                             contentType: 'application/json',
                             data: JSON.stringify(data),
-                            beforeSend: function(xhr) {
+                            beforeSend: function (xhr) {
                                 xhr.setRequestHeader('X-CSRFToken', csrfToken);
                             },
-                            success: function(response) {
+                            success: function (response) {
                                 if (response.status === 'success') {
                                     console.log('Conexión exitosa. Token:', response.token);
                                     const nuevaConexion = new ConnectionData(response.token, data.host, data.db_name, data.name);
-                                    this.conexiones.push(nuevaConexion);
+                                    // this.conexiones.push(nuevaConexion);
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }
                             },
-                            error: function(xhr, status, error) {
+                            error: function (xhr, status, error) {
                                 console.error('Error durante la solicitud:', error);
                             }
                         });
@@ -77,5 +78,10 @@ export const Conexiones = {
                 }
             });
         }
+    },
+    mounted() {
+        document.getElementById('add-connection').addEventListener('click', () => {
+            this.addConnection();
+        });
     }
 };

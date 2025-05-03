@@ -11,9 +11,12 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_protect
-from django.db import connections, OperationalError
 from django.middleware.csrf import get_token
 import json
+from django.db.backends.base.base import BaseDatabaseWrapper
+from django.db import connections, OperationalError, DEFAULT_DB_ALIAS
+from django.conf import settings
+
 
 logger = logging.getLogger('django')
 
@@ -420,24 +423,42 @@ def test_connection(request):
     if request.method == 'POST':
         try:
             body = json.loads(request.body.decode('utf-8'))
+            current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            if not isinstance(body.get('db_engine'), str):
+                return JsonResponse({'status': 'error', 'message': 'ENGINE debe ser una cadena de texto'})
+            logger.info(f"{current_time} - ENGINE: {body.get('db_engine')}")
+            logger.info(f"{current_time} - DB_NAME: {body.get('db_name')}")
+            logger.info(f"{current_time} - USER: {body.get('name')}")
+            logger.info(f"{current_time} - PASSWORD: {body.get('password')}")
+            logger.info(f"{current_time} - HOST: {body.get('host')}")
+            logger.info(f"{current_time} - PORT: {body.get('port')}")
             db_config = {
-                'ENGINE': body.get('db_engine'),
+                'ENGINE': body.get('db_engine', '').strip().lower(),
                 'NAME': body.get('db_name'),
-                'USER': body.get('user'),
+                'USER': body.get('name'),
                 'PASSWORD': body.get('password'),
                 'HOST': body.get('host'),
                 'PORT': body.get('port'),
+                'OPTIONS': {},
+                'TIME_ZONE': settings.TIME_ZONE,
+                'CONN_HEALTH_CHECKS': True,
+                'CONN_MAX_AGE': 60,
+                'AUTOCOMMIT': True
             }
+            #Intentar hacer conexiones
             connections.databases['temp_db'] = db_config
             temp_connection = connections['temp_db']
-            temp_connection.cursor()
+            with temp_connection.cursor() as cursor:
+                cursor.execute('SELECT 1')
+            #Guardar la conexion
+            user = User.objects.filter(id=body.get('user')).first()
             connection_instance = Connection(
-                user=request.get('apid'),
+                user=user,
                 db_type=body.get('db_engine'),
                 host=body.get('host'),
                 db_name=body.get('db_name'),
                 port=body.get('port'),
-                name=body.get('user'),
+                name=body.get('name'),
                 password=body.get('password')
             )
             connection_instance.save()

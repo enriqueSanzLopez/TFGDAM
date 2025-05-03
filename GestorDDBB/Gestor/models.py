@@ -70,8 +70,8 @@ class Value(models.Model):
 ENCRYPTION_KEY = Fernet.generate_key()
 cipher = Fernet(ENCRYPTION_KEY)
 class Connection(models.Model):
-    token=models.CharField(max_length=50, null=False, blank=False, unique=True, default=str(uuid.uuid4()))
-    db_type = models.CharField(max_length=20, null=False, blank=False)
+    token=models.CharField(max_length=256, null=False, blank=False, unique=True, default=str(uuid.uuid4()))
+    db_type = models.CharField(max_length=256, null=False, blank=False)
     host=models.TextField(null=False, blank=False)
     db_name=models.TextField(null=False, blank=False, default="abcd")
     port = models.IntegerField(null=False, blank=False, validators=[MinValueValidator(0), MaxValueValidator(65535)])

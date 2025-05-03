@@ -89,7 +89,8 @@ DATABASES = {
         'USER': 'admin',
         'PASSWORD': '1234',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': '5432',
+        'OPTIONS': {}
     }
 }
 
@@ -118,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Madrid'
 USE_L10N = True
 
 USE_I18N = True
