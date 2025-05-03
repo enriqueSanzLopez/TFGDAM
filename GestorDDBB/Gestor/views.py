@@ -423,15 +423,8 @@ def test_connection(request):
     if request.method == 'POST':
         try:
             body = json.loads(request.body.decode('utf-8'))
-            current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             if not isinstance(body.get('db_engine'), str):
                 return JsonResponse({'status': 'error', 'message': 'ENGINE debe ser una cadena de texto'})
-            logger.info(f"{current_time} - ENGINE: {body.get('db_engine')}")
-            logger.info(f"{current_time} - DB_NAME: {body.get('db_name')}")
-            logger.info(f"{current_time} - USER: {body.get('name')}")
-            logger.info(f"{current_time} - PASSWORD: {body.get('password')}")
-            logger.info(f"{current_time} - HOST: {body.get('host')}")
-            logger.info(f"{current_time} - PORT: {body.get('port')}")
             db_config = {
                 'ENGINE': body.get('db_engine', '').strip().lower(),
                 'NAME': body.get('db_name'),
@@ -476,6 +469,27 @@ def test_connection(request):
             if 'temp_db' in connections.databases:
                 connections['temp_db'].close()
                 del connections.databases['temp_db']
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+
+@csrf_protect
+def list_connections(request):
+    if request.method=='POST':
+        try:
+            body = json.loads(request.body.decode('utf-8'))
+            user = User.objects.filter(id=body.get('user')).first()
+            connections = Connection.objects.filter(user=user.id)
+            decrypted_connections = [conn.get_connections_front() for conn in connections]
+            return JsonResponse({
+                'status': 'success',
+                'message': 'Conexión exitosa',
+                'conexiones': decrypted_connections
+            })
+        except Exception as e:
+            return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+                })
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
 

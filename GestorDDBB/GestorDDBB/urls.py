@@ -37,4 +37,5 @@ urlpatterns = [
     path('groups-edit/', views.create_group, name='groups-edit'),
     path('api/csrf/', views.get_csrf, name='api/csrf'),
     path('api/test-connection/', views.test_connection, name='api/test-connection'),
+    path('api/list-connections/', views.list_connections, name='api/list-connections'),
 ]

@@ -100,7 +100,7 @@ class Connection(models.Model):
             "name": cipher.decrypt(self.name.encode()).decode(),
             "password": cipher.decrypt(self.password.encode()).decode(),
         }
-    def get_connections_font(self):
+    def get_connections_front(self):
         connections = self.user.connections.all().values("id", "host", "db_name")
 
         # Desencriptar los valores de 'host' y 'name'
