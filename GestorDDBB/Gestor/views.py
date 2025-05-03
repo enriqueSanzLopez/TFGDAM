@@ -489,18 +489,13 @@ def test_connection(request):
 def list_connections(request):
     if request.method=='POST':
         try:
-            logger.info('Intentan recuperar las conexiones')
             body = json.loads(request.body.decode('utf-8'))
             user = User.objects.filter(id=body.get('user')).first()
-            logger.info(f'Usuario obtenido: {user}')
             connections = Connection.objects.filter(user=user)
             conexiones_serializadas = list(connections.values())
-            logger.info(f'Conexiones obtenidas: {connections}')
             decrypted_connections = [conn.get_connections_front() for conn in connections]
-            logger.info('Final')
             return JsonResponse({
                 'status': 'success',
-                'message': 'Conexión exitosa',
                 'conexiones': decrypted_connections
             })
         except Exception as e:
@@ -508,5 +503,26 @@ def list_connections(request):
                 'status': 'error',
                 'message': str(e)
                 })
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+
+def delete_connection(request):
+    if request.method=='POST':
+        try:
+            body = json.loads(request.body.decode('utf-8'))
+            user = User.objects.filter(id=body.get('user')).first()
+            connection=Connection.objects.filter(id=body.get('id')).filter(user=user).first()
+            if connection:
+                connection.delete()
+            return JsonResponse({
+                'status': 'success',
+                'message': 'Conexión borrada'
+            })
+        except Exception as e:
+            return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+                })
+
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
