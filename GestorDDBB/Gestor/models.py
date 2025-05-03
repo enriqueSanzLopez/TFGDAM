@@ -4,6 +4,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 import uuid
 from cryptography.fernet import Fernet
 from datetime import datetime
+from django.db import IntegrityError
 
 
 # Create your models here.
@@ -84,14 +85,19 @@ class Connection(models.Model):
     updated_at=models.DateTimeField(null=False, blank=False, auto_now=True)
     def save(self, *args, **kwargs):
         # Generar un token único si no existe
-        if not self.token:
-            self.token = str(self.user.id)+str(uuid.uuid4())+str(datetime.now())
+        if not self.token or Connection.objects.filter(token=self.token).exists():
+            self.token = str(uuid.uuid4())
         # Encriptar los datos sensibles antes de guardarlos
         self.host = cipher.encrypt(self.host.encode()).decode()
         self.db_name = cipher.encrypt(self.db_name.encode()).decode()
         self.db_type = cipher.encrypt(self.db_type.encode()).decode()
         self.name = cipher.encrypt(self.name.encode()).decode()
         self.password = cipher.encrypt(self.password.encode()).decode()
+        try:
+            super().save(*args, **kwargs)
+        except IntegrityError:
+            # Si ocurre un error, intenta generar otro token y guardar nuevamente
+            self.token = str(uuid.uuid4())
         super().save(*args, **kwargs)
     def decrypt_data(self):
         # Desencriptar los datos sensibles

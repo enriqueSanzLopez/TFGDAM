@@ -27,7 +27,7 @@ export const Conexiones = {
     },
     methods: {
         async addConnection() {
-            console.log('Intenta incluir la conexion');
+            const self=this;
             this.conexionLoading = true;
             this.conexionError = false;
             $.ajax({
@@ -55,7 +55,7 @@ export const Conexiones = {
                             },
                             success: function (response) {
                                 if (response.status === 'success') {
-                                    this.listarConexiones();
+                                    self.listarConexiones();
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }
@@ -76,6 +76,7 @@ export const Conexiones = {
             });
         },
         async listarConexiones(){
+            const self=this;
             $.ajax({
                 url: '/api/csrf/',
                 type: 'GET',
@@ -96,6 +97,7 @@ export const Conexiones = {
                             success: function (response) {
                                 if (response.status === 'success') {
                                     console.log('Resultados', response);
+                                    self.conexiones=response.conexiones
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }
