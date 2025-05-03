@@ -100,4 +100,35 @@ class Connection(models.Model):
             "name": cipher.decrypt(self.name.encode()).decode(),
             "password": cipher.decrypt(self.password.encode()).decode(),
         }
+    def get_connections_font(self):
+        connections = self.user.connections.all().values("id", "host", "db_name")
+
+        # Desencriptar los valores de 'host' y 'name'
+        decrypted_connections = []
+        for conn in connections:
+            decrypted_conn = {
+                "id": conn["id"],
+                "host": cipher.decrypt(conn["host"].encode()).decode(),
+                "db_name": cipher.decrypt(conn["db_name"].encode()).decode(),
+            }
+            decrypted_connections.append(decrypted_conn)
+
+        return decrypted_connections
+    def get_connections_back(self):
+        connections = self.user.connections.all().values("id", "host", "name", "db_type", "password", "db_name")
+
+        # Desencriptar los valores de 'host' y 'name'
+        decrypted_connections = []
+        for conn in connections:
+            decrypted_conn = {
+                "id": conn["id"],
+                "host": cipher.decrypt(conn["host"].encode()).decode(),
+                "name": cipher.decrypt(conn["name"].encode()).decode(),
+                "db_name": cipher.decrypt(conn["name"].encode()).decode(),
+                "db_type": cipher.decrypt(conn["name"].encode()).decode(),
+                "password": cipher.decrypt(conn["name"].encode()).decode(),
+            }
+            decrypted_connections.append(decrypted_conn)
+
+        return decrypted_connections
 

@@ -7329,3 +7329,13 @@ Watching for file changes with StatReloader
 2025-05-03 20:00:29 - HOST: localhost
 2025-05-03 20:00:29 - PORT: 5432
 "POST /api/test-connection/ HTTP/1.1" 200 106
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\models.py changed, reloading.
+Watching for file changes with StatReloader
