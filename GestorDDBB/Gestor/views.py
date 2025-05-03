@@ -417,6 +417,18 @@ def create_group(request):
         return redirect('users')
     
 #Metodos de API
+def get_csrf(request):
+    try:
+        return JsonResponse({
+                'status': 'success',
+                'message': 'Token recuperado',
+                'token': get_token(request)
+            })
+    except Exception as e:
+        return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+                })
 
 @csrf_protect
 def test_connection(request):
@@ -461,6 +473,7 @@ def test_connection(request):
                 'token': connection_instance.token
             })
         except OperationalError as e:
+            logger.info('Error: '+e)
             return JsonResponse({
                 'status': 'error',
                 'message': str(e)
@@ -476,10 +489,15 @@ def test_connection(request):
 def list_connections(request):
     if request.method=='POST':
         try:
+            logger.info('Intentan recuperar las conexiones')
             body = json.loads(request.body.decode('utf-8'))
             user = User.objects.filter(id=body.get('user')).first()
-            connections = Connection.objects.filter(user=user.id)
+            logger.info(f'Usuario obtenido: {user}')
+            connections = Connection.objects.filter(user=user)
+            conexiones_serializadas = list(connections.values())
+            logger.info(f'Conexiones obtenidas: {connections}')
             decrypted_connections = [conn.get_connections_front() for conn in connections]
+            logger.info('Final')
             return JsonResponse({
                 'status': 'success',
                 'message': 'Conexión exitosa',
@@ -492,16 +510,3 @@ def list_connections(request):
                 })
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
-
-def get_csrf(request):
-    try:
-        return JsonResponse({
-                'status': 'success',
-                'message': 'Token recuperado',
-                'token': get_token(request)
-            })
-    except Exception as e:
-        return JsonResponse({
-                'status': 'error',
-                'message': str(e)
-                })

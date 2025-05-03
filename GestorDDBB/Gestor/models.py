@@ -5,6 +5,7 @@ import uuid
 from cryptography.fernet import Fernet
 from datetime import datetime
 
+
 # Create your models here.
 #Modelo para estilos personalizados en la aplicacion
 class CustomStyle(models.Model):
@@ -67,7 +68,8 @@ class Value(models.Model):
     updated_at=models.DateTimeField(null=False, blank=False, auto_now=True)
 
 #Modelo de conexiones para usuario
-ENCRYPTION_KEY = Fernet.generate_key()
+# ENCRYPTION_KEY = Fernet.generate_key()
+ENCRYPTION_KEY = 'fPqzIn80Wrf_PF8O8uMCVpO5VkmndDhWxhc7-oGOiCE='
 cipher = Fernet(ENCRYPTION_KEY)
 class Connection(models.Model):
     token=models.CharField(max_length=256, null=False, blank=False, unique=True, default=str(uuid.uuid4()))
@@ -101,34 +103,19 @@ class Connection(models.Model):
             "password": cipher.decrypt(self.password.encode()).decode(),
         }
     def get_connections_front(self):
-        connections = self.user.connections.all().values("id", "host", "db_name")
-
-        # Desencriptar los valores de 'host' y 'name'
-        decrypted_connections = []
-        for conn in connections:
-            decrypted_conn = {
-                "id": conn["id"],
-                "host": cipher.decrypt(conn["host"].encode()).decode(),
-                "db_name": cipher.decrypt(conn["db_name"].encode()).decode(),
-            }
-            decrypted_connections.append(decrypted_conn)
-
-        return decrypted_connections
+        return {
+            "id": self.id,
+            "host": cipher.decrypt(self.host.encode()).decode(),
+            "db_name": cipher.decrypt(self.db_name.encode()).decode(),
+        }
     def get_connections_back(self):
         connections = self.user.connections.all().values("id", "host", "name", "db_type", "password", "db_name")
-
-        # Desencriptar los valores de 'host' y 'name'
-        decrypted_connections = []
-        for conn in connections:
-            decrypted_conn = {
-                "id": conn["id"],
-                "host": cipher.decrypt(conn["host"].encode()).decode(),
-                "name": cipher.decrypt(conn["name"].encode()).decode(),
-                "db_name": cipher.decrypt(conn["name"].encode()).decode(),
-                "db_type": cipher.decrypt(conn["name"].encode()).decode(),
-                "password": cipher.decrypt(conn["name"].encode()).decode(),
-            }
-            decrypted_connections.append(decrypted_conn)
-
-        return decrypted_connections
+        return {
+            "id": self.id,
+            "host": cipher.decrypt(self.host.encode()).decode(),
+            "db_name": cipher.decrypt(self.db_name.encode()).decode(),
+            "name": cipher.decrypt(self.name.encode()).decode(),
+            "db_type": cipher.decrypt(self.db_type.encode()).decode(),
+            "password": cipher.decrypt(self.password.encode()).decode(),
+        }
 

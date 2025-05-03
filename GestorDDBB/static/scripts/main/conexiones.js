@@ -36,7 +36,6 @@ export const Conexiones = {
                 success: function (response) {
                     if (response.status === 'success') {
                         const csrfToken = response.token;
-                        console.log('Token CSRF recibido:', csrfToken);
                         const data = {
                             db_engine: document.getElementById('conexion-tipo').value,
                             db_name: document.getElementById('conexion-database').value,
@@ -56,9 +55,47 @@ export const Conexiones = {
                             },
                             success: function (response) {
                                 if (response.status === 'success') {
-                                    console.log('Conexión exitosa. Token:', response.token);
-                                    const nuevaConexion = new ConnectionData(response.token, data.host, data.db_name, data.name);
-                                    // this.conexiones.push(nuevaConexion);
+                                    this.listarConexiones();
+                                } else {
+                                    console.error('Error en la conexión:', response.message);
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('Error durante la solicitud:', error);
+                            }
+                        });
+                    } else {
+                        console.error('Error al recuperar el token CSRF:', response.message);
+                        this.conexionError = true;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Ocurrió un error durante la solicitud:', error);
+                    this.conexionError = true;
+                }
+            });
+        },
+        async listarConexiones(){
+            $.ajax({
+                url: '/api/csrf/',
+                type: 'GET',
+                success: function (response) {
+                    if (response.status === 'success') {
+                        const csrfToken = response.token;
+                        const data = {
+                            user: document.getElementById('apid').value,
+                        };
+                        $.ajax({
+                            url: '/api/list-connections/',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify(data),
+                            beforeSend: function (xhr) {
+                                xhr.setRequestHeader('X-CSRFToken', csrfToken);
+                            },
+                            success: function (response) {
+                                if (response.status === 'success') {
+                                    console.log('Resultados', response);
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }
@@ -83,5 +120,6 @@ export const Conexiones = {
         document.getElementById('add-connection').addEventListener('click', () => {
             this.addConnection();
         });
+        this.listarConexiones();
     }
 };
