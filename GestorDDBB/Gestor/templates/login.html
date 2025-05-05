@@ -11,8 +11,9 @@
 <img src="/static/img/Icono.jpg" alt="Icono de la aplicacion">
 <form method="post" action="{% url 'login' %}" class="d-flex flex-column justify-content-between align-items-end">
     {% csrf_token %}
-    <input type="text" id="name" name="name" class="form-control" placeholder="Usuario...">
-    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña...">
-    <button type="submit" class="btn btn-primary btn-lg">Iniciar sesión</button>
+    <input type="text" id="name" name="name" class="form-control" placeholder="{{usuario}}...">
+    <input type="password" id="password" name="password" class="form-control" placeholder="{{password}}...">
+    {% load i18n %}
+    <button type="submit" class="btn btn-primary btn-lg">{{iniciar_sesion}}</button>
 </form>
 {% endblock %}

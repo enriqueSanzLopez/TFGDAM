@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'GestorDDBB.urls'
@@ -117,16 +118,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'es-es'
+LANGUAGE_CODE = 'es'
 
 LANGUAGES=[
     ('es', 'Español'),
     ('en', 'English')
 ]
 
-LOCALE_PATHS=[
-    BASE_DIR/'locale'
-]
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'translations')]
 
 TIME_ZONE = 'Europe/Madrid'
 USE_L10N = True

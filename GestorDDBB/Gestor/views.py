@@ -16,10 +16,13 @@ import json
 from django.db.backends.base.base import BaseDatabaseWrapper
 from django.db import connections, OperationalError, DEFAULT_DB_ALIAS
 from django.conf import settings
+from babel import Locale, negotiate_locale
+from django.utils.translation import get_language
+from babel import Locale
+from babel.support import Translations
 
-
-logger = logging.getLogger('django')
-
+translations = Translations.load('translations', locales=['es'])
+translations.install()
 # Create your views here.
 
 def get_permissions_from_user(session):
@@ -39,7 +42,12 @@ def login_view(request):
     if request.user.is_authenticated:
         return redirect('main')
     else:
-        return render(request, 'login.html')
+        contexto = {
+            "iniciar_sesion": translations.gettext("iniciar_sesion"),
+            "usuario": translations.gettext("usuario"),
+            "password": translations.gettext("password"),
+        }
+        return render(request, 'login.html', contexto)
 
 @csrf_protect
 def login_controller(request):

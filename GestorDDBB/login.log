@@ -8541,3 +8541,287 @@ Watching for file changes with StatReloader
 "GET /static/img/Icono.jpg HTTP/1.1" 200 73230
 "GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
 "GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 2042
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py", line 51, in login_view
+    return render(request, 'login.html')
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 519, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\enriq\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 540, in extend_nodelist
+    raise self.error(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: {% extends 'layout.html' %} must be the first tag in 'login.html'.
+"GET / HTTP/1.1" 500 128334
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 5395
+"GET / HTTP/1.1" 200 2041
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2041
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2041
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2041
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2041
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2041
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2041
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2046
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\GestorDDBB\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET / HTTP/1.1" 200 2046
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 2032
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/css/user/login.css HTTP/1.1" 200 334
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
