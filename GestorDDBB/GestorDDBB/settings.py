@@ -119,6 +119,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-es'
 
+LANGUAGES=[
+    ('es', 'Español'),
+    ('en', 'English')
+]
+
+LOCALE_PATHS=[
+    BASE_DIR/'locale'
+]
+
 TIME_ZONE = 'Europe/Madrid'
 USE_L10N = True
 
