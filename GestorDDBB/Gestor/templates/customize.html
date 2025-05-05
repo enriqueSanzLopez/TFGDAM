@@ -12,7 +12,7 @@
     <h1>Personalizar</h1>
     <input type="text" id="company_name" name="company_name" class="form-control" placeholder="Compañía..." value="{{ custom.company_name }}">
     <input type="file" name="imagen" class="form-control" placeholder="Imagen..." id="imagen">
-    <input type="email" id="email" name="email" class="form-control" placeholder="Email..." value="{{ custom.email }}">
+    <!-- <input type="email" id="email" name="email" class="form-control" placeholder="Email..." value="{{ custom.email }}">
     <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Teléfono..." value="{{ custom.telephone }}">
     <input type="number" id="text_size" name="text_size" class="form-control" placeholder="Tamaño de texto..." value="{{ custom.text_size }}" min="0">
     <div class="d-flex flex-wrap flex-row justify-content-between align-items-center">
@@ -26,8 +26,8 @@
         <label for="secondary_color" class="form-label d-flex flex-row justify-content-between align-items-center">
             <input type="color" id="secondary_color" name="secondary_color" class="form-control form-control-color" placeholder="Color de secundario..." value="{{ custom.secondary_color }}"> Color
             secundario</label>
-    </div>
-    <textarea name="other_code" id="other_code" class="form-control" placeholder="Código CSS adicional...">{{ custom.other_code }}</textarea>
+    </div> -->
+    <textarea name="other_code" id="other_code" rows="10" class="form-control" placeholder="Código CSS adicional...">{{ custom.other_code }}</textarea>
     <button type="submit" class="btn btn-primary btn-lg">Guardar cambios</button>
 </form>
 {% endblock %}
