@@ -1,15 +1,15 @@
 # Spanish translations for PROJECT.
 # Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Enrique <admin@admin.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: admin@admin.com\n"
 "POT-Creation-Date: 2025-05-05 21:17+0200\n"
 "PO-Revision-Date: 2025-05-05 21:18+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Enrique Sanz Lopez <admin@admin.com>\n"
 "Language: es\n"
 "Language-Team: es <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -18,3 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
+msgid "iniciar_sesion"
+msgstr "Iniciar sesión"
+
+msgid "usuario"
+msgstr "Usuario"
+
+msgid "password"
+msgstr "Contraseña"
