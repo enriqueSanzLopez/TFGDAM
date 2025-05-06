@@ -19,3 +19,6 @@ Insertar registros iniciales en la aplicación:
 
 Registrar cambios en archivos estáticos:
     python manage.py collectstatic
+
+Compilar traducciones:
+    pybabel compile -d translations

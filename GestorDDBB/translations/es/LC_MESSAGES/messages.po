@@ -26,3 +26,15 @@ msgstr "Usuario"
 
 msgid "password"
 msgstr "Contraseña"
+
+msgid "inicio"
+msgstr "Inicio"
+
+msgid "personalizacion"
+msgstr "Personalización"
+
+msgid "usuarios"
+msgstr "Usuarios"
+
+msgid "logout"
+msgstr "Cerrar sesión"
