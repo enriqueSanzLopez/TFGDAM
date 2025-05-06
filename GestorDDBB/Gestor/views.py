@@ -21,6 +21,8 @@ from django.utils.translation import get_language
 from babel import Locale
 from babel.support import Translations
 
+logger = logging.getLogger('django')
+
 translations = Translations.load('translations', locales=['es'])
 translations.install()
 # Create your views here.
