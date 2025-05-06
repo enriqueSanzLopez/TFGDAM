@@ -38,3 +38,9 @@ msgstr "Usuarios"
 
 msgid "logout"
 msgstr "Cerrar sesión"
+
+msgid "additional_CSS"
+msgstr "Código CSS adicional"
+
+msgid "customize"
+msgstr "Personalizar"

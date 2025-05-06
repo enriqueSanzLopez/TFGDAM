@@ -38,3 +38,9 @@ msgstr "Users"
 
 msgid "logout"
 msgstr "Logout"
+
+msgid "additional_CSS"
+msgstr "Additional CSS code..."
+
+msgid "customize"
+msgstr "Customize"

@@ -168,6 +168,8 @@ def customize_view(request):
         personalizacion=translations.gettext("personalizacion")
         usuarios=translations.gettext("usuarios")
         logout=translations.gettext("logout")
+        additionalCSS=translations.gettext("additional_CSS")
+        customizeCSS=translations.gettext("customize")
         return render(request, 'customize.html', {'permissions': permissions, 'custom': {
                 'company_name': custom.company_name if custom and custom.company_name else '',
                 'email': custom.email if custom and custom.email else '',
@@ -178,7 +180,7 @@ def customize_view(request):
                 'secondary_color': custom.secondary_color if custom and custom.secondary_color else '#000000',
                 'other_code': custom.other_code if custom and custom.other_code else '',
             },
-            'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout})
+            'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout, 'additionalCSS': additionalCSS, 'customizeCSS': customizeCSS})
     else:
         return redirect('inicio')
 
