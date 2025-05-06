@@ -9027,3 +9027,9 @@ Watching for file changes with StatReloader
 "POST /api/list-connections/ HTTP/1.1" 200 190
 C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4175
+"GET /users/ HTTP/1.1" 200 39994
+"GET /users/ HTTP/1.1" 200 39994
+"GET /main/ HTTP/1.1" 200 4740
+"GET /api/csrf/ HTTP/1.1" 200 129
+"POST /api/list-connections/ HTTP/1.1" 200 190
