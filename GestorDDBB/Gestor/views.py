@@ -86,7 +86,7 @@ def main_view(request):
         personalizacion=translations.gettext("personalizacion")
         usuarios=translations.gettext("usuarios")
         logout=translations.gettext("logout")
-        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id'), 'connections': connections, 'inicio': inicio, 'personalizacion': personalizacion, 'usuarios': usuarios, 'logout': logout})
+        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id'), 'connections': connections, 'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout})
     else:
         return redirect('inicio')
 
@@ -107,7 +107,7 @@ def users_view(request):
         personalizacion=translations.gettext("personalizacion")
         usuarios=translations.gettext("usuarios")
         logout=translations.gettext("logout")
-        return render(request, 'users/index.html', {'permissions': permissions, 'users': users, 'groups': groups, 'permissions': permissions, 'inicio': inicio, 'personalizacion': personalizacion, 'usuarios': usuarios, 'logout': logout})
+        return render(request, 'users/index.html', {'permissions': permissions, 'users': users, 'groups': groups, 'permissions': permissions, 'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout})
     else:
         return redirect('inicio')
     
@@ -177,8 +177,8 @@ def customize_view(request):
                 'main_color': custom.main_color if custom and custom.main_color else '#000000',
                 'secondary_color': custom.secondary_color if custom and custom.secondary_color else '#000000',
                 'other_code': custom.other_code if custom and custom.other_code else '',
-                'inicio': inicio, 'personalizacion': personalizacion, 'usuarios': usuarios, 'logout': logout
-            },})
+            },
+            'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout})
     else:
         return redirect('inicio')
 
