@@ -82,7 +82,11 @@ def main_view(request):
         permissions = get_permissions_from_user(request.session)
         connectionsName=Enumerate.objects.get(name="Tipos de Conexión")
         connections=Value.objects.filter(enumerate=connectionsName).order_by('order')
-        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id'), 'connections': connections})
+        inicio=translations.gettext("inicio")
+        personalizacion=translations.gettext("personalizacion")
+        usuarios=translations.gettext("usuarios")
+        logout=translations.gettext("logout")
+        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id'), 'connections': connections, 'inicio': inicio, 'personalizacion': personalizacion, 'usuarios': usuarios, 'logout': logout})
     else:
         return redirect('inicio')
 
@@ -99,7 +103,11 @@ def users_view(request):
         users = User.objects.all()
         groups = Group.objects.all()
         permissions=Permission.objects.all().order_by('order')
-        return render(request, 'users/index.html', {'permissions': permissions, 'users': users, 'groups': groups, 'permissions': permissions})
+        inicio=translations.gettext("inicio")
+        personalizacion=translations.gettext("personalizacion")
+        usuarios=translations.gettext("usuarios")
+        logout=translations.gettext("logout")
+        return render(request, 'users/index.html', {'permissions': permissions, 'users': users, 'groups': groups, 'permissions': permissions, 'inicio': inicio, 'personalizacion': personalizacion, 'usuarios': usuarios, 'logout': logout})
     else:
         return redirect('inicio')
     
@@ -156,6 +164,10 @@ def customize_view(request):
         if acceso!=True:
             return redirect('inicio')
         custom = CustomStyle.objects.first()
+        inicio=translations.gettext("inicio")
+        personalizacion=translations.gettext("personalizacion")
+        usuarios=translations.gettext("usuarios")
+        logout=translations.gettext("logout")
         return render(request, 'customize.html', {'permissions': permissions, 'custom': {
                 'company_name': custom.company_name if custom and custom.company_name else '',
                 'email': custom.email if custom and custom.email else '',
@@ -165,6 +177,7 @@ def customize_view(request):
                 'main_color': custom.main_color if custom and custom.main_color else '#000000',
                 'secondary_color': custom.secondary_color if custom and custom.secondary_color else '#000000',
                 'other_code': custom.other_code if custom and custom.other_code else '',
+                'inicio': inicio, 'personalizacion': personalizacion, 'usuarios': usuarios, 'logout': logout
             },})
     else:
         return redirect('inicio')
