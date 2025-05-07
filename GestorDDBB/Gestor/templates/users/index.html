@@ -164,7 +164,9 @@
 {% include 'partials/modals/permission-modal.html' %}
 {% include 'partials/modals/delete-permission-modal.html' %}
 {% include 'partials/modals/delete-group-modal.html' %}
+{% with crearGrupo=crearGrupo guardarCambios=guardarCambios cancelar=cancelar groupName=groupName %}
 {% include 'partials/modals/group-modal.html' %}
+{% endwith %}
 <script src="{% static 'scripts/users/index.js' %}"></script>
 <script src="{% static 'scripts/users/permissions.js' %}"></script>
 <script src="{% static 'scripts/users/groups.js' %}"></script>

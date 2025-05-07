@@ -101,3 +101,6 @@ msgstr "Change Password"
 
 msgid "repeat_password"
 msgstr "Repeat the Password"
+
+msgid "group_name"
+msgstr "Group Name"
