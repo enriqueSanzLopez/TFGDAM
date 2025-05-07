@@ -86,7 +86,13 @@ def main_view(request):
         personalizacion=translations.gettext("personalizacion")
         usuarios=translations.gettext("usuarios")
         logout=translations.gettext("logout")
-        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id'), 'connections': connections, 'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout})
+        ddbb=translations.gettext("data_base")
+        port=translations.gettext("puerto")
+        password=translations.gettext("password")
+        saveConnection=translations.gettext("save_connection")
+        cancelar=translations.gettext("cancelar")
+        usuario=translations.gettext("usuario")
+        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id'), 'connections': connections, 'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout, 'usuario': usuario, 'ddbb': ddbb, 'port': port, 'password': password, 'saveConnection': saveConnection, 'cancelar': cancelar})
     else:
         return redirect('inicio')
 

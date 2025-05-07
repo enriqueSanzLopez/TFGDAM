@@ -44,3 +44,15 @@ msgstr "Additional CSS code..."
 
 msgid "customize"
 msgstr "Customize"
+
+msgid "puerto"
+msgstr "Port"
+
+msgid "data_base"
+msgstr "Database"
+
+msgid "save_connection"
+msgstr "Save Connection"
+
+msgid "cancelar"
+msgstr "Cancel"

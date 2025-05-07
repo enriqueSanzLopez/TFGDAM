@@ -16,17 +16,16 @@
                         {% endfor %}
                     </select>
                     <input type="text" id="conexion-database" name="conexion-database" class="form-control"
-                        placeholder="Base de datos...">
+                        placeholder="{{ddbb}}...">
                     <input type="number" id="conexion-port" name="conexion-port" class="form-control"
-                        placeholder="Puerto...">
+                        placeholder="{{port}}...">
                     <input type="text" id="conexion-name" name="conexion-name" class="form-control"
-                        placeholder="Usuario...">
+                        placeholder="{{usuario}}...">
                     <input type="password" id="conexion-password" name="conexion-passsword" class="form-control"
-                        placeholder="Contraseña...">
+                        placeholder="{{password}}...">
                     <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                        <button type="button" class="btn btn-primary btn-lg" id="add-connection">Guardar
-                            conexión</button>
-                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary btn-lg" id="add-connection">{{saveConnection}}</button>
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">{{cancelar}}</button>
                     </div>
                 </form>
             </div>
