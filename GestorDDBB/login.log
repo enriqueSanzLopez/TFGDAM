@@ -9359,3 +9359,5 @@ C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py chang
 Watching for file changes with StatReloader
 C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /customize/ HTTP/1.1" 200 4184
+"GET /static/css/customize.css HTTP/1.1" 304 0
