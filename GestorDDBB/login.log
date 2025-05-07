@@ -9677,3 +9677,17 @@ Watching for file changes with StatReloader
 "GET /static/img/Icono.jpg HTTP/1.1" 200 73230
 C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 39943
+"GET /static/css/style.css HTTP/1.1" 200 659
+"GET /static/css/user/index.css HTTP/1.1" 200 665
+"GET /static/fontawesome/css/solid.css HTTP/1.1" 200 625
+"GET /static/fontawesome/css/brands.css HTTP/1.1" 200 19852
+"GET /static/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+"GET /static/bootstrap.min.css HTTP/1.1" 200 232803
+"GET /static/fontawesome/css/fontawesome.css HTTP/1.1" 200 83677
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
+"GET /static/scripts/users/index.js HTTP/1.1" 200 4213
+"GET /static/scripts/users/permissions.js HTTP/1.1" 200 2279
+"GET /static/scripts/users/groups.js HTTP/1.1" 200 2559
+"GET /static/fontawesome/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 158220
+"GET /static/img/Icono.jpg HTTP/1.1" 200 73230
