@@ -104,3 +104,6 @@ msgstr "Repeat the Password"
 
 msgid "group_name"
 msgstr "Group Name"
+
+msgid "group_delete_message"
+msgstr "Remember that the users in that group will be deleted, if you do not want to delete the users, cancel the operation and first change to the group of those users."

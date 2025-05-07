@@ -163,7 +163,9 @@
 {% endwith %}
 {% include 'partials/modals/permission-modal.html' %}
 {% include 'partials/modals/delete-permission-modal.html' %}
+{% with groupDeleteMessage=groupDeleteMessage delete=delete cancelar=cancelar %}
 {% include 'partials/modals/delete-group-modal.html' %}
+{% endwith %}
 {% with crearGrupo=crearGrupo guardarCambios=guardarCambios cancelar=cancelar groupName=groupName %}
 {% include 'partials/modals/group-modal.html' %}
 {% endwith %}

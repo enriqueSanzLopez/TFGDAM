@@ -6,14 +6,13 @@
             </div>
             <div class="modal-body">
                 <h3 id="group-borrar-title">¿Seguro que quieres eliminar el grupo?</h3>
-                <p><i>Recuerda que los usuarios de dicho grupo serán eliminados, si no deseas eliminar a los usuarios,
-                        cancela la operación y cambia primero a el grupo de dichos usuarios</i></p>
+                <p><i>{{groupDeleteMessage}}</i></p>
                 <form action="{% url 'groups-delete' %}" method="POST" class="d-flex flex-column justify-content-between align-items-end">
                     {% csrf_token %}
                     <input type="hidden" name="group_borrar_id" id="group_borrar_id" value="new">
                     <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                        <button type="submit" class="btn btn-danger btn-lg">Borrar</button>
-                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger btn-lg">{{delete}}</button>
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">{{cancelar}}</button>
                     </div>
                 </form>
             </div>
