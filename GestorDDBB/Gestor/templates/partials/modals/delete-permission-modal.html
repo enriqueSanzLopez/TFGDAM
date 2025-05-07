@@ -10,8 +10,8 @@
                     {% csrf_token %}
                     <input type="hidden" name="permission_borrar_id" id="permission_borrar_id" value="new">
                     <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                        <button type="submit" class="btn btn-danger btn-lg">Borrar</button>
-                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger btn-lg">{{delete}}</button>
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">{{cancelar}}</button>
                     </div>
                 </form>
             </div>

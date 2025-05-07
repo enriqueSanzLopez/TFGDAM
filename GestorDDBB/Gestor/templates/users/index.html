@@ -162,7 +162,9 @@
 {% include 'partials/modals/delete-user-modal.html' %}
 {% endwith %}
 {% include 'partials/modals/permission-modal.html' %}
+{% with delete=delete cancelar=cancelar %}
 {% include 'partials/modals/delete-permission-modal.html' %}
+{% endwith %}
 {% with groupDeleteMessage=groupDeleteMessage delete=delete cancelar=cancelar %}
 {% include 'partials/modals/delete-group-modal.html' %}
 {% endwith %}
