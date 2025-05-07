@@ -155,7 +155,9 @@
                 </div>
         </div>
 </div>
+{% with crearUsuario=crearUsuario realName=realName usuario=usuario grupo=grupo password=password cancelar=cancelar guardarCambios=guardarCambios repeatPassword=repeatPassword %}
 {% include 'partials/modals/user-modal.html' %}
+{% endwith %}
 {% with cancelar=cancelar delete=delete %}
 {% include 'partials/modals/delete-user-modal.html' %}
 {% endwith %}

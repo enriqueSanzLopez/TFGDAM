@@ -127,6 +127,10 @@ def users_view(request):
         deletePhrase=translations.gettext('delete_phrase')
         delete=translations.gettext('delete')
         cancelar=translations.gettext("cancelar")
+        changePassword=translations.gettext('change_password')
+        password=translations.gettext('password')
+        guardarCambios=translations.gettext('save_changes')
+        repeatPassword=translations.gettext('repeat_password')
         return render(request, 'users/index.html',
                       {'permissions': permissions,
                         'users': users,
@@ -149,7 +153,11 @@ def users_view(request):
                         'orden': orden,
                         'deletePhrase': deletePhrase,
                         'delete': delete,
-                        'cancelar': cancelar})
+                        'cancelar': cancelar,
+                        'changePassword': changePassword,
+                        'password': password,
+                        'guardarCambios': guardarCambios,
+                        'repeatPassword': repeatPassword})
     else:
         return redirect('inicio')
     

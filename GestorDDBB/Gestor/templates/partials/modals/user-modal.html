@@ -9,11 +9,10 @@
                     <div class="nav nav-tabs" id="nav-user-tab" role="tablist">
                         <button class="nav-link active" id="create-user-form-tab" data-bs-toggle="tab"
                             data-bs-target="#create-user-form" type="button" role="tab" aria-controls="create-user-form"
-                            aria-selected="true">Crear usuario</button>
+                            aria-selected="true">{{crearUsuario}}</button>
                         <button class="nav-link" id="change-password-tab" data-bs-toggle="tab"
                             data-bs-target="#change-password" type="button" role="tab" aria-controls="change-password"
-                            aria-selected="false">Cambiar
-                            contraseña</button>
+                            aria-selected="false">{{changePassword}}</button>
                     </div>
                 <!-- </nav> -->
                 <div class="tab-content" id="nav-tabContent">
@@ -23,23 +22,23 @@
                             class="d-flex flex-column justify-content-between align-items-end">
                             {% csrf_token %}
                             <input type="hidden" name="id" id="id" value="new">
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Usuario...">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="{{usuario}}...">
                             <input type="text" id="real_name" name="real_name" class="form-control"
-                                placeholder="Nombre real...">
+                                placeholder="{{realName}}...">
                             <input type="email" id="email" name="email" class="form-control" placeholder="Email...">
-                            <select class="form-select form-select-lg" name="group" id="group" placeholder="Grupo">
+                            <select class="form-select form-select-lg" name="group" id="group" placeholder="{{grupo}}...">
                                 {% for group in groups %}
                                 <option value="{{ group.id }}">{{ group.desc_group }}</option>
                                 {% endfor %}
                             </select>
                             <input type="password" id="password" name="password" class="form-control"
-                                placeholder="Contraseña...">
+                                placeholder="{{password}}...">
                             <input type="password" id="repeat_password" name="repeat_password" class="form-control"
-                                placeholder="Repite la contraseña...">
+                                placeholder="{{repeatPassword}}...">
                             <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                                <button type="submit" class="btn btn-primary btn-lg" id="save-changes" disabled>Guardar Cambios</button>
+                                <button type="submit" class="btn btn-primary btn-lg" id="save-changes" disabled>{{guardarCambios}}</button>
                                 <button type="button" class="btn btn-secondary btn-lg"
-                                    data-bs-dismiss="modal">Cancelar</button>
+                                    data-bs-dismiss="modal">{{cancelar}}</button>
                             </div>
                         </form>
                     </div>
@@ -50,13 +49,13 @@
                             {% csrf_token %}
                             <input type="hidden" name="cambio_id" id="cambio_id" value="new">
                             <input type="password" id="cambio_password" name="cambio_password" class="form-control"
-                                placeholder="Contraseña...">
+                                placeholder="{{password}}...">
                             <input type="password" id="cambio_repeat_password" name="cambio_repeat_password"
-                                class="form-control" placeholder="Repite la contraseña...">
+                                class="form-control" placeholder="{{repeatPassword}}...">
                             <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                                <button type="submit" class="btn btn-primary btn-lg" disabled id="change-password-button">Cambiar contraseña</button>
+                                <button type="submit" class="btn btn-primary btn-lg" disabled id="change-password-button">{{changePassword}}</button>
                                 <button type="button" class="btn btn-secondary btn-lg"
-                                    data-bs-dismiss="modal">Cancelar</button>
+                                    data-bs-dismiss="modal">{{cancelar}}</button>
                             </div>
                         </form>
                     </div>

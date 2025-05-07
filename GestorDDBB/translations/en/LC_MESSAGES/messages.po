@@ -95,3 +95,9 @@ msgstr "Are you sure you want to delete "
 
 msgid "delete"
 msgstr "Delete"
+
+msgid "change_password"
+msgstr "Change Password"
+
+msgid "repeat_password"
+msgstr "Repeat the Password"
