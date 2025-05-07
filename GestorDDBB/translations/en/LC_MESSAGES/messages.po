@@ -89,3 +89,9 @@ msgstr "Value"
 
 msgid "orden"
 msgstr "Order"
+
+msgid "delete_phrase"
+msgstr "Are you sure you want to delete "
+
+msgid "delete"
+msgstr "Delete"

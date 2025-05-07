@@ -89,3 +89,9 @@ msgstr "Valor"
 
 msgid "orden"
 msgstr "Orden"
+
+msgid "delete_phrase"
+msgstr "¿Seguro que quieres eliminar a"
+
+msgid "delete"
+msgstr "Eliminar"

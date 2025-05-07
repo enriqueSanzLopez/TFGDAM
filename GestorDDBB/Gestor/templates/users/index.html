@@ -156,7 +156,9 @@
         </div>
 </div>
 {% include 'partials/modals/user-modal.html' %}
+{% with cancelar=cancelar delete=delete %}
 {% include 'partials/modals/delete-user-modal.html' %}
+{% endwith %}
 {% include 'partials/modals/permission-modal.html' %}
 {% include 'partials/modals/delete-permission-modal.html' %}
 {% include 'partials/modals/delete-group-modal.html' %}

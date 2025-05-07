@@ -124,6 +124,9 @@ def users_view(request):
         crearPermiso=translations.gettext('crear_permiso')
         valor=translations.gettext('valor')
         orden=translations.gettext('orden')
+        deletePhrase=translations.gettext('delete_phrase')
+        delete=translations.gettext('delete')
+        cancelar=translations.gettext("cancelar")
         return render(request, 'users/index.html',
                       {'permissions': permissions,
                         'users': users,
@@ -143,7 +146,10 @@ def users_view(request):
                         'nombre': nombre,
                         'crearPermiso': crearPermiso,
                         'valor': valor,
-                        'orden': orden})
+                        'orden': orden,
+                        'deletePhrase': deletePhrase,
+                        'delete': delete,
+                        'cancelar': cancelar})
     else:
         return redirect('inicio')
     
