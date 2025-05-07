@@ -133,6 +133,8 @@ def users_view(request):
         repeatPassword=translations.gettext('repeat_password')
         groupName=translations.gettext('group_name')
         groupDeleteMessage=translations.gettext('group_delete_message')
+        permissionName=translations.gettext('permission_name')
+        permissionValue=translations.gettext('permission_value')
         return render(request, 'users/index.html',
                       {'permissions': permissions,
                         'users': users,
@@ -161,7 +163,9 @@ def users_view(request):
                         'guardarCambios': guardarCambios,
                         'repeatPassword': repeatPassword,
                         'groupName': groupName,
-                        'groupDeleteMessage': groupDeleteMessage})
+                        'groupDeleteMessage': groupDeleteMessage,
+                        'permissionName': permissionName,
+                        'permissionValue': permissionValue})
     else:
         return redirect('inicio')
     

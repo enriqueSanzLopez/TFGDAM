@@ -161,7 +161,9 @@
 {% with cancelar=cancelar delete=delete %}
 {% include 'partials/modals/delete-user-modal.html' %}
 {% endwith %}
+{% with guardarCambios=guardarCambios cancelar=cancelar crearPermiso=crearPermiso orden=orden permissionName=permissionName permissionValue=permissionValue %}
 {% include 'partials/modals/permission-modal.html' %}
+{% endwith %}
 {% with delete=delete cancelar=cancelar %}
 {% include 'partials/modals/delete-permission-modal.html' %}
 {% endwith %}

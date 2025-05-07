@@ -107,3 +107,9 @@ msgstr "Nombre del Grupo"
 
 msgid "group_delete_message"
 msgstr "Recuerda que los usuarios de dicho grupo serán eliminados, si no deseas eliminar a los usuarios, cancela la operación y cambia primero a el grupo de dichos usuarios"
+
+msgid "permission_name"
+msgstr "Nombre del Permiso"
+
+msgid "permission_value"
+msgstr "Valor del permiso"

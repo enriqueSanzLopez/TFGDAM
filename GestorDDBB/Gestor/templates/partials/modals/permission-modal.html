@@ -5,21 +5,20 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h3 id="create-permission-modal-title">Crear permiso</h3>
+                <h3 id="create-permission-modal-title">{{crearPermiso}}</h3>
                 <form action="{% url 'permissions-edit' %}" method="POST"
                     class="d-flex flex-column justify-content-between align-items-end">
                     {% csrf_token %}
                     <input type="hidden" name="permission_id" id="permission_id" value="new">
                     <input type="text" id="permission_name" name="permission_name" class="form-control"
-                        placeholder="Nombre del permiso...">
+                        placeholder="{{permissionName}}...">
                     <input type="text" id="permission_value" name="permission_value" class="form-control"
-                        placeholder="Valor del permiso...">
+                        placeholder="{{permissionValue}}...">
                     <input type="number" name="permission_order" class="form-control" id="permission_order"
-                        placeholder="Orden..." min="0">
+                        placeholder="{{orden}}..." min="0">
                     <div class="d-flex flex-row flex-wrap justify-content-end align-items-center">
-                        <button type="submit" class="btn btn-primary btn-lg" id="permission-save-changes">Guardar
-                            Cambios</button>
-                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="permission-save-changes">{{guardarCambios}}</button>
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">{{cancelar}}</button>
                     </div>
                 </form>
             </div>
