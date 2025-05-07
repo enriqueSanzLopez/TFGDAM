@@ -9355,3 +9355,7 @@ Watching for file changes with StatReloader
 "GET /api/csrf/ HTTP/1.1" 200 129
 "GET /static/img/Icono.jpg HTTP/1.1" 200 73230
 "POST /api/list-connections/ HTTP/1.1" 200 190
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\enriq\Desktop\Proyectos\DAM\TFG\TFGDAM\GestorDDBB\Gestor\views.py changed, reloading.
+Watching for file changes with StatReloader

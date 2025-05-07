@@ -56,3 +56,6 @@ msgstr "Save Connection"
 
 msgid "cancelar"
 msgstr "Cancel"
+
+msgid "save_changes"
+msgstr "Save Changes"
