@@ -113,7 +113,37 @@ def users_view(request):
         personalizacion=translations.gettext("personalizacion")
         usuarios=translations.gettext("usuarios")
         logout=translations.gettext("logout")
-        return render(request, 'users/index.html', {'permissions': permissions, 'users': users, 'groups': groups, 'permissions': permissions, 'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout})
+        grupos=translations.gettext("grupos")
+        grupo=translations.gettext("grupo")
+        permisos=translations.gettext("permisos")
+        crearUsuario=translations.gettext('crear_usuario')
+        crearGrupo=translations.gettext('crear_grupo')
+        usuario=translations.gettext("usuario")
+        realName=translations.gettext('real_name')
+        nombre=translations.gettext('nombre')
+        crearPermiso=translations.gettext('crear_permiso')
+        valor=translations.gettext('valor')
+        orden=translations.gettext('orden')
+        return render(request, 'users/index.html',
+                      {'permissions': permissions,
+                        'users': users,
+                        'groups': groups,
+                        'permissions': permissions,
+                        'nav_inicio': inicio,
+                        'nav_personalizacion': personalizacion,
+                        'nav_usuarios': usuarios,
+                        'nav_logout': logout,
+                        'grupos': grupos,
+                        'permisos': permisos,
+                        'crearUsuario': crearUsuario,
+                        'usuario': usuario,
+                        'realName': realName, 
+                        'grupo': grupo,
+                        'crearGrupo': crearGrupo,
+                        'nombre': nombre,
+                        'crearPermiso': crearPermiso,
+                        'valor': valor,
+                        'orden': orden})
     else:
         return redirect('inicio')
     

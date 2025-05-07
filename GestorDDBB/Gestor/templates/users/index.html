@@ -10,27 +10,26 @@
 <!-- <nav> -->
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <button class="nav-link active" id="users-tab" data-bs-toggle="tab" data-bs-target="#users"
-                        type="button" role="tab" aria-controls="users" aria-selected="true">Usuarios</button>
+                        type="button" role="tab" aria-controls="users" aria-selected="true">{{nav_usuarios}}</button>
                 <button class="nav-link" id="groups-tab" data-bs-toggle="tab" data-bs-target="#groups" type="button"
-                        role="tab" aria-controls="groups" aria-selected="false">Grupos</button>
+                        role="tab" aria-controls="groups" aria-selected="false">{{grupos}}</button>
                 <button class="nav-link" id="permissions-tab" data-bs-toggle="tab" data-bs-target="#permissions"
-                        type="button" role="tab" aria-controls="permissions" aria-selected="false">Permisos</button>
+                        type="button" role="tab" aria-controls="permissions" aria-selected="false">{{permisos}}</button>
         </div>
 <!-- </nav> -->
 <div class="tab-content" id="nav-tabMainContent">
         <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
                 <div class="d-flex flex-row justify-content-end align-items-center acciones">
                         <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
-                                data-bs-target="#user-modal" id="create-user"><i class="fa-solid fa-user"></i> Crear
-                                usuario</button>
+                                data-bs-target="#user-modal" id="create-user"><i class="fa-solid fa-user"></i> {{crearUsuario}}</button>
                 </div>
                 <div class="table-responsive-lg">
                         <table class="table table-striped">
                                 <thead>
-                                        <th scope="col">Usuario</th>
-                                        <th scope="col">Nombre real</th>
+                                        <th scope="col">{{usuario}}</th>
+                                        <th scope="col">{{realName}}</th>
                                         <th scope="col">Email</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">{{grupo}}</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                 </thead>
@@ -70,11 +69,11 @@
         <div class="tab-pane fade" id="groups" role="tabpanel" aria-labelledby="groups-tab">
                 <div class="d-flex flex-row justify-content-end align-items-center acciones"><button
                                 class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#group-modal"
-                                id="create-group" type="button">Crear grupo</button></div>
+                                id="create-group" type="button">{{crearGrupo}}</button></div>
                 <div class="table-responsive-lg">
                         <table class="table table-striped">
                                 <thead>
-                                        <th scope="col">Nombre</th>
+                                        <th scope="col">{{nombre}}</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                 </thead>
@@ -109,13 +108,13 @@
         <div class="tab-pane fade" id="permissions" role="tabpanel" aria-labelledby="permissions-tab">
                 <div class="d-flex flex-row justify-content-end align-items-center acciones"><button
                                 class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#permission-modal"
-                                id="create-permission" type="button">Crear permiso</button></div>
+                                id="create-permission" type="button">{{crearPermiso}}</button></div>
                 <div class="table-responsive-lg">
                         <table class="table table-striped">
                                 <thead>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Valor</th>
-                                        <th scope="col">Orden</th>
+                                        <th scope="col">{{nombre}}</th>
+                                        <th scope="col">{{valor}}</th>
+                                        <th scope="col">{{orden}}</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                 </thead>

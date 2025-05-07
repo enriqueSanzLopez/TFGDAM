@@ -59,3 +59,33 @@ msgstr "Cancel"
 
 msgid "save_changes"
 msgstr "Save Changes"
+
+msgid "grupos"
+msgstr "Groups"
+
+msgid "grupo"
+msgstr "Group"
+
+msgid "permisos"
+msgstr "Permissions"
+
+msgid "crear_usuario"
+msgstr "Create User"
+
+msgid "real_name"
+msgstr "Real Name"
+
+msgid "crear_grupo"
+msgstr "Create Group"
+
+msgid "crear_permiso"
+msgstr "Create Permission"
+
+msgid "nombre"
+msgstr "Name"
+
+msgid "valor"
+msgstr "Value"
+
+msgid "orden"
+msgstr "Order"

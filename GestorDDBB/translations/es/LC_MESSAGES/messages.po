@@ -59,3 +59,33 @@ msgstr "Cancelar"
 
 msgid "save_changes"
 msgstr "Guardar Cambios"
+
+msgid "grupos"
+msgstr "Grupos"
+
+msgid "grupo"
+msgstr "Grupo"
+
+msgid "permisos"
+msgstr "Permisos"
+
+msgid "crear_usuario"
+msgstr "Crear Usuario"
+
+msgid "real_name"
+msgstr "Nombre Real"
+
+msgid "crear_grupo"
+msgstr "Crear Grupo"
+
+msgid "crear_permiso"
+msgstr "Crear Permiso"
+
+msgid "nombre"
+msgstr "Nombre"
+
+msgid "valor"
+msgstr "Valor"
+
+msgid "orden"
+msgstr "Orden"
