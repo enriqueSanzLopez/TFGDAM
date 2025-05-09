@@ -41,9 +41,10 @@ def get_permissions_from_user(session):
 
 def login_view(request):
     #Comprueba si el usuario ha iniciado sesion
-    lang = getattr(request, 'lang', 'es')
+    lang = request.COOKIES.get('lang', 'es')
     translations = Translations.load('translations', locales=[lang])
     translations.install()
+    logger.info('Lenguaje: '+lang)
     if request.user.is_authenticated:
         return redirect('main')
     else:
@@ -82,7 +83,7 @@ def logout_view(request):
 
 def main_view(request):
     if 'user_id' in request.session:
-        lang = getattr(request, 'lang', 'es')
+        lang = request.COOKIES.get('lang', 'es')
         translations = Translations.load('translations', locales=[lang])
         translations.install()
         permissions = get_permissions_from_user(request.session)
@@ -112,7 +113,7 @@ def users_view(request):
                 break
         if acceso!=True:
             return redirect('inicio')
-        lang = getattr(request, 'lang', 'es')
+        lang = request.COOKIES.get('lang', 'es')
         translations = Translations.load('translations', locales=[lang])
         translations.install()
         users = User.objects.all()
@@ -230,7 +231,7 @@ def customize_view(request):
                 break
         if acceso!=True:
             return redirect('inicio')
-        lang = getattr(request, 'lang', 'es')
+        lang = request.COOKIES.get('lang', 'es')
         translations = Translations.load('translations', locales=[lang])
         translations.install()
         custom = CustomStyle.objects.first()
