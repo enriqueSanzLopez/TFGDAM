@@ -1,6 +1,10 @@
 <nav class="d-flex flex-row flex-wrap justify-content-between align-items-center">
     <img src="/static/img/Icono.jpg" alt="Icono de la aplicacion">
     <ul class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+        <li><select class="form-select form-select-lg" id="lang">
+            <option value="es" selected>ES</option>
+            <option value="en">EN</option>
+        </select></li>
         {% if request.session.user_id %}
         <li><a href="{% url 'main' %}">{{nav_inicio}}</a></li>
         {% if permissions %}

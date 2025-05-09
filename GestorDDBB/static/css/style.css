@@ -51,3 +51,7 @@ nav{
 nav a{
     color: white;
 }
+
+select{
+    cursor: pointer;
+}
