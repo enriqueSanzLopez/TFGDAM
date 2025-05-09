@@ -41,6 +41,9 @@ def get_permissions_from_user(session):
 
 def login_view(request):
     #Comprueba si el usuario ha iniciado sesion
+    lang = getattr(request, 'lang', 'es')
+    translations = Translations.load('translations', locales=[lang])
+    translations.install()
     if request.user.is_authenticated:
         return redirect('main')
     else:
@@ -79,6 +82,9 @@ def logout_view(request):
 
 def main_view(request):
     if 'user_id' in request.session:
+        lang = getattr(request, 'lang', 'es')
+        translations = Translations.load('translations', locales=[lang])
+        translations.install()
         permissions = get_permissions_from_user(request.session)
         connectionsName=Enumerate.objects.get(name="Tipos de Conexión")
         connections=Value.objects.filter(enumerate=connectionsName).order_by('order')
@@ -106,6 +112,9 @@ def users_view(request):
                 break
         if acceso!=True:
             return redirect('inicio')
+        lang = getattr(request, 'lang', 'es')
+        translations = Translations.load('translations', locales=[lang])
+        translations.install()
         users = User.objects.all()
         groups = Group.objects.all()
         permissions=Permission.objects.all().order_by('order')
@@ -221,6 +230,9 @@ def customize_view(request):
                 break
         if acceso!=True:
             return redirect('inicio')
+        lang = getattr(request, 'lang', 'es')
+        translations = Translations.load('translations', locales=[lang])
+        translations.install()
         custom = CustomStyle.objects.first()
         inicio=translations.gettext("inicio")
         personalizacion=translations.gettext("personalizacion")
