@@ -18,7 +18,7 @@ export const Conexiones = {
         <li v-for="conexion in conexiones" :key="conexion.id" @contextmenu.prevent="mostrarMenu($event, conexion)">{{conexion.host}} - {{conexion.db_name}}</li>
     </ul>
     <div v-if="menuVisible" ref="menu" class="menu-contextual" :style="{ top: menuY + 'px', left: menuX + 'px' }">
-        <button type="button">Desconectar <i class="fa-solid fa-xmark" style="color: red;"></i></button>
+        <button type="button" @click="deleteConexion(conexionSeleccionada)">Desconectar <i class="fa-solid fa-xmark" style="color: red;"></i></button>
     </div>
     `,
     data() {
@@ -135,6 +135,50 @@ export const Conexiones = {
                 this.menuVisible = false;
             }
         },
+        async deleteConexion(id) {
+            const self = this;
+            $.ajax({
+                url: '/api/csrf/',
+                type: 'GET',
+                success: function (response) {
+                    if (response.status === 'success') {
+                        const csrfToken = response.token;
+                        const data = {
+                            user: document.getElementById('apid').value,
+                            id: id.id
+                        };
+                        console.log(data);
+                        $.ajax({
+                            url: '/api/delete-connection/',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify(data),
+                            beforeSend: function (xhr) {
+                                xhr.setRequestHeader('X-CSRFToken', csrfToken);
+                            },
+                            success: function (response) {
+                                if (response.status === 'success') {
+                                    self.listarConexiones();
+                                    self.menuVisible = false;
+                                } else {
+                                    console.error('Error en la conexión:', response.message);
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('Error durante la solicitud:', error);
+                            }
+                        });
+                    } else {
+                        console.error('Error al recuperar el token CSRF:', response.message);
+                        this.conexionError = true;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Ocurrió un error durante la solicitud:', error);
+                    this.conexionError = true;
+                }
+            });
+        }
     },
     mounted() {
         document.getElementById('add-connection').addEventListener('click', () => {
