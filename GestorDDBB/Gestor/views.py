@@ -603,6 +603,7 @@ def list_connections(request):
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
 
+@csrf_protect
 def delete_connection(request):
     if request.method=='POST':
         try:
@@ -621,5 +622,19 @@ def delete_connection(request):
                 'message': str(e)
                 })
 
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+
+@csrf_protect
+def list_tables(request):
+    if request.method=='POST':
+        try:
+            body = json.loads(request.body.decode('utf-8'))
+            user = User.objects.filter(id=body.get('user')).first()
+        except Exception as e:
+            return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+                })
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
