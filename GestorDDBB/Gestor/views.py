@@ -631,7 +631,41 @@ def list_tables(request):
         try:
             body = json.loads(request.body.decode('utf-8'))
             user = User.objects.filter(id=body.get('user')).first()
+            #Conseguir la lista de conexiones
             connections=Connection.objects.filter(user=user)
+            #Conseguir la lista de tablas
+            tables_list = []
+            for connection in connections:
+                try:
+                    #Desencriptar la conexion
+                    decrypted_data = connection.decrypt_data()
+                    #Configurar conexion
+                    db_config = {
+                        'ENGINE': decrypted_data["db_type"].strip().lower(),
+                        'NAME': decrypted_data["db_name"],
+                        'USER': decrypted_data["name"],
+                        'PASSWORD': decrypted_data["password"],
+                        'HOST': decrypted_data["host"],
+                        'PORT': connection.port,
+                        'OPTIONS': {},
+                        'TIME_ZONE': settings.TIME_ZONE,
+                        'CONN_HEALTH_CHECKS': True,
+                        'CONN_MAX_AGE': 60,
+                        'AUTOCOMMIT': True
+                    }
+                    consulta=''
+                    if(decrypted_data["db_type"]=='django.db.backends.postgresql'):
+                        consulta="SELECT schemaname || '.' || tablename AS table_name FROM pg_catalog.pg_tables WHERE schemaname NOT IN ('pg_catalog', 'information_schema')"
+                    elif(decrypted_data["db_type"]=='django.db.backends.mysql'):
+                        consulta="SELECT TABLE_SCHEMA || '.' || TABLE_NAME AS table_name FROM information_schema.tables WHERE TABLE_TYPE = 'BASE TABLE'"
+                    elif(decrypted_data["db_type"]=='mssql'):#SQL Server
+                        consulta="SELECT TABLE_SCHEMA + '.' + TABLE_NAME AS table_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'"
+                    elif(decrypted_data["db_type"]=='django.db.backends.sqlite3'):
+                        consulta="SELECT name AS table_name FROM sqlite_master WHERE type='table'"
+                    elif(decrypted_data["db_type"]=='djongo'):#MongoDB
+                        consulta="db.getCollectionNames()"
+                except Exception as e1:
+                    ''
         except Exception as e:
             return JsonResponse({
                 'status': 'error',
