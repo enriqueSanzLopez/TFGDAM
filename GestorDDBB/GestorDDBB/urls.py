@@ -38,5 +38,6 @@ urlpatterns = [
     path('api/csrf/', views.get_csrf, name='api/csrf'),
     path('api/test-connection/', views.test_connection, name='api/test-connection'),
     path('api/list-connections/', views.list_connections, name='api/list-connections'),
+    path('api/list-tables/', views.list_tables, name='api/list-tables'),
     path('api/delete-connection/', views.delete_connection, name='api/delete-connection'),
 ]

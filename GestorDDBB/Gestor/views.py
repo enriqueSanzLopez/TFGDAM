@@ -632,10 +632,10 @@ def list_tables(request):
             body = json.loads(request.body.decode('utf-8'))
             user = User.objects.filter(id=body.get('user')).first()
             #Conseguir la lista de conexiones
-            connections=Connection.objects.filter(user=user)
+            connections_list=Connection.objects.filter(user=user)
             #Conseguir la lista de tablas
             tables_list = []
-            for connection in connections:
+            for connection in connections_list:
                 try:
                     #Desencriptar la conexion
                     decrypted_data = connection.decrypt_data()
@@ -664,8 +664,24 @@ def list_tables(request):
                         consulta="SELECT name AS table_name FROM sqlite_master WHERE type='table'"
                     elif(decrypted_data["db_type"]=='djongo'):#MongoDB
                         consulta="db.getCollectionNames()"
+                    connections.databases['temp_db'] = db_config
+                    temp_connection = connections['temp_db']
+                    if consulta!='':
+                        with temp_connection.cursor() as cursor:
+                            cursor.execute(consulta)
+                            tables = cursor.fetchall()
+
+                            for table in tables:
+                                tables_list.append({
+                                    "id_conexion": connection.id,
+                                    "nombre_tabla": table[0]
+                                })
                 except Exception as e1:
                     ''
+            return JsonResponse({
+                'status': 'success',
+                'tables': tables_list
+            })
         except Exception as e:
             return JsonResponse({
                 'status': 'error',
