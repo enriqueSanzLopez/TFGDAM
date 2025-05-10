@@ -15,19 +15,26 @@ export const Conexiones = {
         <!--<button type="button" class="btn btn-light"><i class="fa-solid fa-plug-circle-xmark"></i></button>-->
     </div>
     <ul>
-        <li v-for="conexion in conexiones" :key="conexion.id">{{conexion.host}} - {{conexion.db_name}}</li>
+        <li v-for="conexion in conexiones" :key="conexion.id" @contextmenu.prevent="mostrarMenu($event, conexion)">{{conexion.host}} - {{conexion.db_name}}</li>
     </ul>
+    <div v-if="menuVisible" ref="menu" class="menu-contextual" :style="{ top: menuY + 'px', left: menuX + 'px' }">
+        <button type="button">Desconectar <i class="fa-solid fa-xmark" style="color: red;"></i></button>
+    </div>
     `,
     data() {
         return {
             conexionLoading: false,
             conexionError: false,
-            conexiones: []
+            conexiones: [],
+            menuVisible: false,
+            menuX: 0,
+            menuY: 0,
+            conexionSeleccionada: null
         };
     },
     methods: {
         async addConnection() {
-            const self=this;
+            const self = this;
             this.conexionLoading = true;
             this.conexionError = false;
             $.ajax({
@@ -75,8 +82,8 @@ export const Conexiones = {
                 }
             });
         },
-        async listarConexiones(){
-            const self=this;
+        async listarConexiones() {
+            const self = this;
             $.ajax({
                 url: '/api/csrf/',
                 type: 'GET',
@@ -97,7 +104,7 @@ export const Conexiones = {
                             success: function (response) {
                                 if (response.status === 'success') {
                                     console.log('Resultados', response);
-                                    self.conexiones=response.conexiones
+                                    self.conexiones = response.conexiones
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }
@@ -116,12 +123,24 @@ export const Conexiones = {
                     this.conexionError = true;
                 }
             });
-        }
+        },
+        async mostrarMenu(event, conexion) {
+            this.menuVisible = true;
+            this.menuX = event.clientX;
+            this.menuY = event.clientY;
+            this.conexionSeleccionada = conexion;
+        },
+        async cerrarMenu(event) {
+            if (this.menuVisible && this.$refs.menu && !this.$refs.menu.contains(event.target)) {
+                this.menuVisible = false;
+            }
+        },
     },
     mounted() {
         document.getElementById('add-connection').addEventListener('click', () => {
             this.addConnection();
         });
+        document.addEventListener("click", this.cerrarMenu);
         this.listarConexiones();
     }
 };
