@@ -655,13 +655,13 @@ def list_tables(request):
                     }
                     consulta=''
                     if(decrypted_data["db_type"]=='django.db.backends.postgresql'):
-                        consulta="SELECT schemaname || '.' || tablename AS table_name FROM pg_catalog.pg_tables WHERE schemaname NOT IN ('pg_catalog', 'information_schema')"
+                        consulta="SELECT schemaname || '.' || tablename AS table_name FROM pg_catalog.pg_tables WHERE schemaname NOT IN ('pg_catalog', 'information_schema')  ORDER BY table_name"
                     elif(decrypted_data["db_type"]=='django.db.backends.mysql'):
-                        consulta="SELECT TABLE_SCHEMA || '.' || TABLE_NAME AS table_name FROM information_schema.tables WHERE TABLE_TYPE = 'BASE TABLE'"
+                        consulta="SELECT TABLE_SCHEMA || '.' || TABLE_NAME AS table_name FROM information_schema.tables WHERE TABLE_TYPE = 'BASE TABLE' ORDER BY table_name"
                     elif(decrypted_data["db_type"]=='mssql'):#SQL Server
-                        consulta="SELECT TABLE_SCHEMA + '.' + TABLE_NAME AS table_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'"
+                        consulta="SELECT TABLE_SCHEMA + '.' + TABLE_NAME AS table_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' ORDER BY table_name"
                     elif(decrypted_data["db_type"]=='django.db.backends.sqlite3'):
-                        consulta="SELECT name AS table_name FROM sqlite_master WHERE type='table'"
+                        consulta="SELECT name AS table_name FROM sqlite_master WHERE type='table' ORDER BY table_name"
                     elif(decrypted_data["db_type"]=='djongo'):#MongoDB
                         consulta="db.getCollectionNames()"
                     connections.databases['temp_db'] = db_config
