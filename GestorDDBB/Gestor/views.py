@@ -631,6 +631,7 @@ def list_tables(request):
         try:
             body = json.loads(request.body.decode('utf-8'))
             user = User.objects.filter(id=body.get('user')).first()
+            connections=Connection.objects.filter(user=user)
         except Exception as e:
             return JsonResponse({
                 'status': 'error',
