@@ -11,24 +11,53 @@ class ConnectionData {
 export const Conexiones = {
     template: `
     <div class="d-flex flex-row justify-content-end align-items-center flex-wrap">
-        <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#conexion-modal"><i class="fa-solid fa-plug"></i></button>
-        <!--<button type="button" class="btn btn-light"><i class="fa-solid fa-plug-circle-xmark"></i></button>-->
+        <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#conexion-modal">
+            <i class="fa-solid fa-plug"></i>
+        </button>
     </div>
+
     <ul>
-        <li v-for="conexion in conexiones" :key="conexion.id" @contextmenu.prevent="mostrarMenu($event, conexion)">
+        <li
+            v-for="conexion in conexiones"
+            :key="conexion.id"
+            @contextmenu.prevent.stop="mostrarMenu($event, conexion)"
+        >
             {{ conexion.host }} - {{ conexion.db_name }}
             <ul>
                 <li
                     v-for="table in tables.filter(t => t.id_conexion === conexion.id)"
                     :key="table.nombre_tabla"
+                    @contextmenu.prevent.stop="mostrarTableMenu($event, table)"
                 >
                     {{ table.nombre_tabla }}
                 </li>
             </ul>
         </li>
     </ul>
-    <div v-if="menuVisible" ref="menu" class="menu-contextual" :style="{ top: menuY + 'px', left: menuX + 'px' }">
-        <button type="button" @click="deleteConexion(conexionSeleccionada)">Desconectar <i class="fa-solid fa-xmark" style="color: red;"></i></button>
+    <div
+        v-if="menuVisible"
+        ref="menu"
+        class="menu-contextual"
+        :style="{ top: menuY + 'px', left: menuX + 'px' }"
+        @click.stop
+    >
+        <button type="button" @click="deleteConexion(conexionSeleccionada)">
+            Desconectar <i class="fa-solid fa-xmark" style="color: red;"></i>
+        </button>
+    </div>
+    <div
+        v-if="menuTableVisible"
+        ref="menuTable"
+        class="menu-contextual"
+        :style="{ top: menuTableY + 'px', left: menuTableX + 'px' }"
+        @click.stop
+    >
+        <button type="button">
+            Buscar <i class="fa-solid fa-magnifying-glass" style="color: blue;"></i>
+        </button>
+        <button type="button" v-if="editarPermission === true">
+            Editar <i class="fa-solid fa-pen-to-square" style="color: blue;"></i>
+        </button>
     </div>
     `,
     data() {
@@ -40,7 +69,12 @@ export const Conexiones = {
             menuVisible: false,
             menuX: 0,
             menuY: 0,
-            conexionSeleccionada: null
+            conexionSeleccionada: null,
+            menuTableVisible: false,
+            menuTableX: 0,
+            menuTableY: 0,
+            editarPermission: false,
+            tableSeleccionada: null
         };
     },
     methods: {
@@ -136,13 +170,14 @@ export const Conexiones = {
                 }
             });
         },
-        async mostrarMenu(event, conexion) {
+        mostrarMenu(event, conexion) {
+            this.menuTableVisible = false;
             this.menuVisible = true;
             this.menuX = event.clientX;
             this.menuY = event.clientY;
             this.conexionSeleccionada = conexion;
         },
-        async cerrarMenu(event) {
+        cerrarMenu(event) {
             if (this.menuVisible && this.$refs.menu && !this.$refs.menu.contains(event.target)) {
                 this.menuVisible = false;
             }
@@ -191,7 +226,7 @@ export const Conexiones = {
                 }
             });
         },
-        async listarTablas(){
+        async listarTablas() {
             const self = this;
             $.ajax({
                 url: '/api/csrf/',
@@ -232,13 +267,37 @@ export const Conexiones = {
                     this.conexionError = true;
                 }
             });
+        },
+        mostrarTableMenu(event, table) {
+            this.menuVisible = false;
+            this.menuTableVisible = true;
+            this.menuTableX = event.clientX;
+            this.menuTableY = event.clientY;
+            this.tableSeleccionada = table;
+        },
+        cerrarTableMenu(event) {
+            if (this.menuTableVisible && this.$refs.menuTable && !this.$refs.menuTable.contains(event.target)) {
+                this.menuTableVisible = false;
+            }
+        },
+        cerrarTodosLosMenus(event) {
+            const fueraMenuConexion = this.menuVisible && this.$refs.menu && !this.$refs.menu.contains(event.target);
+            const fueraMenuTabla = this.menuTableVisible && this.$refs.menuTable && !this.$refs.menuTable.contains(event.target);
+
+            if (fueraMenuConexion) {
+                this.menuVisible = false;
+            }
+
+            if (fueraMenuTabla) {
+                this.menuTableVisible = false;
+            }
         }
     },
     mounted() {
         document.getElementById('add-connection').addEventListener('click', () => {
             this.addConnection();
         });
-        document.addEventListener("click", this.cerrarMenu);
+        document.addEventListener('click', this.cerrarTodosLosMenus);
         this.listarConexiones();
     }
 };
