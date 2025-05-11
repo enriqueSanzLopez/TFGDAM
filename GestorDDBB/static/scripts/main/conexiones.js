@@ -15,7 +15,17 @@ export const Conexiones = {
         <!--<button type="button" class="btn btn-light"><i class="fa-solid fa-plug-circle-xmark"></i></button>-->
     </div>
     <ul>
-        <li v-for="conexion in conexiones" :key="conexion.id" @contextmenu.prevent="mostrarMenu($event, conexion)">{{conexion.host}} - {{conexion.db_name}}</li>
+        <li v-for="conexion in conexiones" :key="conexion.id" @contextmenu.prevent="mostrarMenu($event, conexion)">
+            {{ conexion.host }} - {{ conexion.db_name }}
+            <ul>
+                <li
+                    v-for="table in tables.filter(t => t.id_conexion === conexion.id)"
+                    :key="table.nombre_tabla"
+                >
+                    {{ table.nombre_tabla }}
+                </li>
+            </ul>
+        </li>
     </ul>
     <div v-if="menuVisible" ref="menu" class="menu-contextual" :style="{ top: menuY + 'px', left: menuX + 'px' }">
         <button type="button" @click="deleteConexion(conexionSeleccionada)">Desconectar <i class="fa-solid fa-xmark" style="color: red;"></i></button>
@@ -26,6 +36,7 @@ export const Conexiones = {
             conexionLoading: false,
             conexionError: false,
             conexiones: [],
+            tables: [],
             menuVisible: false,
             menuX: 0,
             menuY: 0,
@@ -104,7 +115,8 @@ export const Conexiones = {
                             success: function (response) {
                                 if (response.status === 'success') {
                                     console.log('Resultados', response);
-                                    self.conexiones = response.conexiones
+                                    self.conexiones = response.conexiones;
+                                    self.listarTablas();
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }
@@ -160,6 +172,48 @@ export const Conexiones = {
                                 if (response.status === 'success') {
                                     self.listarConexiones();
                                     self.menuVisible = false;
+                                } else {
+                                    console.error('Error en la conexión:', response.message);
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('Error durante la solicitud:', error);
+                            }
+                        });
+                    } else {
+                        console.error('Error al recuperar el token CSRF:', response.message);
+                        this.conexionError = true;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Ocurrió un error durante la solicitud:', error);
+                    this.conexionError = true;
+                }
+            });
+        },
+        async listarTablas(){
+            const self = this;
+            $.ajax({
+                url: '/api/csrf/',
+                type: 'GET',
+                success: function (response) {
+                    if (response.status === 'success') {
+                        const csrfToken = response.token;
+                        const data = {
+                            user: document.getElementById('apid').value,
+                        };
+                        $.ajax({
+                            url: '/api/list-tables/',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify(data),
+                            beforeSend: function (xhr) {
+                                xhr.setRequestHeader('X-CSRFToken', csrfToken);
+                            },
+                            success: function (response) {
+                                if (response.status === 'success') {
+                                    console.log('Resultados', response);
+                                    self.tables = response.tables
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }

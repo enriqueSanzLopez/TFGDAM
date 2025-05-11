@@ -545,7 +545,8 @@ def test_connection(request):
                 'TIME_ZONE': settings.TIME_ZONE,
                 'CONN_HEALTH_CHECKS': True,
                 'CONN_MAX_AGE': 60,
-                'AUTOCOMMIT': True
+                'AUTOCOMMIT': True,
+                'ATOMIC_REQUESTS': True,
             }
             #Intentar hacer conexiones
             connections.databases['temp_db'] = db_config
@@ -651,7 +652,8 @@ def list_tables(request):
                         'TIME_ZONE': settings.TIME_ZONE,
                         'CONN_HEALTH_CHECKS': True,
                         'CONN_MAX_AGE': 60,
-                        'AUTOCOMMIT': True
+                        'AUTOCOMMIT': True,
+                        'ATOMIC_REQUESTS': True,
                     }
                     consulta=''
                     if(decrypted_data["db_type"]=='django.db.backends.postgresql'):
