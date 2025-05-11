@@ -291,6 +291,48 @@ export const Conexiones = {
             if (fueraMenuTabla) {
                 this.menuTableVisible = false;
             }
+        },
+        async checkEdicionPermiso() {
+            const self = this;
+            $.ajax({
+                url: '/api/csrf/',
+                type: 'GET',
+                success: function (response) {
+                    if (response.status === 'success') {
+                        const csrfToken = response.token;
+                        const data = {
+                            user: document.getElementById('apid').value,
+                        };
+                        $.ajax({
+                            url: '/api/edicion-permission/',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify(data),
+                            beforeSend: function (xhr) {
+                                xhr.setRequestHeader('X-CSRFToken', csrfToken);
+                            },
+                            success: function (response) {
+                                if (response.status === 'success') {
+                                    console.log('Resultados', response);
+                                    self.editarPermission=response.edicion
+                                } else {
+                                    console.error('Error en la conexión:', response.message);
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('Error durante la solicitud:', error);
+                            }
+                        });
+                    } else {
+                        console.error('Error al recuperar el token CSRF:', response.message);
+                        this.conexionError = true;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Ocurrió un error durante la solicitud:', error);
+                    this.conexionError = true;
+                }
+            });
         }
     },
     mounted() {
@@ -299,5 +341,6 @@ export const Conexiones = {
         });
         document.addEventListener('click', this.cerrarTodosLosMenus);
         this.listarConexiones();
+        this.checkEdicionPermiso();
     }
 };
