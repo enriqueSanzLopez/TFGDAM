@@ -691,3 +691,28 @@ def list_tables(request):
                 })
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+
+@csrf_protect
+def view_edit_permission(request):
+    if request.method=='POST':
+        try:
+            body = json.loads(request.body.decode('utf-8'))
+            user = User.objects.filter(id=body.get('user')).first()
+            #Conseguir los permisos del usuario
+            permisos = user.group.permissions.all()
+            edicion=False
+            for permiso in user.group.permissions.all():
+                if permiso.value == 'edicion':
+                    edicion = True
+                    break
+            return JsonResponse({
+                'status': 'success',
+                'edicion': edicion
+            })
+        except Exception as e:
+            return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+                })
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)

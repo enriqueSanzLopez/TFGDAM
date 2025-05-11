@@ -33,6 +33,14 @@ class Command(BaseCommand):
         )
         administradores_group.permissions.add(usuarios_permission)
         self.stdout.write(f"Permiso creado: {usuarios_permission.name}, Asociado a Grupo: {administradores_group.desc_group}")
+        
+        edicion_permission = PermissionFactory(
+            name="Edicion",
+            value="edicion",
+            order=4
+        )
+        administradores_group.permissions.add(edicion_permission)
+        self.stdout.write(f"Permiso creado: {edicion_permission.name}, Asociado a Grupo: {administradores_group.desc_group}")
 
         # Crear usuario "admin"
         administrador_user = UserFactory(

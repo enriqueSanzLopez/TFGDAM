@@ -39,5 +39,6 @@ urlpatterns = [
     path('api/test-connection/', views.test_connection, name='api/test-connection'),
     path('api/list-connections/', views.list_connections, name='api/list-connections'),
     path('api/list-tables/', views.list_tables, name='api/list-tables'),
+    path('api/edicion-permission/', views.view_edit_permission, name='api/edicion-permission'),
     path('api/delete-connection/', views.delete_connection, name='api/delete-connection'),
 ]
