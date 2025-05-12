@@ -52,11 +52,11 @@ export const Conexiones = {
         :style="{ top: menuTableY + 'px', left: menuTableX + 'px' }"
         @click.stop
     >
-        <button type="button">
+        <button type="button" @click="buscarEnTabla">
             Buscar <i class="fa-solid fa-magnifying-glass" style="color: blue;"></i>
         </button>
         <button type="button" v-if="editarPermission === true">
-            Editar <i class="fa-solid fa-pen-to-square" style="color: blue;"></i>
+            Consola <i class="fa-solid fa-code" style="color: blue;"></i></i>
         </button>
     </div>
     `,
@@ -183,6 +183,18 @@ export const Conexiones = {
             }
         },
         async deleteConexion(id) {
+            const fakeTarget = document.createElement('div');
+            document.body.appendChild(fakeTarget);
+            const fakeEvent = new MouseEvent('click', {
+                bubbles: true,
+                cancelable: true,
+                view: window
+            });
+            Object.defineProperty(fakeEvent, 'target', { value: fakeTarget });
+
+            this.cerrarMenu(fakeEvent);
+
+            document.body.removeChild(fakeTarget);
             const self = this;
             $.ajax({
                 url: '/api/csrf/',
@@ -314,7 +326,7 @@ export const Conexiones = {
                             success: function (response) {
                                 if (response.status === 'success') {
                                     console.log('Resultados', response);
-                                    self.editarPermission=response.edicion
+                                    self.editarPermission = response.edicion
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }
@@ -332,6 +344,25 @@ export const Conexiones = {
                     console.error('Ocurrió un error durante la solicitud:', error);
                     this.conexionError = true;
                 }
+            });
+        },
+        async buscarEnTabla() {
+            const fakeTarget = document.createElement('div');
+            document.body.appendChild(fakeTarget);
+            const fakeEvent = new MouseEvent('click', {
+                bubbles: true,
+                cancelable: true,
+                view: window
+            });
+            Object.defineProperty(fakeEvent, 'target', { value: fakeTarget });
+
+            this.cerrarTableMenu(fakeEvent);
+
+            document.body.removeChild(fakeTarget);
+            this.$emit('buscar-tabla', {
+                connectionId: this.tableSeleccionada.id_conexion,
+                tableName: this.tableSeleccionada.nombre_tabla,
+                action: 'select'
             });
         }
     },
