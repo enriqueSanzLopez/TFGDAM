@@ -1,9 +1,16 @@
 import { Conexiones } from '/static/scripts/main/conexiones.js';
+import { Busqueda } from '/static/scripts/main/select.js';
 const main = {
     template: `
         <div id="main-principal">
             <div class="main-conexiones"><conexiones @buscar-tabla="handleBuscarTabla"></conexiones></div>
-            <div class="d-flex flex-column justify-content-start align-items-center"></div>
+            <div class="d-flex flex-column justify-content-start align-items-center">
+                <busqueda
+                    v-if="action === 'select'"
+                    :currentTable="currentTable"
+                    :currentConnection="currentConnection"
+                />
+            </div>
         </div>
     `,
     data() {
@@ -15,7 +22,8 @@ const main = {
         };
     },
     components: {
-        Conexiones
+        Conexiones,
+        Busqueda
     },
     computed: {
     },
@@ -26,6 +34,7 @@ const main = {
             this.currentConnection = connectionId;
             this.currentTable = tableName;
             this.action = action;
+            console.log('En principal: Conexion seleccionada: '+this.currentConnection, 'Tabla seleccionada: '+this.currentTable, 'Accion: '+this.action);
             //Mas codigo aqui...
         },
     },

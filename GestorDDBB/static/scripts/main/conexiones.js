@@ -359,6 +359,7 @@ export const Conexiones = {
             this.cerrarTableMenu(fakeEvent);
 
             document.body.removeChild(fakeTarget);
+            console.log('Conexion a enviar: '+this.tableSeleccionada.id_conexion, 'Tabla seleccionada: ', this.tableSeleccionada.nombre_tabla);
             this.$emit('buscar-tabla', {
                 connectionId: this.tableSeleccionada.id_conexion,
                 tableName: this.tableSeleccionada.nombre_tabla,
