@@ -749,3 +749,68 @@ def view_edit_permission(request):
                 })
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+    
+@csrf_protect
+def query_table(request):
+    if request.method == 'POST':
+        try:
+            body = json.loads(request.body.decode('utf-8'))
+            user = User.objects.filter(id=body.get('user')).first()
+            connection = Connection.objects.filter(id=body.get('connection_id'), user=user).first()
+            if not connection:
+                return JsonResponse({'status': 'error', 'message': 'Conexión no encontrada'})
+            table_name = body.get('table')
+            columns = body.get('columns', '*')
+            filters = body.get('filters', '')
+            ordering = body.get('ordering', '')
+            if not isinstance(table_name, str) or not re.match(r'^[\w\.\"]+$', table_name):
+                return JsonResponse({'status': 'error', 'message': 'Nombre de tabla inválido'})
+
+            if columns != '*' and not re.match(r'^[\w\,\s]+$', columns):
+                return JsonResponse({'status': 'error', 'message': 'Columnas inválidas'})
+
+            decrypted_data = connection.decrypt_data()
+            db_config = {
+                'ENGINE': decrypted_data["db_type"].strip().lower(),
+                'NAME': decrypted_data["db_name"],
+                'USER': decrypted_data["name"],
+                'PASSWORD': decrypted_data["password"],
+                'HOST': decrypted_data["host"],
+                'PORT': connection.port,
+                'OPTIONS': {},
+                'TIME_ZONE': settings.TIME_ZONE,
+                'CONN_HEALTH_CHECKS': True,
+                'CONN_MAX_AGE': 60,
+                'AUTOCOMMIT': True,
+                'ATOMIC_REQUESTS': True,
+            }
+
+            connections.databases['temp_db'] = db_config
+            temp_connection = connections['temp_db']
+
+            query = f"SELECT {columns} FROM {table_name}"
+            if filters:
+                query += f" WHERE {filters}"
+            if ordering:
+                query += f" ORDER BY {ordering}"
+
+            results = []
+            with temp_connection.cursor() as cursor:
+                cursor.execute(query)
+                rows = cursor.fetchall()
+                col_names = [desc[0] for desc in cursor.description]
+                for row in rows:
+                    results.append(dict(zip(col_names, row)))
+
+            return JsonResponse({
+                'status': 'success',
+                'data': results
+            })
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)})
+        finally:
+            if 'temp_db' in connections.databases:
+                connections['temp_db'].close()
+                del connections.databases['temp_db']
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
