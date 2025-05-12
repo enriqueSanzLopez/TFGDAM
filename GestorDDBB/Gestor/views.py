@@ -784,28 +784,53 @@ def query_table(request):
                 'AUTOCOMMIT': True,
                 'ATOMIC_REQUESTS': True,
             }
+            
+            if decrypted_data["db_type"] == "djongo":
+                import pymongo
+                try:
+                    client = pymongo.MongoClient(
+                    host=decrypted_data["host"],
+                    port=int(connection.port),
+                    username=decrypted_data["name"],
+                    password=decrypted_data["password"]
+                    )
+                    db = client[decrypted_data["db_name"]]
+                    collection = db[table_name]
+                    mongo_filters = json.loads(filters) if filters else {}
+                    projection = columns.split(',') if columns != '*' else None
+                    sort_fields = json.loads(ordering) if ordering else None
+                    cursor = collection.find(mongo_filters, projection)
+                    if sort_fields:
+                        cursor = cursor.sort(sort_fields)
+                    results = list(cursor)
+                    for doc in results:
+                        doc['_id'] = str(doc['_id'])
 
-            connections.databases['temp_db'] = db_config
-            temp_connection = connections['temp_db']
-
-            query = f"SELECT {columns} FROM {table_name}"
-            if filters:
-                query += f" WHERE {filters}"
-            if ordering:
-                query += f" ORDER BY {ordering}"
-
-            results = []
-            with temp_connection.cursor() as cursor:
-                cursor.execute(query)
-                rows = cursor.fetchall()
-                col_names = [desc[0] for desc in cursor.description]
-                for row in rows:
-                    results.append(dict(zip(col_names, row)))
-
-            return JsonResponse({
-                'status': 'success',
-                'data': results
-            })
+                    return JsonResponse({
+                        'status': 'success',
+                        'data': results
+                    })
+                except Exception as e:
+                    return JsonResponse({'status': 'error', 'message': str(e)})
+            else:
+                connections.databases['temp_db'] = db_config
+                temp_connection = connections['temp_db']
+                query = f"SELECT {columns} FROM {table_name}"
+                if filters:
+                    query += f" WHERE {filters}"
+                if ordering:
+                    query += f" ORDER BY {ordering}"
+                results = []
+                with temp_connection.cursor() as cursor:
+                    cursor.execute(query)
+                    rows = cursor.fetchall()
+                    col_names = [desc[0] for desc in cursor.description]
+                    for row in rows:
+                        results.append(dict(zip(col_names, row)))
+                return JsonResponse({
+                    'status': 'success',
+                    'data': results
+                })
         except Exception as e:
             return JsonResponse({'status': 'error', 'message': str(e)})
         finally:
