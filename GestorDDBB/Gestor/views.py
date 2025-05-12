@@ -48,10 +48,17 @@ def login_view(request):
     if request.user.is_authenticated:
         return redirect('main')
     else:
+        customStyle=CustomStyle.objects.first()
+        other_code=''
+        if customStyle is None:
+            ''
+        else:
+            other_code=customStyle.other_code
         contexto = {
             "iniciar_sesion": translations.gettext("iniciar_sesion"),
             "usuario": translations.gettext("usuario"),
             "password": translations.gettext("password"),
+            "other_code": other_code
         }
         return render(request, 'login.html', contexto)
 
@@ -99,7 +106,26 @@ def main_view(request):
         saveConnection=translations.gettext("save_connection")
         cancelar=translations.gettext("cancelar")
         usuario=translations.gettext("usuario")
-        return render(request, 'main.html', {'permissions': permissions, 'user_id': request.session.get('user_id'), 'connections': connections, 'nav_inicio': inicio, 'nav_personalizacion': personalizacion, 'nav_usuarios': usuarios, 'nav_logout': logout, 'usuario': usuario, 'ddbb': ddbb, 'port': port, 'password': password, 'saveConnection': saveConnection, 'cancelar': cancelar})
+        customStyle=CustomStyle.objects.first()
+        other_code=''
+        if customStyle is None:
+            ''
+        else:
+            other_code=customStyle.other_code
+        return render(request, 'main.html', {'permissions': permissions,
+                                             'user_id': request.session.get('user_id'),
+                                             'connections': connections,
+                                             'nav_inicio': inicio,
+                                             'nav_personalizacion': personalizacion,
+                                             'nav_usuarios': usuarios,
+                                             'nav_logout': logout,
+                                             'usuario': usuario,
+                                             'ddbb': ddbb,
+                                             'port': port,
+                                             'password': password,
+                                             'saveConnection': saveConnection,
+                                             'cancelar': cancelar,
+                                             'other_code': other_code})
     else:
         return redirect('inicio')
 
@@ -145,6 +171,12 @@ def users_view(request):
         groupDeleteMessage=translations.gettext('group_delete_message')
         permissionName=translations.gettext('permission_name')
         permissionValue=translations.gettext('permission_value')
+        customStyle=CustomStyle.objects.first()
+        other_code=''
+        if customStyle is None:
+            ''
+        else:
+            other_code=customStyle.other_code
         return render(request, 'users/index.html',
                       {'permissions': permissions,
                         'users': users,
@@ -175,7 +207,8 @@ def users_view(request):
                         'groupName': groupName,
                         'groupDeleteMessage': groupDeleteMessage,
                         'permissionName': permissionName,
-                        'permissionValue': permissionValue})
+                        'permissionValue': permissionValue,
+                        'other_code': other_code})
     else:
         return redirect('inicio')
     
