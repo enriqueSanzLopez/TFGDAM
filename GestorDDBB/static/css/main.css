@@ -65,3 +65,13 @@ main,
 li{
     cursor: pointer;
 }
+
+.main{
+    padding: .25em;
+    margin: 2em;
+    background: #f0f0f0;
+}
+
+.main>div{
+    width: 100%;
+}

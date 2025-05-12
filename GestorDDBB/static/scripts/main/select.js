@@ -10,11 +10,21 @@ export const Busqueda = {
         }
     },
     template: `
-        <div class="busqueda">
-            <h3>Búsqueda en tabla</h3>
-            <p>Tabla: {{ currentTable }}</p>
-            <p>Conexión ID: {{ currentConnection }}</p>
-            <!-- Aquí puedes añadir inputs, filtros, etc -->
+        <div class="acciones d-flex flex-row justify-content-between align-items-center">
+            <button type="button" class="btn btn-success btn-lg"><i class="fa-solid fa-play"></i></button>
+            <button type="button" class="btn btn-secondary btn-lg">JSON <i class="fa-solid fa-download"></i></button>
+            <button type="button" class="btn btn-secondary btn-lg">CSV <i class="fa-solid fa-download"></i></button>
         </div>
-    `
+        <div class="filtros"></div>
+        <div class="resultados"></div>
+    `,
+    data() {
+        return {
+            registers: []
+        };
+    },
+    methods: {
+    },
+    mounted() {
+    }
 };
