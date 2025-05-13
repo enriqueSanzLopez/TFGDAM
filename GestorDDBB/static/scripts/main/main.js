@@ -1,9 +1,10 @@
 import { Conexiones } from '/static/scripts/main/conexiones.js';
 import { Busqueda } from '/static/scripts/main/select.js';
+import { Consola } from '/static/scripts/main/console.js';
 const main = {
     template: `
         <div id="main-principal">
-            <div class="main-conexiones"><conexiones @buscar-tabla="handleBuscarTabla"></conexiones></div>
+            <div class="main-conexiones"><conexiones @buscar-tabla="handleBuscarTabla" @consola-tabla="handleConsola"></conexiones></div>
             <div class="d-flex flex-column justify-content-start align-items-center main overflow-auto">
                 <busqueda
                     v-if="action === 'select'"
@@ -11,6 +12,12 @@ const main = {
                     :currentTable="currentTable"
                     :currentConnection="currentConnection"
                 />
+                <consola
+                    v-if="action === 'console'"
+                    :key="currentConnection + '_' + currentTable"
+                    :currentTable="currentTable"
+                    :currentConnection="currentConnection"
+                    />
             </div>
         </div>
     `,
@@ -24,7 +31,8 @@ const main = {
     },
     components: {
         Conexiones,
-        Busqueda
+        Busqueda,
+        Consola
     },
     computed: {
     },
@@ -35,8 +43,12 @@ const main = {
             this.currentConnection = connectionId;
             this.currentTable = tableName;
             this.action = action;
-            console.log('En principal: Conexion seleccionada: '+this.currentConnection, 'Tabla seleccionada: '+this.currentTable, 'Accion: '+this.action);
-            //Mas codigo aqui...
+        },
+        async handleConsola({ connectionId, tableName, action }) {
+            this.currentConnection = connectionId;
+            this.currentTable = tableName;
+            this.action = action;
+            console.log("Accion: ", this.action);
         },
     },
     mounted() {

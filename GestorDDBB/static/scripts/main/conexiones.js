@@ -52,10 +52,10 @@ export const Conexiones = {
         :style="{ top: menuTableY + 'px', left: menuTableX + 'px' }"
         @click.stop
     >
-        <button type="button" @click="buscarEnTabla">
+        <button type="button" @click="buscarEnTabla()">
             Buscar <i class="fa-solid fa-magnifying-glass" style="color: blue;"></i>
         </button>
-        <button type="button" v-if="editarPermission === true">
+        <button type="button" v-if="editarPermission === true" @click="lanzarConsola()">
             Consola <i class="fa-solid fa-code" style="color: blue;"></i></i>
         </button>
     </div>
@@ -364,6 +364,26 @@ export const Conexiones = {
                 connectionId: this.tableSeleccionada.id_conexion,
                 tableName: this.tableSeleccionada.nombre_tabla,
                 action: 'select'
+            });
+        },
+        async lanzarConsola() {
+            const fakeTarget = document.createElement('div');
+            document.body.appendChild(fakeTarget);
+            const fakeEvent = new MouseEvent('click', {
+                bubbles: true,
+                cancelable: true,
+                view: window
+            });
+            Object.defineProperty(fakeEvent, 'target', { value: fakeTarget });
+
+            this.cerrarTableMenu(fakeEvent);
+
+            document.body.removeChild(fakeTarget);
+            console.log('Conexion a enviar: '+this.tableSeleccionada.id_conexion, 'Tabla seleccionada: ', this.tableSeleccionada.nombre_tabla);
+            this.$emit('consola-tabla', {
+                connectionId: this.tableSeleccionada.id_conexion,
+                tableName: this.tableSeleccionada.nombre_tabla,
+                action: 'console'
             });
         }
     },
