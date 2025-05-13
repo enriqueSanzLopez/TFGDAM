@@ -7,6 +7,7 @@ const main = {
             <div class="d-flex flex-column justify-content-start align-items-center main">
                 <busqueda
                     v-if="action === 'select'"
+                    :key="currentConnection + '_' + currentTable"
                     :currentTable="currentTable"
                     :currentConnection="currentConnection"
                 />
