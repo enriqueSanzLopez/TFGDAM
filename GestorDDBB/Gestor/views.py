@@ -21,6 +21,7 @@ from django.utils.translation import get_language
 from babel import Locale
 from babel.support import Translations
 import re
+import pymongo
 
 logger = logging.getLogger('django')
 
@@ -733,7 +734,6 @@ def view_edit_permission(request):
             body = json.loads(request.body.decode('utf-8'))
             user = User.objects.filter(id=body.get('user')).first()
             #Conseguir los permisos del usuario
-            permisos = user.group.permissions.all()
             edicion=False
             for permiso in user.group.permissions.all():
                 if permiso.value == 'edicion':
@@ -787,7 +787,6 @@ def query_table(request):
             }
             
             if decrypted_data["db_type"] == "djongo":
-                import pymongo
                 try:
                     client = pymongo.MongoClient(
                     host=decrypted_data["host"],
@@ -848,5 +847,78 @@ def query_table(request):
             if 'temp_db' in connections.databases:
                 connections['temp_db'].close()
                 del connections.databases['temp_db']
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+
+@csrf_protect
+def console_api(request):
+    if request.method=='POST':
+        try:
+            body = json.loads(request.body.decode('utf-8'))
+            user = User.objects.filter(id=body.get('user')).first()
+            connection = Connection.objects.filter(id=body.get('connection_id'), user=user).first()
+            edicion=False
+            for permiso in user.group.permissions.all():
+                if permiso.value == 'edicion':
+                    edicion = True
+                    break
+            if edicion==False:
+                return JsonResponse({'status': 'error', 'message': 'No tienes los permisos adecuados.'}, status=405)
+            query = body.get('query', '').strip()
+            if not query:
+                return JsonResponse({'status': 'error', 'message': 'No se recibió una consulta.'})
+            decrypted_data = connection.decrypt_data()
+            db_config = {
+                'ENGINE': decrypted_data["db_type"].strip().lower(),
+                'NAME': decrypted_data["db_name"],
+                'USER': decrypted_data["name"],
+                'PASSWORD': decrypted_data["password"],
+                'HOST': decrypted_data["host"],
+                'PORT': connection.port,
+                'OPTIONS': {},
+                'TIME_ZONE': settings.TIME_ZONE,
+                'CONN_HEALTH_CHECKS': True,
+                'CONN_MAX_AGE': 60,
+                'AUTOCOMMIT': True,
+                'ATOMIC_REQUESTS': True,
+            }
+            if decrypted_data["db_type"].strip().lower() == 'mongodb':
+                # Conexión a MongoDB con pymongo
+                try:
+                    client = pymongo.MongoClient(
+                        host=decrypted_data["host"],
+                        port=int(connection.port),
+                        username=decrypted_data["name"],
+                        password=decrypted_data["password"]
+                    )
+                    db = client[decrypted_data["db_name"]]
+                    result = eval(f"db.{query}") 
+                    return JsonResponse({'status': 'success', 'data': result})
+                except Exception as e:
+                    return JsonResponse({'status': 'error', 'message': str(e)})
+            else:
+                connections.databases['temp_db'] = db_config
+                temp_connection = connections['temp_db']
+
+                with temp_connection.cursor() as cursor:
+                    cursor.execute(query)
+                    if cursor.description:
+                        rows = cursor.fetchall()
+                        col_names = [desc[0] for desc in cursor.description]
+                        results = [dict(zip(col_names, row)) for row in rows]
+                        return JsonResponse({'status': 'success', 'type': 'select', 'data': results})
+                    return JsonResponse({
+                        'status': 'success',
+                        'type': 'command',
+                        'message': f'Consulta ejecutada correctamente.',
+                        'rowcount': cursor.rowcount,
+                        'command_status': str(cursor.statusmessage)
+                    })
+        except Exception as e:
+            logger.error(f"Error al buscar los registros: {str(e)}")
+            return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+                })
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
