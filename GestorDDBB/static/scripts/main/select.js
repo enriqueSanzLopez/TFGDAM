@@ -13,8 +13,8 @@ export const Busqueda = {
         <div class="acciones d-flex flex-row justify-content-between align-items-center">
             <button type="button" class="btn btn-success btn-lg" @click="buscarRegistros()"><i class="fa-solid fa-search"></i></button>
             <button type="button" class="btn btn-secondary btn-lg" @click="toggleFiltros"><i class="fa-solid fa-filter"></i></button>
-            <button type="button" class="btn btn-primary btn-lg">JSON <i class="fa-solid fa-download"></i></button>
-            <button type="button" class="btn btn-primary btn-lg">CSV <i class="fa-solid fa-download"></i></button>
+            <button type="button" class="btn btn-primary btn-lg" @click="downloadJSON()">JSON <i class="fa-solid fa-download"></i></button>
+            <button type="button" class="btn btn-primary btn-lg" @click="downloadCSV()">CSV <i class="fa-solid fa-download"></i></button>
         </div>
         <transition @enter="enter"
             @leave="leave">
@@ -143,6 +143,52 @@ export const Busqueda = {
                     this.conexionError = true;
                 }
             });
+        },
+        async downloadJSON() {
+            if (!this.registers.length) {
+                alert("No hay datos para exportar.");
+                return;
+            }
+
+            const jsonData = JSON.stringify(this.registers, null, 2);
+            const blob = new Blob([jsonData], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `registros_${this.currentTable}.json`;
+            a.click();
+
+            URL.revokeObjectURL(url);
+        },
+        async downloadCSV() {
+            if (!this.registers.length) {
+                alert("No hay datos para exportar.");
+                return;
+            }
+
+            const keys = Object.keys(this.registers[0]);
+            const csvRows = [];
+            csvRows.push(keys.join(','));
+            for (const row of this.registers) {
+                const values = keys.map(key => {
+                    const val = row[key];
+                    const escaped = String(val).replace(/"/g, '""');
+                    return `"${escaped}"`;
+                });
+                csvRows.push(values.join(','));
+            }
+
+            const csvContent = csvRows.join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `registros_${this.currentTable}.csv`;
+            a.click();
+
+            URL.revokeObjectURL(url);
         }
     },
     mounted() {
