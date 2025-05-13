@@ -20,6 +20,7 @@ from babel import Locale, negotiate_locale
 from django.utils.translation import get_language
 from babel import Locale
 from babel.support import Translations
+import re
 
 logger = logging.getLogger('django')
 
@@ -815,7 +816,16 @@ def query_table(request):
             else:
                 connections.databases['temp_db'] = db_config
                 temp_connection = connections['temp_db']
-                query = f"SELECT {columns} FROM {table_name}"
+                def quote_ident(identifier):
+                    if '"' in identifier:
+                        identifier = identifier.replace('"', '""')
+                    return f'"{identifier}"'
+                if '.' in table_name:
+                    schema, table = table_name.split('.', 1)
+                    safe_table_name = f'{quote_ident(schema)}.{quote_ident(table)}'
+                else:
+                    safe_table_name = quote_ident(table_name)
+                query = f"SELECT {columns} FROM {safe_table_name}"
                 if filters:
                     query += f" WHERE {filters}"
                 if ordering:
@@ -832,6 +842,7 @@ def query_table(request):
                     'data': results
                 })
         except Exception as e:
+            # logger.error(f"Error al buscar los registros: {str(e)}")
             return JsonResponse({'status': 'error', 'message': str(e)})
         finally:
             if 'temp_db' in connections.databases:
