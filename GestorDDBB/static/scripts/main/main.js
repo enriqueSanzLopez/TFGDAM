@@ -4,7 +4,7 @@ const main = {
     template: `
         <div id="main-principal">
             <div class="main-conexiones"><conexiones @buscar-tabla="handleBuscarTabla"></conexiones></div>
-            <div class="d-flex flex-column justify-content-start align-items-center main">
+            <div class="d-flex flex-column justify-content-start align-items-center main overflow-auto">
                 <busqueda
                     v-if="action === 'select'"
                     :key="currentConnection + '_' + currentTable"
