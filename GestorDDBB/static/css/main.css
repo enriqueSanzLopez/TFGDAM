@@ -103,3 +103,8 @@ li {
 .resultados>* {
     width: 100%;
 }
+
+#codigo{
+    margin-top: .5em;
+    margin-bottom: .5em;
+}

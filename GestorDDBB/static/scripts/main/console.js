@@ -10,7 +10,16 @@ export const Consola = {
         }
     },
     template: `
-    <h1>Se llega al componente de consola</h1>
+    <div class="acciones d-flex flex-row justify-content-between align-items-center">
+        <button type="button" class="btn btn-success btn-lg"><i class="fa-solid fa-search"></i></button>
+        <button type="button" class="btn btn-primary btn-lg">JSON <i class="fa-solid fa-download"></i></button>
+        <button type="button" class="btn btn-primary btn-lg">CSV <i class="fa-solid fa-download"></i></button>
+    </div>
+    <textarea name="codigo" id="codigo" rows="10" class="form-control" placeholder="Código..."></textarea>
+    <div class="resultados d-flex flex-column flex-grow-1">
+        <p>Resultados</p>
+        <div class="result-registers flex-grow-1 overflow-auto"></div>
+    </div>
     `,
     data() {
         return {
