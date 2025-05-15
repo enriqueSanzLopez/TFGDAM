@@ -11,7 +11,7 @@ export const Consola = {
     },
     template: `
     <div class="acciones d-flex flex-row justify-content-between align-items-center">
-        <button type="button" class="btn btn-success btn-lg"><i class="fa-solid fa-search"></i></button>
+        <button type="button" class="btn btn-success btn-lg" @click="buscarRegistros()"><i class="fa-solid fa-search"></i></button>
         <button type="button" class="btn btn-primary btn-lg" @click="downloadJSON()">JSON <i class="fa-solid fa-download"></i></button>
         <button type="button" class="btn btn-primary btn-lg" @click="downloadCSV()">CSV <i class="fa-solid fa-download"></i></button>
     </div>
