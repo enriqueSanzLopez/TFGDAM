@@ -15,7 +15,7 @@ export const Consola = {
         <button type="button" class="btn btn-primary btn-lg">JSON <i class="fa-solid fa-download"></i></button>
         <button type="button" class="btn btn-primary btn-lg">CSV <i class="fa-solid fa-download"></i></button>
     </div>
-    <textarea name="codigo" id="codigo" rows="10" class="form-control" placeholder="Código..."></textarea>
+    <textarea v-model="consola" name="codigo" id="codigo" rows="10" class="form-control" placeholder="Código..."></textarea>
     <div class="resultados d-flex flex-column flex-grow-1">
         <p>Resultados</p>
         <div class="result-registers flex-grow-1 overflow-auto"></div>
