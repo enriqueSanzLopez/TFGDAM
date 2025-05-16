@@ -18,7 +18,23 @@ export const Consola = {
     <textarea v-model="consola" name="codigo" id="codigo" rows="10" class="form-control" placeholder="Código..."></textarea>
     <div class="resultados d-flex flex-column flex-grow-1">
         <p>Resultados</p>
-        <div class="result-registers flex-grow-1 overflow-auto"></div>
+        <div class="result-registers flex-grow-1 overflow-auto">
+            <table v-if="responseType === 'select'" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th v-for="(value, key) in registers[0]" :key="key">{{ key }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in registers" :key="index">
+                        <td v-for="(value, key) in item" :key="key">{{ value }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre v-else-if="responseType === 'command'" class="p-2 bg-light border rounded">
+                {{ formatRegisters(registers) }}
+            </pre>
+        </div>
     </div>
     `,
     data() {
@@ -26,6 +42,7 @@ export const Consola = {
             registers: [],
             consola: '',
             mostrarFiltros: false,
+            responseType: '',
         };
     },
     methods: {
@@ -101,6 +118,7 @@ export const Consola = {
                                 if (response.status === 'success') {
                                     console.log('Resultados', response);
                                     self.registers = response.data
+                                    self.responseType = response.type;
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }
@@ -119,6 +137,14 @@ export const Consola = {
                     this.conexionError = true;
                 }
             });
+        },
+        async formatRegisters(data) {
+            if (typeof data === 'string') return data;
+            try {
+                return JSON.stringify(data, null, 2);
+            } catch (e) {
+                return String(data);
+            }
         },
     },
     mounted() {

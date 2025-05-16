@@ -12890,3 +12890,4 @@ Lenguaje: es
 "POST /api/edicion-permission/ HTTP/1.1" 200 38
 "GET /api/csrf/ HTTP/1.1" 200 129
 "POST /api/list-tables/ HTTP/1.1" 200 1170
+Watching for file changes with StatReloader
