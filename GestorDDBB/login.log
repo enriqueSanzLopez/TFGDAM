@@ -12944,3 +12944,8 @@ Lenguaje: es
 "POST /api/list-registers/ HTTP/1.1" 200 694
 "GET /api/csrf/ HTTP/1.1" 200 129
 "POST /api/consola/ HTTP/1.1" 200 712
+"GET /logout/ HTTP/1.1" 302 0
+Lenguaje: es
+"GET / HTTP/1.1" 200 2305
+"GET /static/bootstrap.min.css.map HTTP/1.1" 404 1877
+"GET /static/bootstrap.bundle.min.js.map HTTP/1.1" 404 1895
