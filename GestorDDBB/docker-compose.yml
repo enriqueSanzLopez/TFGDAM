@@ -5,13 +5,11 @@ services:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_USER: django
-      POSTGRES_PASSWORD: django
-      POSTGRES_DB: gestor
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
 
   web:
     build: .
@@ -19,7 +17,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "${DJANGO_PORT}:8000"
     depends_on:
       - db
     environment:
