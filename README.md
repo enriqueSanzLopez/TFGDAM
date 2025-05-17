@@ -36,4 +36,6 @@ Instalación:
             docker-compose exec web python manage.py makemigrations
             docker-compose exec web python manage.py migrate
             docker-compose exec web python manage.py seed_database
+        
+        Guardar los cambios de archivos estáticos:
             docker-compose exec web python manage.py collectstatic --noinput
