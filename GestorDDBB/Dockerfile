@@ -1,7 +1,5 @@
 FROM python:3.11-slim
-
 ENV DEBIAN_FRONTEND=noninteractive
-
 RUN apt-get update && apt-get install -y \
     gcc \
     build-essential \
@@ -13,19 +11,14 @@ RUN apt-get update && apt-get install -y \
     libldap2-dev \
     && apt-get remove -y libodbc2 unixodbc-common libodbcinst2 \
     && rm -rf /var/lib/apt/lists/*
-
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
     apt-get update && ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev && \
-    apt-get clean
-
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
-
-COPY . .
-
+COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
-
+COPY . .
 EXPOSE 8000
-
 CMD ["gunicorn", "GestorDDBB.wsgi:application", "--bind", "0.0.0.0:8000"]

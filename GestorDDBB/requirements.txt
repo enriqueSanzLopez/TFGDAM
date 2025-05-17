@@ -1,4 +1,5 @@
 Django>=4.2,<5.1
+Babel>=2.0
 gunicorn
 psycopg2-binary
 dj-database-url
@@ -6,3 +7,5 @@ pymongo
 python-dotenv
 mssql-django
 pyodbc
+cryptography
+factory_boy>=3.2,<4.0

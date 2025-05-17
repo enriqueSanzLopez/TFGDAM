@@ -22,3 +22,17 @@ Registrar cambios en archivos estáticos:
 
 Compilar traducciones:
     pybabel compile -d translations
+
+Instalación:
+    Para la instalación, se asume que el usuario tiene una instalación de Docker funcional. Los comandos se van a explicar para el sistema operativo Windows. En caso de trabajar con un entorno Ubuntu, es posible, que los comandos de docker-exec, se tengan que lanzar como docker exec dado que algunas distribuciones de Docker tienen pequeñas variaciones en sus comandos.
+
+    Generación de los contenedores Docker:
+        La carpeta GestorDDBB contiene en su interior los archivos docker-compose.yml y Dockerfile encargados de la generación de los contenedores. Los parámetros de estos, dependen del archivo .env, el cual puede modificarse para cambiar datos de conexión o puertos de uso, encontrado en la misma carpeta. Para lanzar estos contenedores, se necesita lanzar el siguiente comando:
+            docker-compose up -d
+        
+        Se puede comprobar que la aplicación funciona correctamente funciona correctamente listando los contenedores de Docker, donde ahora debería haber dos contenedores nuevos llamados: gestorddbb-db-1 gestorddbb-web-1. Los cuales deberían estar en marcha.
+
+        Seguidamente, se debe migrar la base de datos, para lo cual, se deben lanzar los siguientes comandos:
+            docker-compose exec web python manage.py makemigrations
+            docker-compose exec web python manage.py migrate
+            docker-compose exec web python manage.py seed_database
