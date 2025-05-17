@@ -1,0 +1,47 @@
+main>.acciones {
+    margin-top: 3em;
+    margin-right: .25em;
+}
+
+main tbody {
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+.table-responsive-lg {
+    overflow-x: scroll;
+    max-width: 100%;
+}
+
+.modal form>* {
+    margin-top: .25em;
+}
+
+.modal form>div {
+    width: 100%;
+}
+
+.modal form>div>button{
+    margin-left: .25em;
+}
+
+#nav-tabMainContent .tab-pane{
+    padding-left: .25em;
+    padding-right: .25em;
+}
+
+.acciones{
+    margin-top: .25em;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .25em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+#nav-tab{
+    margin-top: .5em;
+}

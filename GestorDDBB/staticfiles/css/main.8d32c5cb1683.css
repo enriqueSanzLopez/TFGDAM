@@ -1,0 +1,110 @@
+main,
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+#app,
+#main-principal {
+    flex-grow: 1;
+}
+
+#main-principal {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    gap: .25em;
+}
+
+#main-principal>div:first-child {
+    margin-top: .25em;
+    padding: .25em;
+    overflow-x: scroll;
+}
+
+.main-conexiones ul {
+    overflow-y: scroll;
+}
+
+.main-conexiones button {
+    margin-left: .25em;
+}
+
+.modal form>* {
+    margin-top: .25em;
+}
+
+.modal form>div {
+    width: 100%;
+}
+
+.modal form>div>button {
+    margin-left: .25em;
+}
+
+
+
+.menu-contextual {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+}
+
+.menu-contextual button {
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu-contextual button:hover {
+    background: #f0f0f0;
+}
+
+li {
+    cursor: pointer;
+}
+
+.main {
+    padding: .25em;
+    margin: 2em;
+    background: #f0f0f0;
+}
+
+.main>div {
+    width: 100%;
+}
+
+.filtros {
+    background: #004e97;
+    padding: .25em;
+    border-radius: 4px;
+}
+
+.filtros,
+.filtros>* {
+    margin-top: .25em;
+}
+
+.filtros>label {
+    color: white;
+}
+
+.result-registers {
+    background: white;
+    border-radius: 4px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.resultados>* {
+    width: 100%;
+}
+
+#codigo{
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
