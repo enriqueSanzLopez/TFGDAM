@@ -1,0 +1,7 @@
+Django>=5.2
+gunicorn
+psycopg2-binary
+dj-database-url
+pymongo
+pyodbc
+python-dotenv
