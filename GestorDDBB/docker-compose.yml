@@ -21,7 +21,12 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://django:django@db:5432/gestor
+      DJANGO_PORT: ${DJANGO_PORT}
+      DB_DB: ${DB_DB}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+      DB_HOST: ${DB_HOST}
 
 volumes:
   postgres_data:
