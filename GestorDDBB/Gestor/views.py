@@ -18,7 +18,6 @@ from django.db import connections, OperationalError, DEFAULT_DB_ALIAS
 from django.conf import settings
 from babel import Locale, negotiate_locale
 from django.utils.translation import get_language
-from babel import Locale
 from babel.support import Translations
 import re
 import pymongo
