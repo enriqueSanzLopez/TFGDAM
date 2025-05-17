@@ -5,6 +5,7 @@
 
 body{
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body>*{
@@ -40,4 +41,18 @@ header>nav>ul>li>a{
 nav img{
     width: 5%;
     height: auto;
+    border-radius: 4px;
+}
+
+nav{
+    background: #004e97;
+    color: white;
+}
+
+nav a{
+    color: white;
+}
+
+select{
+    cursor: pointer;
 }
