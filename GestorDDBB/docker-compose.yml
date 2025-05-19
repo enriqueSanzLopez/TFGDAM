@@ -27,6 +27,12 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       DB_PORT: ${DB_PORT}
       DB_HOST: ${DB_HOST}
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
 
 volumes:
   postgres_data:
