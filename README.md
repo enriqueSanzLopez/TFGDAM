@@ -39,3 +39,6 @@ Instalación:
         
         Guardar los cambios de archivos estáticos:
             docker-compose exec web python manage.py collectstatic --noinput
+    
+    Conexión con servicios locales:
+        Para conectar con servicios locales, es necesario cambiar localhost por: host.docker.internal, por ejemplo si fuera a conectar a localhost:8080, tendría que hacerlo a host.docker.internal:8080
