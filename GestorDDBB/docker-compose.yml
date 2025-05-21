@@ -11,7 +11,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  web:
+  app:
     build: .
     command: gunicorn GestorDDBB.wsgi:application --bind 0.0.0.0:8000
     volumes:

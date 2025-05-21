@@ -30,15 +30,15 @@ Instalación:
         La carpeta GestorDDBB contiene en su interior los archivos docker-compose.yml y Dockerfile encargados de la generación de los contenedores. Los parámetros de estos, dependen del archivo .env, el cual puede modificarse para cambiar datos de conexión o puertos de uso, encontrado en la misma carpeta. Para lanzar estos contenedores, se necesita lanzar el siguiente comando:
             docker-compose up -d
         
-        Se puede comprobar que la aplicación funciona correctamente funciona correctamente listando los contenedores de Docker, donde ahora debería haber dos contenedores nuevos llamados: gestorddbb-db-1 gestorddbb-web-1. Los cuales deberían estar en marcha.
+        Se puede comprobar que la aplicación funciona correctamente funciona correctamente listando los contenedores de Docker, donde ahora debería haber dos contenedores nuevos llamados: gestorddbb-db-1 gestorddbb-app-1. Los cuales deberían estar en marcha.
 
         Seguidamente, se debe migrar la base de datos, para lo cual, se deben lanzar los siguientes comandos:
-            docker-compose exec web python manage.py makemigrations
-            docker-compose exec web python manage.py migrate
-            docker-compose exec web python manage.py seed_database
+            docker-compose exec app python manage.py makemigrations
+            docker-compose exec app python manage.py migrate
+            docker-compose exec app python manage.py seed_database
         
         Guardar los cambios de archivos estáticos:
-            docker-compose exec web python manage.py collectstatic --noinput
+            docker-compose exec app python manage.py collectstatic --noinput
     
     Conexión con servicios locales:
         Para conectar con servicios locales, es necesario cambiar localhost por: host.docker.internal, por ejemplo si fuera a conectar a localhost:8080, tendría que hacerlo a host.docker.internal:8080
