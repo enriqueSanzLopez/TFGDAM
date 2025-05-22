@@ -13656,3 +13656,6 @@ Realiza la conexión con SQL Server (ID 1)
 Error en la conexión 2: 'pymongo' isn't an available database backend or couldn't be imported. Check the above exception. To use one of the built-in backends, use 'django.db.backends.XXX', where XXX is one of:
     'mysql', 'oracle', 'postgresql', 'sqlite3'
 Realiza la conexión con PostgreSQL (ID 3)
+Realiza la conexión con SQL Server (ID 1)
+Realiza la conexión con MongoDB (ID 2)
+Realiza la conexión con PostgreSQL (ID 3)
