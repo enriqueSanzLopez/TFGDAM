@@ -22,6 +22,7 @@ from babel.support import Translations
 import re
 import pymongo
 from django.db.utils import ConnectionDoesNotExist
+from django.db.utils import ConnectionHandler
 
 logger = logging.getLogger('django')
 
@@ -562,6 +563,9 @@ def get_csrf(request):
                 'message': str(e)
                 })
 
+def get_temp_connection(db_config):
+    return ConnectionHandler({'default': db_config})['default']
+
 @csrf_protect
 def test_connection(request):
     if request.method == 'POST':
@@ -665,18 +669,21 @@ def delete_connection(request):
 def list_tables(request):
     if request.method != 'POST':
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+    
     try:
         body = json.loads(request.body.decode('utf-8'))
         user = User.objects.filter(id=body.get('user')).first()
         if not user:
             return JsonResponse({'status': 'error', 'message': 'Usuario no encontrado.'}, status=404)
+        
         connections_list = Connection.objects.filter(user=user)
         tables_list = []
+
         for connection in connections_list:
-            alias = f"temp_db_{connection.id}"
             try:
                 decrypted_data = connection.decrypt_data()
                 db_type = decrypted_data["db_type"].strip().lower()
+
                 db_config = {
                     'ENGINE': db_type,
                     'NAME': decrypted_data["db_name"],
@@ -689,12 +696,11 @@ def list_tables(request):
                     'CONN_HEALTH_CHECKS': True,
                     'CONN_MAX_AGE': 60,
                     'AUTOCOMMIT': True,
-                    'ATOMIC_REQUESTS': True,
+                    'ATOMIC_REQUESTS': False,
                 }
-                connections.databases[alias] = db_config
-                if alias in connections:
-                    connections[alias].close()
-                temp_connection = connections[alias]
+
+                temp_connection = get_temp_connection(db_config)
+
                 if db_type == 'django.db.backends.postgresql':
                     logger.info(f'Realiza la conexión con PostgreSQL (ID {connection.id})')
                     consulta = """
@@ -706,6 +712,7 @@ def list_tables(request):
                     with temp_connection.cursor() as cursor:
                         cursor.execute(consulta)
                         tables = cursor.fetchall()
+
                 elif db_type == 'django.db.backends.mysql':
                     logger.info(f'Realiza la conexión con MySQL (ID {connection.id})')
                     consulta = """
@@ -717,6 +724,7 @@ def list_tables(request):
                     with temp_connection.cursor() as cursor:
                         cursor.execute(consulta)
                         tables = cursor.fetchall()
+
                 elif db_type == 'mssql':
                     logger.info(f'Realiza la conexión con SQL Server (ID {connection.id})')
                     consulta = """
@@ -728,6 +736,7 @@ def list_tables(request):
                     with temp_connection.cursor() as cursor:
                         cursor.execute(consulta)
                         tables = cursor.fetchall()
+
                 elif db_type == 'django.db.backends.sqlite3':
                     logger.info(f'Realiza la conexión con SQLite (ID {connection.id})')
                     consulta = """
@@ -739,29 +748,33 @@ def list_tables(request):
                     with temp_connection.cursor() as cursor:
                         cursor.execute(consulta)
                         tables = cursor.fetchall()
+
                 elif db_type == 'djongo':
                     logger.info(f'Realiza la conexión con MongoDB (ID {connection.id})')
                     db = temp_connection.connection.client[decrypted_data["db_name"]]
                     tables = [(name,) for name in db.list_collection_names()]
+
                 else:
                     logger.warning(f'Base de datos no soportada: {db_type}')
                     tables = []
+
                 for table in tables:
                     tables_list.append({
                         "id_conexion": connection.id,
                         "nombre_tabla": table[0]
                     })
+
+                temp_connection.close()
+
             except Exception as e1:
                 logger.error(f"Error en la conexión {connection.id}: {e1}")
                 continue
-            finally:
-                if alias in connections:
-                    connections[alias].close()
-                    del connections.databases[alias]
+
         return JsonResponse({
             'status': 'success',
             'tables': tables_list,
         })
+
     except Exception as e:
         logger.exception("Error general en list_tables")
         return JsonResponse({

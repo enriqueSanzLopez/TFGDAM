@@ -13612,3 +13612,11 @@ Traceback (most recent call last):
 django.core.exceptions.ImproperlyConfigured: 'djongo' isn't an available database backend or couldn't be imported. Check the above exception. To use one of the built-in backends, use 'django.db.backends.XXX', where XXX is one of:
     'mysql', 'oracle', 'postgresql', 'sqlite3'
 Not Found: /favicon.ico
+Lenguaje: es
+2025-05-22 23:08:26 - Inicio de sesión: 1
+Error en la conexión 1: You must define a 'default' database.
+Error en la conexión 2: You must define a 'default' database.
+Error en la conexión 3: You must define a 'default' database.
+Error en la conexión 1: You must define a 'default' database.
+Error en la conexión 2: You must define a 'default' database.
+Error en la conexión 3: You must define a 'default' database.
