@@ -21,6 +21,7 @@ from django.utils.translation import get_language
 from babel.support import Translations
 import re
 import pymongo
+from django.db.utils import ConnectionDoesNotExist
 
 logger = logging.getLogger('django')
 
@@ -662,69 +663,111 @@ def delete_connection(request):
 
 @csrf_protect
 def list_tables(request):
-    if request.method=='POST':
-        try:
-            body = json.loads(request.body.decode('utf-8'))
-            user = User.objects.filter(id=body.get('user')).first()
-            #Conseguir la lista de conexiones
-            connections_list=Connection.objects.filter(user=user)
-            #Conseguir la lista de tablas
-            tables_list = []
-            for connection in connections_list:
-                try:
-                    #Desencriptar la conexion
-                    decrypted_data = connection.decrypt_data()
-                    #Configurar conexion
-                    db_config = {
-                        'ENGINE': decrypted_data["db_type"].strip().lower(),
-                        'NAME': decrypted_data["db_name"],
-                        'USER': decrypted_data["name"],
-                        'PASSWORD': decrypted_data["password"],
-                        'HOST': decrypted_data["host"],
-                        'PORT': connection.port,
-                        'OPTIONS': {},
-                        'TIME_ZONE': settings.TIME_ZONE,
-                        'CONN_HEALTH_CHECKS': True,
-                        'CONN_MAX_AGE': 60,
-                        'AUTOCOMMIT': True,
-                        'ATOMIC_REQUESTS': True,
-                    }
-                    consulta=''
-                    if(decrypted_data["db_type"]=='django.db.backends.postgresql'):
-                        consulta="SELECT schemaname || '.' || tablename AS table_name FROM pg_catalog.pg_tables WHERE schemaname NOT IN ('pg_catalog', 'information_schema')  ORDER BY table_name"
-                    elif(decrypted_data["db_type"]=='django.db.backends.mysql'):
-                        consulta="SELECT TABLE_SCHEMA || '.' || TABLE_NAME AS table_name FROM information_schema.tables WHERE TABLE_TYPE = 'BASE TABLE' ORDER BY table_name"
-                    elif(decrypted_data["db_type"]=='mssql'):#SQL Server
-                        consulta="SELECT TABLE_SCHEMA + '.' + TABLE_NAME AS table_name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' ORDER BY table_name"
-                    elif(decrypted_data["db_type"]=='django.db.backends.sqlite3'):
-                        consulta="SELECT name AS table_name FROM sqlite_master WHERE type='table' ORDER BY table_name"
-                    elif(decrypted_data["db_type"]=='djongo'):#MongoDB
-                        consulta="db.getCollectionNames()"
-                    connections.databases['temp_db'] = db_config
-                    temp_connection = connections['temp_db']
-                    if consulta!='':
-                        with temp_connection.cursor() as cursor:
-                            cursor.execute(consulta)
-                            tables = cursor.fetchall()
-
-                            for table in tables:
-                                tables_list.append({
-                                    "id_conexion": connection.id,
-                                    "nombre_tabla": table[0]
-                                })
-                except Exception as e1:
-                    ''
-            return JsonResponse({
-                'status': 'success',
-                'tables': tables_list
-            })
-        except Exception as e:
-            return JsonResponse({
-                'status': 'error',
-                'message': str(e)
-                })
-    else:
+    if request.method != 'POST':
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
+    try:
+        body = json.loads(request.body.decode('utf-8'))
+        user = User.objects.filter(id=body.get('user')).first()
+        if not user:
+            return JsonResponse({'status': 'error', 'message': 'Usuario no encontrado.'}, status=404)
+        connections_list = Connection.objects.filter(user=user)
+        tables_list = []
+        for connection in connections_list:
+            alias = f"temp_db_{connection.id}"
+            try:
+                decrypted_data = connection.decrypt_data()
+                db_type = decrypted_data["db_type"].strip().lower()
+                db_config = {
+                    'ENGINE': db_type,
+                    'NAME': decrypted_data["db_name"],
+                    'USER': decrypted_data["name"],
+                    'PASSWORD': decrypted_data["password"],
+                    'HOST': decrypted_data["host"],
+                    'PORT': connection.port,
+                    'OPTIONS': {},
+                    'TIME_ZONE': settings.TIME_ZONE,
+                    'CONN_HEALTH_CHECKS': True,
+                    'CONN_MAX_AGE': 60,
+                    'AUTOCOMMIT': True,
+                    'ATOMIC_REQUESTS': True,
+                }
+                connections.databases[alias] = db_config
+                if alias in connections:
+                    connections[alias].close()
+                temp_connection = connections[alias]
+                if db_type == 'django.db.backends.postgresql':
+                    logger.info(f'Realiza la conexión con PostgreSQL (ID {connection.id})')
+                    consulta = """
+                        SELECT schemaname || '.' || tablename AS table_name
+                        FROM pg_catalog.pg_tables
+                        WHERE schemaname NOT IN ('pg_catalog', 'information_schema')
+                        ORDER BY table_name
+                    """
+                    with temp_connection.cursor() as cursor:
+                        cursor.execute(consulta)
+                        tables = cursor.fetchall()
+                elif db_type == 'django.db.backends.mysql':
+                    logger.info(f'Realiza la conexión con MySQL (ID {connection.id})')
+                    consulta = """
+                        SELECT CONCAT(TABLE_SCHEMA, '.', TABLE_NAME) AS table_name
+                        FROM information_schema.tables
+                        WHERE TABLE_TYPE = 'BASE TABLE'
+                        ORDER BY table_name
+                    """
+                    with temp_connection.cursor() as cursor:
+                        cursor.execute(consulta)
+                        tables = cursor.fetchall()
+                elif db_type == 'mssql':
+                    logger.info(f'Realiza la conexión con SQL Server (ID {connection.id})')
+                    consulta = """
+                        SELECT TABLE_SCHEMA + '.' + TABLE_NAME AS table_name
+                        FROM INFORMATION_SCHEMA.TABLES
+                        WHERE TABLE_TYPE = 'BASE TABLE'
+                        ORDER BY table_name
+                    """
+                    with temp_connection.cursor() as cursor:
+                        cursor.execute(consulta)
+                        tables = cursor.fetchall()
+                elif db_type == 'django.db.backends.sqlite3':
+                    logger.info(f'Realiza la conexión con SQLite (ID {connection.id})')
+                    consulta = """
+                        SELECT name AS table_name
+                        FROM sqlite_master
+                        WHERE type='table'
+                        ORDER BY name
+                    """
+                    with temp_connection.cursor() as cursor:
+                        cursor.execute(consulta)
+                        tables = cursor.fetchall()
+                elif db_type == 'djongo':
+                    logger.info(f'Realiza la conexión con MongoDB (ID {connection.id})')
+                    db = temp_connection.connection.client[decrypted_data["db_name"]]
+                    tables = [(name,) for name in db.list_collection_names()]
+                else:
+                    logger.warning(f'Base de datos no soportada: {db_type}')
+                    tables = []
+                for table in tables:
+                    tables_list.append({
+                        "id_conexion": connection.id,
+                        "nombre_tabla": table[0]
+                    })
+            except Exception as e1:
+                logger.error(f"Error en la conexión {connection.id}: {e1}")
+                continue
+            finally:
+                if alias in connections:
+                    connections[alias].close()
+                    del connections.databases[alias]
+        return JsonResponse({
+            'status': 'success',
+            'tables': tables_list,
+        })
+    except Exception as e:
+        logger.exception("Error general en list_tables")
+        return JsonResponse({
+            'status': 'error',
+            'message': str(e)
+        })
 
 @csrf_protect
 def view_edit_permission(request):
