@@ -23,6 +23,7 @@ import re
 import pymongo
 from django.db.utils import ConnectionDoesNotExist
 from django.db.utils import ConnectionHandler
+from pymongo import MongoClient
 
 logger = logging.getLogger('django')
 
@@ -563,8 +564,40 @@ def get_csrf(request):
                 'message': str(e)
                 })
 
+# def get_temp_connection(db_config):
+#     return ConnectionHandler({'default': db_config})['default']
+
+
 def get_temp_connection(db_config):
+    # Detectamos si es MongoDB para manejar distinto
+    if db_config['ENGINE'].lower() in ('pymongo', 'mongodb'):
+        # Crear cliente pymongo usando datos del config
+        host = db_config.get('HOST', 'localhost')
+        port = int(db_config.get('PORT', 27017))
+        user = db_config.get('USER')
+        password = db_config.get('PASSWORD')
+        dbname = db_config.get('NAME')
+        
+        # Construir argumentos de conexión según si hay usuario y password
+        if user and password:
+            # URI con autenticación
+            mongo_uri = f"mongodb://{user}:{password}@{host}:{port}/{dbname}"
+            client = MongoClient(mongo_uri)
+        else:
+            client = MongoClient(host=host, port=port)
+        
+        return TempConnectionMongo(client)
+    
+    # Para bases SQL, usar la conexión estándar de Django
     return ConnectionHandler({'default': db_config})['default']
+
+
+class TempConnectionMongo:
+    def __init__(self, client):
+        # simulamos atributo connection.client para mantener la compatibilidad
+        self.connection = type('obj', (), {'client': client})()
+    def close(self):
+        self.connection.client.close()
 
 @csrf_protect
 def test_connection(request):
@@ -687,9 +720,9 @@ def list_tables(request):
                 db_config = {
                     'ENGINE': db_type,
                     'NAME': decrypted_data["db_name"],
-                    'USER': decrypted_data["name"],
-                    'PASSWORD': decrypted_data["password"],
-                    'HOST': decrypted_data["host"],
+                    'USER': decrypted_data.get("name"),
+                    'PASSWORD': decrypted_data.get("password"),
+                    'HOST': decrypted_data.get("host"),
                     'PORT': connection.port,
                     'OPTIONS': {},
                     'TIME_ZONE': settings.TIME_ZONE,
@@ -725,7 +758,7 @@ def list_tables(request):
                         cursor.execute(consulta)
                         tables = cursor.fetchall()
 
-                elif db_type == 'mssql':
+                elif db_type in ('mssql', 'django.db.backends.mssql'):
                     logger.info(f'Realiza la conexión con SQL Server (ID {connection.id})')
                     consulta = """
                         SELECT TABLE_SCHEMA + '.' + TABLE_NAME AS table_name
@@ -749,10 +782,12 @@ def list_tables(request):
                         cursor.execute(consulta)
                         tables = cursor.fetchall()
 
-                elif db_type == 'djongo':
+                elif db_type in ('pymongo', 'mongodb'):
                     logger.info(f'Realiza la conexión con MongoDB (ID {connection.id})')
-                    db = temp_connection.connection.client[decrypted_data["db_name"]]
-                    tables = [(name,) for name in db.list_collection_names()]
+                    client = temp_connection.connection.client
+                    db = client[decrypted_data["db_name"]]
+                    collection_names = db.list_collection_names()
+                    tables = [(name,) for name in collection_names]
 
                 else:
                     logger.warning(f'Base de datos no soportada: {db_type}')
@@ -841,7 +876,7 @@ def query_table(request):
                 'ATOMIC_REQUESTS': True,
             }
             
-            if decrypted_data["db_type"] == "djongo":
+            if decrypted_data["db_type"] == "pymongo":
                 try:
                     client = pymongo.MongoClient(
                     host=decrypted_data["host"],

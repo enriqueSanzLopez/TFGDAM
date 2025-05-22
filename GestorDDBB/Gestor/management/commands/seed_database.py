@@ -87,7 +87,7 @@ class Command(BaseCommand):
 
         django_enumerate_value=ValueFactory(
             placeholder='MongoDB',
-            value='djongo',
+            value='pymongo',
             order=5,
             enumerate=connection_enumerate
         )
