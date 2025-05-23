@@ -112,7 +112,6 @@ export const Busqueda = {
                             connection_id: self.currentConnection,
                             table: self.currentTable
                         };
-                        console.log('Datos a enviar a la API de registros', data);
                         $.ajax({
                             url: '/api/list-registers/',
                             type: 'POST',
@@ -123,23 +122,22 @@ export const Busqueda = {
                             },
                             success: function (response) {
                                 if (response.status === 'success') {
-                                    console.log('Resultados', response);
                                     self.registers = response.data
                                 } else {
-                                    console.error('Error en la conexión:', response.message);
+                                    self.$emit('error', String(response.message));
                                 }
                             },
                             error: function (xhr, status, error) {
-                                console.error('Error durante la solicitud:', error);
+                                self.$emit('error', String(error));
                             }
                         });
                     } else {
-                        console.error('Error al recuperar el token CSRF:', response.message);
+                        self.$emit('error', String(response.message));
                         this.conexionError = true;
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.error('Ocurrió un error durante la solicitud:', error);
+                    self.$emit('error', String(error));
                     this.conexionError = true;
                 }
             });

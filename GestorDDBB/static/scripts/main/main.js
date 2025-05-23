@@ -72,9 +72,8 @@ const main = {
             this.currentTable = tableName;
             this.action = action;
         },
-        async handleError({ error }) {
-            console.log('Se intenta manejar el error: '+error)
-            this.agregarError(error)
+        async handleError(error) {
+            this.agregarError(error);
         },
         async eliminarError(id) {
             this.errors = this.errors.filter(e => e.id !== id);

@@ -118,24 +118,20 @@ export const Consola = {
                                     self.registers = response.data
                                     self.responseType = response.type || (Array.isArray(response.data) ? 'select' : 'command');
                                 } else {
-                                    console.log('Error: ', response.message);
-                                    const errorMsg = typeof response.message === 'string'
-                                        ? response.message
-                                        : JSON.stringify(response.message);
-                                    self.$emit('error', errorMsg);
+                                    self.$emit('error', String(response.message));
                                 }
                             },
                             error: function (xhr, status, error) {
-                                self.$emit('error', error);
+                                self.$emit('error', String(error));
                             }
                         });
                     } else {
-                        self.$emit('error', error);
+                        self.$emit('error', String(error));
                         this.conexionError = true;
                     }
                 },
                 error: function (xhr, status, error) {
-                    self.$emit('error', error);
+                    self.$emit('error', String(error));
                     this.conexionError = true;
                 }
             });

@@ -109,20 +109,20 @@ export const Conexiones = {
                                 if (response.status === 'success') {
                                     self.listarConexiones();
                                 } else {
-                                    console.error('Error en la conexión:', response.message);
+                                    self.$emit('error', String(response.message));
                                 }
                             },
                             error: function (xhr, status, error) {
-                                console.error('Error durante la solicitud:', error);
+                                self.$emit('error', String(error));
                             }
                         });
                     } else {
-                        console.error('Error al recuperar el token CSRF:', response.message);
+                        self.$emit('error', String(response.message));
                         this.conexionError = true;
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.error('Ocurrió un error durante la solicitud:', error);
+                    self.$emit('error', String(error));
                     this.conexionError = true;
                 }
             });
@@ -151,20 +151,20 @@ export const Conexiones = {
                                     self.conexiones = response.conexiones;
                                     self.listarTablas();
                                 } else {
-                                    console.error('Error en la conexión:', response.message);
+                                    self.$emit('error', String(response.message));
                                 }
                             },
                             error: function (xhr, status, error) {
-                                console.error('Error durante la solicitud:', error);
+                                self.$emit('error', String(error));
                             }
                         });
                     } else {
-                        console.error('Error al recuperar el token CSRF:', response.message);
+                        self.$emit('error', String(response.message));
                         this.conexionError = true;
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.error('Ocurrió un error durante la solicitud:', error);
+                    self.$emit('error', String(error));
                     this.conexionError = true;
                 }
             });
@@ -218,20 +218,20 @@ export const Conexiones = {
                                     self.listarConexiones();
                                     self.menuVisible = false;
                                 } else {
-                                    console.error('Error en la conexión:', response.message);
+                                    self.$emit('error', String(response.message));
                                 }
                             },
                             error: function (xhr, status, error) {
-                                console.error('Error durante la solicitud:', error);
+                                self.$emit('error', String(error));
                             }
                         });
                     } else {
-                        console.error('Error al recuperar el token CSRF:', response.message);
+                        self.$emit('error', String(response.message));
                         this.conexionError = true;
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.error('Ocurrió un error durante la solicitud:', error);
+                    self.$emit('error', String(error));
                     this.conexionError = true;
                 }
             });
@@ -259,20 +259,20 @@ export const Conexiones = {
                                 if (response.status === 'success') {
                                     self.tables = response.tables
                                 } else {
-                                    console.error('Error en la conexión:', response.message);
+                                    self.$emit('error', String(response.message));
                                 }
                             },
                             error: function (xhr, status, error) {
-                                console.error('Error durante la solicitud:', error);
+                                self.$emit('error', String(error));
                             }
                         });
                     } else {
-                        console.error('Error al recuperar el token CSRF:', response.message);
+                        self.$emit('error', String(response.message));
                         this.conexionError = true;
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.error('Ocurrió un error durante la solicitud:', error);
+                    self.$emit('error', String(error));
                     this.conexionError = true;
                 }
             });
@@ -324,20 +324,20 @@ export const Conexiones = {
                                 if (response.status === 'success') {
                                     self.editarPermission = response.edicion
                                 } else {
-                                    console.error('Error en la conexión:', response.message);
+                                    self.$emit('error', String(response.message));
                                 }
                             },
                             error: function (xhr, status, error) {
-                                console.error('Error durante la solicitud:', error);
+                                self.$emit('error', String(error));
                             }
                         });
                     } else {
-                        console.error('Error al recuperar el token CSRF:', response.message);
+                        self.$emit('error', String(response.message));
                         this.conexionError = true;
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.error('Ocurrió un error durante la solicitud:', error);
+                    self.$emit('error', String(error));
                     this.conexionError = true;
                 }
             });
