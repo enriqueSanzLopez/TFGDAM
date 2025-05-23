@@ -23,12 +23,12 @@ const main = {
         </div>
         <div 
             v-if="errors.length" 
-            class="error-list position-fixed bg-white border rounded p-2 shadow-sm"
+            class="error-list position-fixed"
             >
             <div 
                 v-for="error in errors" 
                 :key="error.id" 
-                class="d-flex justify-content-between align-items-center mb-2"
+                class="d-flex justify-content-between align-items-start mb-2 bg-danger border rounded p-2 shadow-sm"
                 >
                 <div class="error-message text-break">{{ error.error }}</div>
                 <button 
