@@ -1,7 +1,6 @@
 import { Conexiones } from '/static/scripts/main/conexiones.js';
 import { Busqueda } from '/static/scripts/main/select.js';
 import { Consola } from '/static/scripts/main/console.js';
-import { ErrorList } from '/static/scripts/main/errors.js';
 const main = {
     template: `
         <div id="main-principal">
@@ -21,20 +20,41 @@ const main = {
                     />
             </div>
         </div>
+        <div 
+            v-if="errors.length" 
+            class="error-list position-fixed bg-white border rounded p-2 shadow-sm"
+            >
+            <div 
+                v-for="error in errors" 
+                :key="error.id" 
+                class="d-flex justify-content-between align-items-center mb-2"
+                >
+                <div class="error-message text-break">{{ error.error }}</div>
+                <button 
+                    type="button" 
+                    class="btn btn-sm btn-danger ms-2" 
+                    @click="eliminarError(error.id)" 
+                    aria-label="Eliminar error"
+                    title="Eliminar error"
+                    >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
     `,
     data() {
         return {
             mensaje: 'Hola, Vue.js!',
             currentConnection: null,
             currentTable: null,
-            action: null
+            action: null,
+            errors: []
         };
     },
     components: {
         Conexiones,
         Busqueda,
-        Consola,
-        ErrorList
+        Consola
     },
     computed: {
     },
@@ -50,6 +70,10 @@ const main = {
             this.currentConnection = connectionId;
             this.currentTable = tableName;
             this.action = action;
+        },
+        async eliminarError(id) {
+            const nuevosErrores = this.errors.filter(e => e.id !== id);
+            this.$emit('update:errors', nuevosErrores);
         },
     },
     mounted() {
