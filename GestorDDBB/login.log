@@ -13674,3 +13674,4 @@ Realiza la conexión con PostgreSQL (ID 3)
 Realiza la conexión con SQL Server (ID 1)
 Realiza la conexión con MongoDB (ID 2)
 Realiza la conexión con PostgreSQL (ID 3)
+Error al ejecutar la consulta: 'Cursor' object has no attribute 'pretty'
