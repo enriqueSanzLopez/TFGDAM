@@ -105,6 +105,7 @@ export const Consola = {
                             query: self.consola,
                             connection_id: self.currentConnection,
                         };
+                        console.log('Datos a enviar a la API de consola', data);
                         $.ajax({
                             url: '/api/consola/',
                             type: 'POST',

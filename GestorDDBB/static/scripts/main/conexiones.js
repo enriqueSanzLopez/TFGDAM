@@ -148,7 +148,6 @@ export const Conexiones = {
                             },
                             success: function (response) {
                                 if (response.status === 'success') {
-                                    console.log('Resultados', response);
                                     self.conexiones = response.conexiones;
                                     self.listarTablas();
                                 } else {
@@ -206,7 +205,6 @@ export const Conexiones = {
                             user: document.getElementById('apid').value,
                             id: id.id
                         };
-                        console.log(data);
                         $.ajax({
                             url: '/api/delete-connection/',
                             type: 'POST',
@@ -259,7 +257,6 @@ export const Conexiones = {
                             },
                             success: function (response) {
                                 if (response.status === 'success') {
-                                    console.log('Resultados', response);
                                     self.tables = response.tables
                                 } else {
                                     console.error('Error en la conexión:', response.message);
@@ -325,7 +322,6 @@ export const Conexiones = {
                             },
                             success: function (response) {
                                 if (response.status === 'success') {
-                                    console.log('Resultados', response);
                                     self.editarPermission = response.edicion
                                 } else {
                                     console.error('Error en la conexión:', response.message);
@@ -359,7 +355,6 @@ export const Conexiones = {
             this.cerrarTableMenu(fakeEvent);
 
             document.body.removeChild(fakeTarget);
-            console.log('Conexion a enviar: '+this.tableSeleccionada.id_conexion, 'Tabla seleccionada: ', this.tableSeleccionada.nombre_tabla);
             this.$emit('buscar-tabla', {
                 connectionId: this.tableSeleccionada.id_conexion,
                 tableName: this.tableSeleccionada.nombre_tabla,
@@ -379,7 +374,6 @@ export const Conexiones = {
             this.cerrarTableMenu(fakeEvent);
 
             document.body.removeChild(fakeTarget);
-            console.log('Conexion a enviar: '+this.tableSeleccionada.id_conexion, 'Tabla seleccionada: ', this.tableSeleccionada.nombre_tabla);
             this.$emit('consola-tabla', {
                 connectionId: this.tableSeleccionada.id_conexion,
                 tableName: this.tableSeleccionada.nombre_tabla,

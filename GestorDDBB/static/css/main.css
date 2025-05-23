@@ -108,3 +108,13 @@ li {
     margin-top: .5em;
     margin-bottom: .5em;
 }
+
+.error-list {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  max-width: 25vw;
+  max-height: 25vh;
+  overflow-y: auto;
+  z-index: 1050;
+}

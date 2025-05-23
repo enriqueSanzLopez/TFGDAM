@@ -1,6 +1,7 @@
 import { Conexiones } from '/static/scripts/main/conexiones.js';
 import { Busqueda } from '/static/scripts/main/select.js';
 import { Consola } from '/static/scripts/main/console.js';
+import { ErrorList } from '/static/scripts/main/errors.js';
 const main = {
     template: `
         <div id="main-principal">
@@ -32,7 +33,8 @@ const main = {
     components: {
         Conexiones,
         Busqueda,
-        Consola
+        Consola,
+        ErrorList
     },
     computed: {
     },
@@ -48,7 +50,6 @@ const main = {
             this.currentConnection = connectionId;
             this.currentTable = tableName;
             this.action = action;
-            console.log("Accion: ", this.action);
         },
     },
     mounted() {
