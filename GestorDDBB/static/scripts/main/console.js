@@ -105,7 +105,6 @@ export const Consola = {
                             query: self.consola,
                             connection_id: self.currentConnection,
                         };
-                        console.log('Datos a enviar a la API de consola', data);
                         $.ajax({
                             url: '/api/consola/',
                             type: 'POST',
@@ -116,24 +115,27 @@ export const Consola = {
                             },
                             success: function (response) {
                                 if (response.status === 'success') {
-                                    console.log('Resultados', response);
                                     self.registers = response.data
                                     self.responseType = response.type || (Array.isArray(response.data) ? 'select' : 'command');
                                 } else {
-                                    console.error('Error en la conexión:', response.message);
+                                    console.log('Error: ', response.message);
+                                    const errorMsg = typeof response.message === 'string'
+                                        ? response.message
+                                        : JSON.stringify(response.message);
+                                    self.$emit('error', errorMsg);
                                 }
                             },
                             error: function (xhr, status, error) {
-                                console.error('Error durante la solicitud:', error);
+                                self.$emit('error', error);
                             }
                         });
                     } else {
-                        console.error('Error al recuperar el token CSRF:', response.message);
+                        self.$emit('error', error);
                         this.conexionError = true;
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.error('Ocurrió un error durante la solicitud:', error);
+                    self.$emit('error', error);
                     this.conexionError = true;
                 }
             });

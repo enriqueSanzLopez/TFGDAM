@@ -17,6 +17,7 @@ const main = {
                     :key="currentConnection + '_' + currentTable"
                     :currentTable="currentTable"
                     :currentConnection="currentConnection"
+                    @error="handleError"
                     />
             </div>
         </div>
@@ -71,9 +72,16 @@ const main = {
             this.currentTable = tableName;
             this.action = action;
         },
+        async handleError({ error }) {
+            console.log('Se intenta manejar el error: '+error)
+            this.agregarError(error)
+        },
         async eliminarError(id) {
-            const nuevosErrores = this.errors.filter(e => e.id !== id);
-            this.$emit('update:errors', nuevosErrores);
+            this.errors = this.errors.filter(e => e.id !== id);
+        },
+        async agregarError(mensaje) {
+            const idUnico = Date.now() + Math.random();
+            this.errors.push({ id: idUnico, error: mensaje });
         },
     },
     mounted() {
