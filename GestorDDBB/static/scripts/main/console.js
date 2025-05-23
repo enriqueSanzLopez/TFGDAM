@@ -105,7 +105,6 @@ export const Consola = {
                             query: self.consola,
                             connection_id: self.currentConnection,
                         };
-                        console.log('Datos a enviar a la API de consola', data);
                         $.ajax({
                             url: '/api/consola/',
                             type: 'POST',
@@ -118,7 +117,7 @@ export const Consola = {
                                 if (response.status === 'success') {
                                     console.log('Resultados', response);
                                     self.registers = response.data
-                                    self.responseType = response.type;
+                                    self.responseType = response.type || (Array.isArray(response.data) ? 'select' : 'command');
                                 } else {
                                     console.error('Error en la conexión:', response.message);
                                 }

@@ -13685,3 +13685,6 @@ Query: db.usuarios.find()
 Base de datos: pruebasmongo
 Resultado: []
 Error al ejecutar la consulta: Solo se permite el método find() para MongoDB en esta API.
+Realiza la conexión con SQL Server (ID 1)
+Realiza la conexión con MongoDB (ID 2)
+Realiza la conexión con PostgreSQL (ID 3)
