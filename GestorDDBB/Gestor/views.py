@@ -980,15 +980,21 @@ def console_api(request):
             if db_type in ('pymongo', 'mongodb'):
                 try:
                     db = temp_connection.connection.client[decrypted_data["db_name"]]
+
+                    # Eliminar prefijo "db." si lo trae
+                    if query.startswith("db."):
+                        query = query[3:]
+
+                    # Ejecutar la consulta
                     result = eval(f"db.{query}")
-                    
-                    # Si el resultado es iterable (como un cursor), conviértelo en lista
+
+                    # Convertir a lista si es iterable
                     if hasattr(result, 'to_list'):
                         result = result.to_list(length=None)
-                    elif hasattr(result, 'next') or hasattr(result, '__iter__'):
+                    elif hasattr(result, '__iter__') and not isinstance(result, dict):
                         result = list(result)
 
-                    # Convertir objetos ObjectId
+                    # Convertir ObjectId
                     def convert(doc):
                         if isinstance(doc, dict):
                             doc = dict(doc)
@@ -1015,7 +1021,7 @@ def console_api(request):
                         col_names = [desc[0] for desc in cursor.description]
                         results = [dict(zip(col_names, row)) for row in rows]
                         return JsonResponse({'status': 'success', 'type': 'select', 'data': results})
-                    
+
                     return JsonResponse({
                         'status': 'success',
                         'type': 'command',
