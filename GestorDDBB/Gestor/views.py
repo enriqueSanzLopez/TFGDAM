@@ -854,6 +854,7 @@ def query_table(request):
             columns = body.get('columns', '*')
             filters = body.get('filters', '')
             ordering = body.get('ordering', '')
+
             if not isinstance(table_name, str) or not re.match(r'^[\w\.\"]+$', table_name):
                 return JsonResponse({'status': 'error', 'message': 'Nombre de tabla inválido'})
 
@@ -861,12 +862,14 @@ def query_table(request):
                 return JsonResponse({'status': 'error', 'message': 'Columnas inválidas'})
 
             decrypted_data = connection.decrypt_data()
+            db_type = decrypted_data["db_type"].strip().lower()
+
             db_config = {
-                'ENGINE': decrypted_data["db_type"].strip().lower(),
+                'ENGINE': db_type,
                 'NAME': decrypted_data["db_name"],
-                'USER': decrypted_data["name"],
-                'PASSWORD': decrypted_data["password"],
-                'HOST': decrypted_data["host"],
+                'USER': decrypted_data.get("name"),
+                'PASSWORD': decrypted_data.get("password"),
+                'HOST': decrypted_data.get("host"),
                 'PORT': connection.port,
                 'OPTIONS': {},
                 'TIME_ZONE': settings.TIME_ZONE,
@@ -875,19 +878,15 @@ def query_table(request):
                 'AUTOCOMMIT': True,
                 'ATOMIC_REQUESTS': True,
             }
-            
-            if decrypted_data["db_type"] == "pymongo":
+
+            temp_connection = get_temp_connection(db_config)
+
+            if db_type in ('pymongo', 'mongodb'):
                 try:
-                    client = pymongo.MongoClient(
-                    host=decrypted_data["host"],
-                    port=int(connection.port),
-                    username=decrypted_data["name"],
-                    password=decrypted_data["password"]
-                    )
-                    db = client[decrypted_data["db_name"]]
+                    db = temp_connection.connection.client[decrypted_data["db_name"]]
                     collection = db[table_name]
                     mongo_filters = json.loads(filters) if filters else {}
-                    projection = columns.split(',') if columns != '*' else None
+                    projection = {col.strip(): 1 for col in columns.split(',')} if columns != '*' else None
                     sort_fields = json.loads(ordering) if ordering else None
                     cursor = collection.find(mongo_filters, projection)
                     if sort_fields:
@@ -900,25 +899,27 @@ def query_table(request):
                         'status': 'success',
                         'data': results
                     })
-                except Exception as e:
-                    return JsonResponse({'status': 'error', 'message': str(e)})
+                finally:
+                    temp_connection.close()
+
             else:
-                connections.databases['temp_db'] = db_config
-                temp_connection = connections['temp_db']
                 def quote_ident(identifier):
                     if '"' in identifier:
                         identifier = identifier.replace('"', '""')
                     return f'"{identifier}"'
+
                 if '.' in table_name:
                     schema, table = table_name.split('.', 1)
                     safe_table_name = f'{quote_ident(schema)}.{quote_ident(table)}'
                 else:
                     safe_table_name = quote_ident(table_name)
+
                 query = f"SELECT {columns} FROM {safe_table_name}"
                 if filters:
                     query += f" WHERE {filters}"
                 if ordering:
                     query += f" ORDER BY {ordering}"
+
                 results = []
                 with temp_connection.cursor() as cursor:
                     cursor.execute(query)
@@ -926,17 +927,17 @@ def query_table(request):
                     col_names = [desc[0] for desc in cursor.description]
                     for row in rows:
                         results.append(dict(zip(col_names, row)))
+
+                temp_connection.close()
+
                 return JsonResponse({
                     'status': 'success',
                     'data': results
                 })
+
         except Exception as e:
-            # logger.error(f"Error al buscar los registros: {str(e)}")
             return JsonResponse({'status': 'error', 'message': str(e)})
-        finally:
-            if 'temp_db' in connections.databases:
-                connections['temp_db'].close()
-                del connections.databases['temp_db']
+
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
 
