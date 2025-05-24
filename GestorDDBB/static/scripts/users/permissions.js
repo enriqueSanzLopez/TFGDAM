@@ -1,37 +1,60 @@
-try {
-    document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('create-permission').addEventListener('click', () => {
-            document.getElementById('create-permission-modal-title').innerText = 'Crear permiso';
-            document.getElementById('permission_id').value = 'new';
-            document.getElementById('permission_name').value = '';
-            document.getElementById('permission_value').value = '';
-            document.getElementById('permission_order').value = '';
+document.addEventListener('DOMContentLoaded', () => {
+    const modalTitle = document.getElementById('create-permission-modal-title');
+    const permissionIdInput = document.getElementById('permission_id');
+    const permissionNameInput = document.getElementById('permission_name');
+    const permissionValueInput = document.getElementById('permission_value');
+    const permissionOrderInput = document.getElementById('permission_order');
+
+    // CREAR PERMISO
+    const createBtn = document.getElementById('create-permission');
+    if (createBtn) {
+        createBtn.addEventListener('click', () => {
+            modalTitle.innerText = 'Crear permiso';
+            permissionIdInput.value = 'new';
+            permissionNameInput.value = '';
+            permissionValueInput.value = '';
+            permissionOrderInput.value = '';
         });
+    }
 
-        let ediciones = document.getElementsByClassName('editar-permission');
-        for (let i = 0; i < ediciones.length; i++) {
-            ediciones[i].addEventListener('click', (e) => {
-                const id = e.target.id.split('editar-permission-')[1];
-                document.getElementById('create-permission-modal-title').innerText = 'Editar permiso';
-                document.getElementById('permission_id').value = document.getElementById('permission-id-' + id).value;
-                document.getElementById('permission_name').value = document.getElementById('permission-name-' + id).value;
-                document.getElementById('permission_value').value = document.getElementById('permission-value-' + id).value;
-                document.getElementById('permission_order').value = document.getElementById('permission-order-' + id).value;
-            });
-        }
+    // EDITAR PERMISO
+    const editarBtns = document.querySelectorAll('.editar-permission');
+    editarBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const id = e.currentTarget.id.split('editar-permission-')[1];
 
-        let borrar = document.getElementsByClassName('borrar-permission');
-        for (let i = 0; i < borrar.length; i++) {
-            borrar[i].addEventListener('click', (e) => {
-                const id = e.target.id.split('borrar-permission-')[1];
-                const permissionNameElement = document.getElementById('permission-name-' + id);
-                if (permissionNameElement) {
-                    document.getElementById('permission_borrar_id').value = id;
-                    document.getElementById('permission-borrar-title').innerText = '¿Seguro que quieres eliminar el permiso ' + permissionNameElement.value + '?';
-                } else {
-                    console.error('Elemento con ID permission-name-' + id + ' no encontrado.');
-                }
-            });
-        }
+            const idEl = document.getElementById(`permission-id-${id}`);
+            const nameEl = document.getElementById(`permission-name-${id}`);
+            const valueEl = document.getElementById(`permission-value-${id}`);
+            const orderEl = document.getElementById(`permission-order-${id}`);
+
+            if (idEl && nameEl && valueEl && orderEl) {
+                modalTitle.innerText = 'Editar permiso';
+                permissionIdInput.value = idEl.value;
+                permissionNameInput.value = nameEl.value;
+                permissionValueInput.value = valueEl.value;
+                permissionOrderInput.value = orderEl.value;
+            } else {
+                console.error(`Alguno de los elementos del permiso con ID ${id} no fue encontrado.`);
+            }
+        });
     });
-} catch (e) { }
+
+    // BORRAR PERMISO
+    const borrarBtns = document.querySelectorAll('.borrar-permission');
+    borrarBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const id = e.currentTarget.id.split('borrar-permission-')[1];
+            const nameEl = document.getElementById(`permission-name-${id}`);
+            const borrarIdInput = document.getElementById('permission_borrar_id');
+            const borrarTitle = document.getElementById('permission-borrar-title');
+
+            if (nameEl && borrarIdInput && borrarTitle) {
+                borrarIdInput.value = id;
+                borrarTitle.innerText = `¿Seguro que quieres eliminar el permiso ${nameEl.value}?`;
+            } else {
+                console.error(`Elemento de nombre del permiso con ID ${id} no encontrado.`);
+            }
+        });
+    });
+});
