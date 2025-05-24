@@ -10,13 +10,13 @@ class Command(BaseCommand):
         administradores_group = GroupFactory(desc_group="administradores")
         self.stdout.write(f"Grupo creado: {administradores_group.desc_group}")
 
-        lectura_permission = PermissionFactory(
-            name="Lectura",
-            value="lectura",
-            order=1
-        )
-        administradores_group.permissions.add(lectura_permission)
-        self.stdout.write(f"Permiso creado: {lectura_permission.name}, Asociado a Grupo: {administradores_group.desc_group}")
+        # lectura_permission = PermissionFactory(
+        #     name="Lectura",
+        #     value="lectura",
+        #     order=1
+        # )
+        # administradores_group.permissions.add(lectura_permission)
+        # self.stdout.write(f"Permiso creado: {lectura_permission.name}, Asociado a Grupo: {administradores_group.desc_group}")
 
         personalizacion_permission = PermissionFactory(
             name="Personalizacion",
