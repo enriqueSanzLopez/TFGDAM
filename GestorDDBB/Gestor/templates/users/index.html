@@ -29,12 +29,14 @@
                 <div class="table-responsive-lg">
                         <table class="table table-striped">
                                 <thead>
-                                        <th scope="col">{{usuario}}</th>
-                                        <th scope="col">{{realName}}</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">{{grupo}}</th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
+                                        <tr>
+                                                <th scope="col">{{usuario}}</th>
+                                                <th scope="col">{{realName}}</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">{{grupo}}</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                        </tr>
                                 </thead>
                                 <tbody id="usuarios">
                                         {% for user in users %}
@@ -76,9 +78,11 @@
                 <div class="table-responsive-lg">
                         <table class="table table-striped">
                                 <thead>
-                                        <th scope="col">{{nombre}}</th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
+                                        <tr>
+                                                <th scope="col">{{nombre}}</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                        </tr>
                                 </thead>
                                 <tbody>
                                         {% for group in groups %}
@@ -115,11 +119,13 @@
                 <div class="table-responsive-lg">
                         <table class="table table-striped">
                                 <thead>
-                                        <th scope="col">{{nombre}}</th>
-                                        <th scope="col">{{valor}}</th>
-                                        <th scope="col">{{orden}}</th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
+                                        <tr>
+                                                <th scope="col">{{nombre}}</th>
+                                                <th scope="col">{{valor}}</th>
+                                                <th scope="col">{{orden}}</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                        </tr>
                                 </thead>
                                 <tbody>
                                         {% for permission in permissions %}
