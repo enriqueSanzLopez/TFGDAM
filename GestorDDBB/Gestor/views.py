@@ -578,9 +578,9 @@ def get_temp_connection(db_config):
         password = db_config.get('PASSWORD')
         dbname = db_config.get('NAME')
         
-        # Construir argumentos de conexión según si hay usuario y password
+        # Construir argumentos de conexion segun si hay usuario y password
         if user and password:
-            # URI con autenticación
+            # URI con autenticacion
             mongo_uri = f"mongodb://{user}:{password}@{host}:{port}/{dbname}"
             client = MongoClient(mongo_uri)
         else:
@@ -588,7 +588,7 @@ def get_temp_connection(db_config):
         
         return TempConnectionMongo(client)
     
-    # Para bases SQL, usar la conexión estándar de Django
+    # Para bases SQL, usar la conexion estandar de Django
     return ConnectionHandler({'default': db_config})['default']
 
 
