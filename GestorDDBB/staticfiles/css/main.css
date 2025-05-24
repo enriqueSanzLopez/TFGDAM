@@ -21,9 +21,9 @@ main,
     overflow-x: scroll;
 }
 
-.main-conexiones ul {
+/* .main-conexiones ul {
     overflow-y: scroll;
-}
+} */
 
 .main-conexiones button {
     margin-left: .25em;
@@ -107,4 +107,30 @@ li {
 #codigo{
     margin-top: .5em;
     margin-bottom: .5em;
+}
+
+.error-list {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  max-width: 25vw;
+  max-height: 25vh;
+  overflow-y: auto;
+  z-index: 1050;
+}
+
+#app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-conexiones {
+    overflow-y: auto;
+    overflow-x: auto;
+    max-height: 100%;
+}
+
+#main-principal {
+    height: calc(100vh - 60px);
 }

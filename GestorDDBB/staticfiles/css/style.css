@@ -57,3 +57,8 @@ nav a {
 select {
     cursor: pointer;
 }
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
