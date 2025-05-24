@@ -136,7 +136,7 @@ export const Consola = {
                 }
             });
         },
-        async formatRegisters(data) {
+        formatRegisters(data) {
             if (typeof data === 'string') return data;
             try {
                 return JSON.stringify(data, null, 2);

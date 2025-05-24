@@ -1021,13 +1021,13 @@ def console_api(request):
                         col_names = [desc[0] for desc in cursor.description]
                         results = [dict(zip(col_names, row)) for row in rows]
                         return JsonResponse({'status': 'success', 'type': 'select', 'data': results})
-
+                    command_status = getattr(cursor, 'statusmessage', 'Consulta ejecutada.')
                     return JsonResponse({
                         'status': 'success',
                         'type': 'command',
                         'message': 'Consulta ejecutada correctamente.',
                         'rowcount': cursor.rowcount,
-                        'command_status': str(cursor.statusmessage)
+                        'command_status': str(command_status)
                     })
 
         except Exception as e:
