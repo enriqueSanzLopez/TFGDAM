@@ -14435,3 +14435,4 @@ ValueError: El nombre del archivo SQLite debe terminar en .db
 Error en la conexión 4: (2002, "Can't connect to server on 'host.docker.internal' (101)")
 Error en la conexión 4: (2002, "Can't connect to server on 'host.docker.internal' (101)")
 Error en la conexión 4: (2002, "Can't connect to server on 'host.docker.internal' (101)")
+Lenguaje: es
