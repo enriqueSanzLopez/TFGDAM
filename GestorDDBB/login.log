@@ -14406,3 +14406,29 @@ Traceback (most recent call last):
     raise ImproperlyConfigured(
 django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
 Did you install mysqlclient?
+Not Found: /favicon.ico
+Error en la conexión 4: (2002, "Can't connect to server on 'host.docker.internal' (101)")
+Error en la conexión 4: (2002, "Can't connect to server on 'host.docker.internal' (101)")
+Internal Server Error: /api/test-connection/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/Gestor/views.py", line 666, in test_connection
+    temp_connection = get_temp_connection(db_config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/Gestor/views.py", line 603, in get_temp_connection
+    raise ValueError("El nombre del archivo SQLite debe terminar en .db")
+ValueError: El nombre del archivo SQLite debe terminar en .db

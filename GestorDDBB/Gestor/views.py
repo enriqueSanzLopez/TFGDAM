@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
@@ -576,28 +577,42 @@ def get_csrf(request):
 
 
 def get_temp_connection(db_config):
-    # Detectamos si es MongoDB para manejar distinto
-    if db_config['ENGINE'].lower() in ('pymongo', 'mongodb'):
-        # Crear cliente pymongo usando datos del config
+    engine = db_config['ENGINE'].lower()
+    
+    # --- MongoDB ---
+    if engine in ('pymongo', 'mongodb'):
         host = db_config.get('HOST', 'localhost')
         port = int(db_config.get('PORT', 27017))
         user = db_config.get('USER')
         password = db_config.get('PASSWORD')
         dbname = db_config.get('NAME')
-        
-        # Construir argumentos de conexion segun si hay usuario y password
+
         if user and password:
-            # URI con autenticacion
             mongo_uri = f"mongodb://{user}:{password}@{host}:{port}/{dbname}"
             client = MongoClient(mongo_uri)
         else:
             client = MongoClient(host=host, port=port)
-        
-        return TempConnectionMongo(client)
-    
-    # Para bases SQL, usar la conexion estandar de Django
-    return ConnectionHandler({'default': db_config})['default']
 
+        return TempConnectionMongo(client)
+
+    # --- SQLite ---
+    elif engine == 'django.db.backends.sqlite3':
+        # La ruta debe estar en static/sqlite/
+        filename = db_config['NAME']
+        if not filename.endswith('.db'):
+            raise ValueError("El nombre del archivo SQLite debe terminar en .db")
+
+        sqlite_path = os.path.join(settings.BASE_DIR, 'static', 'sqlite', filename)
+        if not os.path.exists(sqlite_path):
+            raise FileNotFoundError(f"Archivo SQLite no encontrado: {sqlite_path}")
+
+        db_config['NAME'] = sqlite_path
+        db_config.pop('HOST', None)
+        db_config.pop('PORT', None)
+        db_config.pop('USER', None)
+        db_config.pop('PASSWORD', None)
+
+    return ConnectionHandler({'default': db_config})['default']
 
 class TempConnectionMongo:
     def __init__(self, client):
@@ -615,13 +630,23 @@ def test_connection(request):
             if not isinstance(engine, str):
                 return JsonResponse({'status': 'error', 'message': 'ENGINE debe ser una cadena de texto'})
 
+            # db_config = {
+            #     'ENGINE': engine,
+            #     'NAME': body.get('db_name'),
+            #     'USER': body.get('name'),
+            #     'PASSWORD': body.get('password'),
+            #     'HOST': body.get('host'),
+            #     'PORT': body.get('port'),
+            #     'OPTIONS': {},
+            #     'TIME_ZONE': settings.TIME_ZONE,
+            #     'CONN_HEALTH_CHECKS': True,
+            #     'CONN_MAX_AGE': 60,
+            #     'AUTOCOMMIT': True,
+            #     'ATOMIC_REQUESTS': True,
+            # }
             db_config = {
                 'ENGINE': engine,
                 'NAME': body.get('db_name'),
-                'USER': body.get('name'),
-                'PASSWORD': body.get('password'),
-                'HOST': body.get('host'),
-                'PORT': body.get('port'),
                 'OPTIONS': {},
                 'TIME_ZONE': settings.TIME_ZONE,
                 'CONN_HEALTH_CHECKS': True,
@@ -629,6 +654,14 @@ def test_connection(request):
                 'AUTOCOMMIT': True,
                 'ATOMIC_REQUESTS': True,
             }
+
+            if engine not in ('django.db.backends.sqlite3', 'sqlite3'):
+                db_config.update({
+                    'USER': body.get('name'),
+                    'PASSWORD': body.get('password'),
+                    'HOST': body.get('host'),
+                    'PORT': body.get('port'),
+                })
 
             temp_connection = get_temp_connection(db_config)
             try:
