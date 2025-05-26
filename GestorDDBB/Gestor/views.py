@@ -905,16 +905,20 @@ def query_table(request):
                     temp_connection.close()
 
             else:
-                def quote_ident(identifier):
-                    if '"' in identifier:
-                        identifier = identifier.replace('"', '""')
-                    return f'"{identifier}"'
-
                 if '.' in table_name:
                     schema, table = table_name.split('.', 1)
-                    safe_table_name = f'{quote_ident(schema)}.{quote_ident(table)}'
+                    if db_type == 'django.db.backends.mysql':
+                        safe_table_name = f'`{schema.replace("`", "``")}`.`{table.replace("`", "``")}`'
+                    else:
+                        escaped_schema = schema.replace('"', '""')
+                        escaped_table = table.replace('"', '""')
+                        safe_table_name = f'"{escaped_schema}"."{escaped_table}"'
                 else:
-                    safe_table_name = quote_ident(table_name)
+                    if db_type == 'django.db.backends.mysql':
+                        safe_table_name = f'`{table_name.replace("`", "``")}`'
+                    else:
+                        escaped_table = table_name.replace('"', '""')
+                        safe_table_name = f'"{escaped_table}"'
 
                 query = f"SELECT {columns} FROM {safe_table_name}"
                 if filters:
