@@ -14432,3 +14432,6 @@ Traceback (most recent call last):
   File "/app/Gestor/views.py", line 603, in get_temp_connection
     raise ValueError("El nombre del archivo SQLite debe terminar en .db")
 ValueError: El nombre del archivo SQLite debe terminar en .db
+Error en la conexión 4: (2002, "Can't connect to server on 'host.docker.internal' (101)")
+Error en la conexión 4: (2002, "Can't connect to server on 'host.docker.internal' (101)")
+Error en la conexión 4: (2002, "Can't connect to server on 'host.docker.internal' (101)")
