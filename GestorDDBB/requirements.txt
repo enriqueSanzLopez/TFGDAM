@@ -11,3 +11,4 @@ cryptography
 factory_boy>=3.2,<4.0
 whitenoise
 dnspython
+mysqlclient>=2.2.0

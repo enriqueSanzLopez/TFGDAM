@@ -611,10 +611,12 @@ def test_connection(request):
     if request.method == 'POST':
         try:
             body = json.loads(request.body.decode('utf-8'))
-            if not isinstance(body.get('db_engine'), str):
+            engine = body.get('db_engine', '').strip().lower()
+            if not isinstance(engine, str):
                 return JsonResponse({'status': 'error', 'message': 'ENGINE debe ser una cadena de texto'})
+
             db_config = {
-                'ENGINE': body.get('db_engine', '').strip().lower(),
+                'ENGINE': engine,
                 'NAME': body.get('db_name'),
                 'USER': body.get('name'),
                 'PASSWORD': body.get('password'),
@@ -627,16 +629,18 @@ def test_connection(request):
                 'AUTOCOMMIT': True,
                 'ATOMIC_REQUESTS': True,
             }
-            #Intentar hacer conexiones
-            connections.databases['temp_db'] = db_config
-            temp_connection = connections['temp_db']
-            with temp_connection.cursor() as cursor:
-                cursor.execute('SELECT 1')
-            #Guardar la conexion
+
+            temp_connection = get_temp_connection(db_config)
+            try:
+                with temp_connection.cursor() as cursor:
+                    cursor.execute('SELECT 1')
+            finally:
+                temp_connection.close()
+
             user = User.objects.filter(id=body.get('user')).first()
             connection_instance = Connection(
                 user=user,
-                db_type=body.get('db_engine'),
+                db_type=engine,
                 host=body.get('host'),
                 db_name=body.get('db_name'),
                 port=body.get('port'),
@@ -650,15 +654,11 @@ def test_connection(request):
                 'token': connection_instance.token
             })
         except OperationalError as e:
-            logger.info('Error: '+e)
+            logger.info('Error: '+str(e))
             return JsonResponse({
                 'status': 'error',
                 'message': str(e)
-                })
-        finally:
-            if 'temp_db' in connections.databases:
-                connections['temp_db'].close()
-                del connections.databases['temp_db']
+            })
     else:
         return JsonResponse({'status': 'error', 'message': 'Método no permitido.'}, status=405)
 
@@ -742,7 +742,6 @@ def list_tables(request):
                 temp_connection = get_temp_connection(db_config)
 
                 if db_type == 'django.db.backends.postgresql':
-                    logger.info(f'Realiza la conexión con PostgreSQL (ID {connection.id})')
                     consulta = """
                         SELECT schemaname || '.' || tablename AS table_name
                         FROM pg_catalog.pg_tables
@@ -754,7 +753,6 @@ def list_tables(request):
                         tables = cursor.fetchall()
 
                 elif db_type == 'django.db.backends.mysql':
-                    logger.info(f'Realiza la conexión con MySQL (ID {connection.id})')
                     consulta = """
                         SELECT CONCAT(TABLE_SCHEMA, '.', TABLE_NAME) AS table_name
                         FROM information_schema.tables
@@ -766,7 +764,6 @@ def list_tables(request):
                         tables = cursor.fetchall()
 
                 elif db_type in ('mssql', 'django.db.backends.mssql'):
-                    logger.info(f'Realiza la conexión con SQL Server (ID {connection.id})')
                     consulta = """
                         SELECT TABLE_SCHEMA + '.' + TABLE_NAME AS table_name
                         FROM INFORMATION_SCHEMA.TABLES
@@ -778,7 +775,6 @@ def list_tables(request):
                         tables = cursor.fetchall()
 
                 elif db_type == 'django.db.backends.sqlite3':
-                    logger.info(f'Realiza la conexión con SQLite (ID {connection.id})')
                     consulta = """
                         SELECT name AS table_name
                         FROM sqlite_master
@@ -790,7 +786,6 @@ def list_tables(request):
                         tables = cursor.fetchall()
 
                 elif db_type in ('pymongo', 'mongodb'):
-                    logger.info(f'Realiza la conexión con MongoDB (ID {connection.id})')
                     client = temp_connection.connection.client
                     db = client[decrypted_data["db_name"]]
                     collection_names = db.list_collection_names()
