@@ -4,13 +4,14 @@ import { Consola } from '/static/scripts/main/console.js';
 const main = {
     template: `
         <div id="main-principal">
-            <div class="main-conexiones"><conexiones @buscar-tabla="handleBuscarTabla" @consola-tabla="handleConsola"></conexiones></div>
+            <div class="main-conexiones"><conexiones @buscar-tabla="handleBuscarTabla" @consola-tabla="handleConsola" @error="handleError"></conexiones></div>
             <div class="d-flex flex-column justify-content-start align-items-center main overflow-auto">
                 <busqueda
                     v-if="action === 'select'"
                     :key="currentConnection + '_' + currentTable"
                     :currentTable="currentTable"
                     :currentConnection="currentConnection"
+                    @error="handleError"
                 />
                 <consola
                     v-if="action === 'console'"
